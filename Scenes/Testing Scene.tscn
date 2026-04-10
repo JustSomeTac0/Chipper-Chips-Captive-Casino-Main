@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://qh2ad3val6fo"]
 
 [ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper Chips Captive Casino Main/Sprites/level1Backgorund.png" id="1_c6x0b"]
-[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png" id="1_ebker"]
-[ext_resource type="PackedScene" uid="uid://c21jfavx7db7m" path="res://Chipper Chips Captive Casino Main/Scenes/player_camera_scene.tscn" id="2_c6x0b"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn" id="2_ebker"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pai55"]
 size = Vector3(51.99407, 0.20582847, 41.645565)
@@ -15,21 +14,6 @@ texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_lk8nq"]
 material = SubResource("StandardMaterial3D_sf7i5")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lk8nq"]
-radius = 0.9536133
-height = 2.7576294
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lk8nq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_ebker")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c6x0b"]
 
@@ -44,7 +28,7 @@ ambient_light_color = Color(0.5743278, 0.5743278, 0.5743278, 1)
 
 [node name="Testing" type="Node3D" unique_id=1829307356]
 
-[node name="Ground" type="Area3D" parent="." unique_id=1018751602]
+[node name="Ground" type="StaticBody3D" parent="." unique_id=103731958]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1120158246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0047041243, 0, 0)
@@ -55,22 +39,8 @@ shape = SubResource("BoxShape3D_pai55")
 transform = Transform3D(51.99407, 0, 0, 0, 0.20582847, 0, 0, 0, 41.645565, 0.003978499, 0, 0)
 mesh = SubResource("BoxMesh_lk8nq")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=2064836104]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83009046, 0)
-
-[node name="PlayerCollision" type="CollisionShape3D" parent="Player" unique_id=655171208]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67766124, 0)
-shape = SubResource("CapsuleShape3D_lk8nq")
-
-[node name="PlayerSprite" type="AnimatedSprite3D" parent="Player" unique_id=874659527]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7596887, 0)
-visible = false
-billboard = 2
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_lk8nq")
-
-[node name="PlayerCameraScene" parent="Player" unique_id=1802069814 instance=ExtResource("2_c6x0b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026774406, 1.6252775, 0.11694831)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=269315319]
 environment = SubResource("Environment_c6x0b")
+
+[node name="Player" parent="." unique_id=1452280072 instance=ExtResource("2_ebker")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7232065, 0)

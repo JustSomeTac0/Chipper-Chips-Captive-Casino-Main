@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do8ae1f8y6ya6"
-path="res://.godot/imported/icon.svg-5a3b6edaa235dfbe30758a4f47440d47.ctex"
+path="res://.godot/imported/icon.svg-91d85443d619f36ab12ba9ca2524e890.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chipper Chips Captive Casino Main/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-5a3b6edaa235dfbe30758a4f47440d47.ctex"]
+source_file="res://Chipper Chips Captive Casino Main/Sprites/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-91d85443d619f36ab12ba9ca2524e890.ctex"]
 
 [params]
 
