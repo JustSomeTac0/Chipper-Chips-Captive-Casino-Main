@@ -2,11 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
 
+[sub_resource type="Sky" id="Sky_1i5qp"]
+
 [sub_resource type="Environment" id="Environment_1i5qp"]
 background_color = Color(0.08228006, 8.509517e-05, 0.24602038, 1)
+sky = SubResource("Sky_1i5qp")
 ambient_light_source = 2
 ambient_light_color = Color(0.82441294, 0.90936625, 0.97817594, 1)
 ambient_light_energy = 0.1
+reflected_light_source = 2
 tonemap_exposure = 0.5
 glow_enabled = true
 glow_normalized = true
@@ -375,6 +379,12 @@ size = Vector3(0.7319565, 0.03869629, 2.0617676)
 [node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D6" unique_id=980833116]
 transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -2.7334626, -0.5344238)
 size = Vector3(1.0602951, 0.03869629, 2.0688477)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Map/Storage" unique_id=1374297953]
+transform = Transform3D(0.102531694, 0, 0, 0, 0.005893199, 0.10236219, 0, -0.10236219, 0.005893199, -0.3903151, 0.0884684, 0)
+shadow_enabled = true
+spot_range = 6.0448413
+spot_angle = 35.370724
 
 [node name="Lobby" type="CSGMesh3D" parent="Map" unique_id=1864456493]
 transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)

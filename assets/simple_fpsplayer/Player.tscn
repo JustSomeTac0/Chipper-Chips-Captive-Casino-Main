@@ -38,12 +38,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 [node name="Camera3D" type="Camera3D" parent="rotation_helper" unique_id=1423988991]
 
 [node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D" unique_id=1832081135]
-visible = false
-light_energy = 3.0
-light_bake_mode = 0
-spot_range = 10.0
-spot_angle = 15.0
-spot_angle_attenuation = 1.56917
+transform = Transform3D(0.9999909, 0.0010289253, 0.0041538402, -0.0010287459, 0.99999946, -4.5329776e-05, -0.004153885, 4.105611e-05, 0.9999914, 0.24691164, 0, 0)
+light_energy = 0.999
+light_indirect_energy = 5.289
+light_volumetric_fog_energy = 3.899
+light_size = 0.222
+light_specular = 3.863
+shadow_enabled = true
+shadow_normal_bias = 1.797
+shadow_opacity = 0.26
+shadow_blur = 6.942
+distance_fade_begin = 2.15
+distance_fade_shadow = 9.8
+spot_range = 10.23702
+spot_attenuation = 0.61
+spot_angle = 17.037931
+spot_angle_attenuation = 1.4640871
 
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D" unique_id=1449266271]
 target_position = Vector3(0, 0, -2)
