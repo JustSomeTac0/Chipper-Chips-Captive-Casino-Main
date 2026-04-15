@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1i5qp"]
-
-[sub_resource type="Sky" id="Sky_sf7i5"]
-sky_material = SubResource("ProceduralSkyMaterial_1i5qp")
-
-[sub_resource type="Environment" id="Environment_pegwi"]
-background_mode = 2
-sky = SubResource("Sky_sf7i5")
-ambient_light_source = 3
-ambient_light_color = Color(0.5743278, 0.5743278, 0.5743278, 1)
+[sub_resource type="Environment" id="Environment_1i5qp"]
+background_color = Color(0.08228006, 8.509517e-05, 0.24602038, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.82441294, 0.90936625, 0.97817594, 1)
+ambient_light_energy = 0.1
+tonemap_exposure = 0.5
+glow_enabled = true
+glow_normalized = true
+fog_enabled = true
+fog_light_color = Color(0.00967607, 0, 0.14160633, 1)
 
 [node name="Map" type="Node3D" unique_id=841301764]
 
@@ -560,8 +560,8 @@ transform = Transform3D(1.0694467e-14, 1.0000002, -1.0376549e-07, -1.9011615e-07
 size = Vector3(0.2795086, 0.011230469, 0.9155731)
 
 [node name="CSGBox3D135" type="CSGBox3D" parent="Map/Vip/Hallways" unique_id=1808567081]
-transform = Transform3D(1, -5.960263e-22, -4.2351647e-22, -5.435652e-13, 1, 1.4210855e-14, -4.6004477e-20, 0, 1.0000001, -1.4901161e-08, -0.32790422, 4.844293)
-size = Vector3(0.27093506, 0.011230469, 0.756567)
+transform = Transform3D(1, -3.552714e-15, -8.4703295e-22, -5.435652e-13, 0.9999999, 2.842171e-14, -2.8905e-20, 0, 1.0000001, -0.008438125, -0.32790518, 4.8442926)
+size = Vector3(0.28781128, 0.011230469, 0.756567)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="Map/Vip/Hallways" unique_id=1808123202]
 
@@ -1033,13 +1033,44 @@ transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694,
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 2.1670227)
 
+[node name="Stairs" type="CSGMesh3D" parent="Map/Staff" unique_id=607530688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5415945, -0.005779433, 2.4208505)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=584795082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011749268, 0, 0.017959595)
+size = Vector3(0.20281982, 0.008544922, 0.17556763)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=486404068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115264416, -0.01995784, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=2079872147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28735685, -0.08027054, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=141747223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33593798, -0.100841515, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=998900369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2417264, -0.063611336, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=1042558018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19761705, -0.04883216, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Map/Staff/Stairs" unique_id=1387071656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15663338, -0.034853168, 0.016807556)
+size = Vector3(0.034902573, 0.008544922, 0.1778717)
+
 [node name="Security" type="CSGMesh3D" parent="Map" unique_id=1665458549]
 transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
 use_collision = true
 
 [node name="CSGBox3D132" type="CSGBox3D" parent="Map/Security" unique_id=796622204]
-transform = Transform3D(4.3710926e-08, 1.0000004, -1.2010818e-07, 1, -4.3711402e-08, 7.1054274e-15, -2.6858682e-16, -1.2010821e-07, -0.37387726, 5.6474605, 0.109322146, 2.6768703)
-size = Vector3(0.27093506, 0.011230469, 0.7380123)
+transform = Transform3D(4.371093e-08, 1.0000005, -1.2010818e-07, 1, -4.3711402e-08, 7.1054274e-15, -2.6858684e-16, -1.2010824e-07, -0.37387735, 5.647461, 0.09996089, 2.6768703)
+size = Vector3(0.2709198, 0.011230469, 0.7380123)
 
 [node name="CSGBox3D88" type="CSGBox3D" parent="Map/Security" unique_id=967991096]
 transform = Transform3D(1.2297388, 0, 0, 0, 1, 0, 0, 0, 1.5255618, 5.6890645, -0.039878435, 3.427688)
@@ -1075,4 +1106,4 @@ size = Vector3(1.5095825, 2.2525635, 1.9038391)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.62251, 8.321319, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1446552579]
-environment = SubResource("Environment_pegwi")
+environment = SubResource("Environment_1i5qp")
