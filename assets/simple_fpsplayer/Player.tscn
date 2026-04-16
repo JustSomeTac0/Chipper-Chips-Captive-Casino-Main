@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dqv31vp8jkp7a" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png" id="2_ckusu"]
 [ext_resource type="Script" uid="uid://yguvjfk2srxr" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
-[ext_resource type="Texture2D" uid="uid://cebgw7xdr3hi0" path="res://Chipper Chips Captive Casino Main/Sprites/FlashLightTexture.png" id="3_n2yuy"]
+[ext_resource type="Texture2D" uid="uid://dmo07y4qr38ah" path="res://Chipper Chips Captive Casino Main/Sprites/OtherFlash.png" id="3_n2yuy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 height = 2.0283203
@@ -42,16 +42,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D" unique_id=1832081135]
 transform = Transform3D(0.9999909, 0.0010289253, 0.0041538402, -0.0010287459, 0.99999946, -4.5329776e-05, -0.004153885, 4.105611e-05, 0.9999914, 0.24691164, 0, 0)
-light_energy = 2.738
-light_indirect_energy = 5.289
+light_color = Color(0.9888658, 0.90425026, 0.45202398, 1)
+light_energy = 1.927
+light_indirect_energy = 3.55
 light_volumetric_fog_energy = 3.899
 light_projector = ExtResource("3_n2yuy")
 light_size = 0.222
 light_specular = 3.863
 shadow_enabled = true
-shadow_normal_bias = 1.797
-shadow_opacity = 0.43
-shadow_blur = 7.594
+shadow_bias = 1.334
+shadow_normal_bias = 0.927
+shadow_blur = 1.289
 distance_fade_begin = 2.15
 distance_fade_shadow = 9.8
 spot_range = 8.135626

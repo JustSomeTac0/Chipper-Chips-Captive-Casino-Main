@@ -4,9 +4,10 @@ const ACCEL = 10
 const DEACCEL = 30
 
 const SPEED = 8.5
-const SPRINT_MULT = 2.3
-const JUMP_VELOCITY = 4.5
+const SPRINT_MULT = 1.9
+const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.7
+var weight = 2
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -59,7 +60,7 @@ func _physics_process(delta):
 	var moving = false
 	# Add the gravity. Pulls value from project settings.
 	if not is_on_floor():
-		velocity.y -= gravity * delta
+		velocity.y -= gravity * delta * weight
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -69,11 +70,15 @@ func _physics_process(delta):
 	
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
+		
+		weight = 4 # fall faster 
+		velocity.y -= 0.4 # ditto
 		hitboxRadius = 0.3
-		hitboxHeight = 1.2
+		hitboxHeight = 1.2 #making smaller hit box
 		hitbox.shape.radius = float(hitboxRadius)
 		hitbox.shape.height = float(hitboxHeight)
 	else:
+		weight = 2
 		hitboxRadius = 0.5
 		hitboxHeight = 2.0
 		hitbox.shape.radius = float(hitboxRadius)
