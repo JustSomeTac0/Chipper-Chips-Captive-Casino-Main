@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d3c5w5bdspqww"]
+
+[ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper Chips Captive Casino Main/Sprites/testTile.png" id="1_uoauu"]
+
+[resource]
+albedo_texture = ExtResource("1_uoauu")
+uv1_scale = Vector3(4.235, 8.314, 3.903)
+texture_filter = 0

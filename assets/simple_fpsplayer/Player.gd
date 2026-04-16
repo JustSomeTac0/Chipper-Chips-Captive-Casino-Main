@@ -15,11 +15,17 @@ var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
+var hitbox
+var hitboxRadius: float = 0.5
+var hitboxHeight: float = 2.0
 
 func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
+	hitbox = $body
+	
+	
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -58,6 +64,23 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	
+	
+	##Crouching things I addded
+	if Input.is_action_pressed("crouch"):
+		hitboxRadius = 0.3
+		hitboxHeight = 1.2
+		hitbox.shape.radius = float(hitboxRadius)
+		hitbox.shape.height = float(hitboxHeight)
+	else:
+		hitboxRadius = 0.5
+		hitboxHeight = 2.0
+		hitbox.shape.radius = float(hitboxRadius)
+		hitbox.shape.height = float(hitboxHeight)
+	
+	
+	
 	
 	# This just controls acceleration. Don't touch it.
 	var accel
