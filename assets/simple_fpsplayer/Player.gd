@@ -3,11 +3,11 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-const SPEED = 8.5
-const SPRINT_MULT = 1.9
-const JUMP_VELOCITY = 9
+const SPEED = 8.5 #HOPFULLY THIS FIXES SHIT
+const SPRINT_MULT = 1.9 #HOPFULLY THIS FIXES SHIT
+const JUMP_VELOCITY = 9 #HOPFULLY THIS FIXES SHIT
 const MOUSE_SENSITIVITY = 0.7
-var weight = 2
+var weight = 2 #HOPFULLY THIS FIXES SHIT
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -71,14 +71,14 @@ func _physics_process(delta):
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
 		
-		weight = 4 # fall faster 
-		velocity.y -= 0.4 # ditto
+		weight = 4 # fall faster  #HOPFULLY THIS FIXES SHIT
+		velocity.y -= 0.4 # ditto #HOPFULLY THIS FIXES SHIT
 		hitboxRadius = 0.3
 		hitboxHeight = 1.2 #making smaller hit box
 		hitbox.shape.radius = float(hitboxRadius)
 		hitbox.shape.height = float(hitboxHeight)
 	else:
-		weight = 2
+		weight = 2 #HOPFULLY THIS FIXES SHIT
 		hitboxRadius = 0.5
 		hitboxHeight = 2.0
 		hitbox.shape.radius = float(hitboxRadius)
