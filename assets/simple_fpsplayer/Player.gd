@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+
+
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -15,10 +17,10 @@ var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
-var hitbox
-var hitboxRadius: float = 0.5
-var hitboxHeight: float = 2.0
-var stamina: int = 100
+var hitbox #THIS 
+var hitboxRadius: float = 0.5 #SHIT
+var hitboxHeight: float = 2.0 #BETTER
+var stamina: int = 100 #PULL
 var sprinting: bool = false
 
 func _ready():
