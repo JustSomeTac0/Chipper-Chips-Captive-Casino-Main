@@ -1,13 +1,14 @@
 extends CharacterBody3D
 
+
+
 const ACCEL = 10
 const DEACCEL = 30
 
-const SPEED = 8.5 #HOPFULLY THIS FIXES SHIT
-const SPRINT_MULT = 1.9 #HOPFULLY THIS FIXES SHIT
-const JUMP_VELOCITY = 9 #HOPFULLY THIS FIXES SHIT
+const SPEED = 8.5
+const SPRINT_MULT = 2.3
+const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.7
-var weight = 2 #HOPFULLY THIS FIXES SHIT
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -16,9 +17,11 @@ var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
-var hitbox
-var hitboxRadius: float = 0.5
-var hitboxHeight: float = 2.0
+var hitbox #THIS 
+var hitboxRadius: float = 0.5 #SHIT
+var hitboxHeight: float = 2.0 #BETTER
+var stamina: int = 100 #PULL
+var sprinting: bool = false
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -60,7 +63,7 @@ func _physics_process(delta):
 	var moving = false
 	# Add the gravity. Pulls value from project settings.
 	if not is_on_floor():
-		velocity.y -= gravity * delta * weight
+		velocity.y -= gravity * delta
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -70,15 +73,11 @@ func _physics_process(delta):
 	
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
-		
-		weight = 4 # fall faster  #HOPFULLY THIS FIXES SHIT
-		velocity.y -= 0.4 # ditto #HOPFULLY THIS FIXES SHIT
 		hitboxRadius = 0.3
-		hitboxHeight = 1.2 #making smaller hit box
+		hitboxHeight = 1.2
 		hitbox.shape.radius = float(hitboxRadius)
 		hitbox.shape.height = float(hitboxHeight)
 	else:
-		weight = 2 #HOPFULLY THIS FIXES SHIT
 		hitboxRadius = 0.5
 		hitboxHeight = 2.0
 		hitbox.shape.radius = float(hitboxRadius)
@@ -101,7 +100,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
 	var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
-	if Input.is_key_pressed(KEY_SHIFT):
+	if Input.is_key_pressed(KEY_SHIFT) && stamina > 0:
+		stamina -= 1
+		sprinting = true
 		direction = direction * SPRINT_MULT
 	else:
 		pass
