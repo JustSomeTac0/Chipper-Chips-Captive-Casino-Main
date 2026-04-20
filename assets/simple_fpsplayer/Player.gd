@@ -5,7 +5,7 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-const SPEED = 8.5
+var SPEED = 8.5
 const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.7
@@ -23,6 +23,9 @@ var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
 var stamina: int = 100 #PULL
 var sprinting: bool = false
+
+var isCrouched = false # Add states for diffrent actions
+var isRunning = false
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -74,6 +77,8 @@ func _physics_process(delta):
 	
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
+		SPEED = 6
+		isCrouched = true
 		weight = 4 # fall faster 
 		velocity.y -= 0.4 # ditto
 		hitboxRadius = 0.3
@@ -81,6 +86,8 @@ func _physics_process(delta):
 		hitbox.shape.radius = float(hitboxRadius)
 		hitbox.shape.height = float(hitboxHeight)
 	else:
+		SPEED = 8.5
+		isCrouched = false
 		weight = 2
 		hitboxRadius = 0.5
 		hitboxHeight = 2.0
@@ -104,12 +111,13 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
 	var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
-	if Input.is_key_pressed(KEY_SHIFT) && stamina > 0:
+	if Input.is_key_pressed(KEY_SHIFT) && stamina > 0 && isCrouched == false:
+		isRunning = true
 		stamina -= 1
 		sprinting = true
 		direction = direction * SPRINT_MULT
 	else:
-		pass
+		isRunning = false
 
 	if direction:
 		velocity.x = direction.x * SPEED
