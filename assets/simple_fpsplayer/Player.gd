@@ -10,6 +10,7 @@ const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.7
 var weight = 2
+var regenTime = 0.1
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -19,21 +20,26 @@ var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
 var hitbox #THIS 
+var waitfForTimer = false
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
 var stamina: int = 100 #PULL
 var sprinting: bool = false
+var StaminaRegenTimer
 
 var isCrouched = false # Add states for diffrent actions
 var isRunning = false
+
+
+signal staminaChanged
+
 
 func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
 	hitbox = $body
-	
-	
+	StaminaRegenTimer = $StaminaRegenTimer
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -48,12 +54,21 @@ func _input(event):
 		camera_rot.x = clampf(camera_rot.x, -1.4, 1.4)
 		rotation_helper.rotation = camera_rot
 	
+	
+	
+	
+	
 	# Release/Grab Mouse for debugging. You can change or replace this.
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
+	
+	
+	
+	
 	
 	# Flashlight toggle. Defaults to F on Keyboard.
 	if event is InputEventKey:
@@ -62,6 +77,14 @@ func _input(event):
 				flashlight.hide()
 			elif not event.echo:
 				flashlight.show()
+
+
+
+
+
+
+
+
 
 func _physics_process(delta):
 	var moving = false
@@ -75,10 +98,14 @@ func _physics_process(delta):
 	
 	
 	
+	
+	
+	
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
 		SPEED = 6
 		isCrouched = true
+		regenTime = 0.05
 		weight = 4 # fall faster 
 		velocity.y -= 0.4 # ditto
 		hitboxRadius = 0.3
@@ -88,11 +115,14 @@ func _physics_process(delta):
 	else:
 		SPEED = 8.5
 		isCrouched = false
+		regenTime = 0.1
 		weight = 2
 		hitboxRadius = 0.5
 		hitboxHeight = 2.0
 		hitbox.shape.radius = float(hitboxRadius)
 		hitbox.shape.height = float(hitboxHeight)
+	
+	
 	
 	
 	
@@ -107,6 +137,12 @@ func _physics_process(delta):
 		moving = false
 
 
+
+
+
+
+
+
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
 	var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
@@ -116,9 +152,15 @@ func _physics_process(delta):
 		stamina -= 1
 		sprinting = true
 		direction = direction * SPRINT_MULT
+		staminaChanged.emit()
 	else:
 		isRunning = false
-
+		if waitfForTimer == false:
+			StaminaRegenTimer.start(regenTime)
+			waitfForTimer = true
+		
+	
+	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -127,3 +169,10 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_stamina_regen_timer_timeout() -> void:
+	if not Input.is_key_pressed(KEY_SHIFT):
+		stamina += 1
+		staminaChanged.emit()
+		waitfForTimer = false

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bi2dng2ui1qyr"]
+
+[ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper Chips Captive Casino Main/Scripts/Stamania Bar.gd" id="1_8u1te"]
+[ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper Chips Captive Casino Main/Sprites/testTile.png" id="1_stexo"]
+
+[node name="Hud" type="Node2D" unique_id=1366660728]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=226205030]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=345629915]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -69.99994
+offset_right = 105.0
+offset_bottom = 30.000061
+grow_vertical = 0
+scale = Vector2(4.999999, 0.5257137)
+value = 100.0
+texture_progress = ExtResource("1_stexo")
+script = ExtResource("1_8u1te")
