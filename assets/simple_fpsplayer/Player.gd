@@ -10,7 +10,7 @@ const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.7
 var weight = 2
-var regenTime = 0.1
+var regenTime = 0.1 #base Stamina Regen time
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -31,7 +31,7 @@ var isCrouched = false # Add states for diffrent actions
 var isRunning = false
 
 
-signal staminaChanged
+signal staminaChanged #call to update the Stamina bar
 
 
 func _ready():
@@ -171,7 +171,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_stamina_regen_timer_timeout() -> void:
+func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen Timer call StaminaRegenTimer.start(regenTime) to start it
 	if not Input.is_key_pressed(KEY_SHIFT):
 		stamina += 1
 		staminaChanged.emit()
