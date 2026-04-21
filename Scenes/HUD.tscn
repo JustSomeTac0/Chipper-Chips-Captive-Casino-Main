@@ -8,6 +8,7 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=226205030]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=345629915]
+texture_filter = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -18,5 +19,8 @@ offset_bottom = 30.000061
 grow_vertical = 0
 scale = Vector2(4.999999, 0.5257137)
 value = 100.0
+texture_under = ExtResource("1_stexo")
 texture_progress = ExtResource("1_stexo")
+tint_under = Color(0.35425574, 2.4215783e-06, 0.009051529, 1)
+tint_progress = Color(0, 1, 1, 1)
 script = ExtResource("1_8u1te")
