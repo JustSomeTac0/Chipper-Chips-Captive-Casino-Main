@@ -1,0 +1,31 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1776793951
+::res://assets/::1776790915
+::res://assets/simple_fpsplayer/::1776792065
+ability_grab.gd::GDScript::1698170836289804579::1776790913::0::1::::<>RayCast3D<><>0<>0<><>::
+Player.gd::GDScript::8327383116236291644::1776792065::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Player.tscn::PackedScene::7611949078106151781::1776792065::0::1::::<><><>0<>0<><>::uid://dqv31vp8jkp7a::::res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.gd<>uid://bi2dng2ui1qyr::::res://Chipper Chips Captive Casino Main/Scenes/HUD.tscn<>uid://5s1q8wvituvn::::res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png<>uid://yguvjfk2srxr::::res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/ability_grab.gd<>uid://dmo07y4qr38ah::::res://Chipper Chips Captive Casino Main/Sprites/OtherFlash.png
+::res://Chipper-Chips-Captive-Casino-Main-main/::1776792108
+::res://Chipper-Chips-Captive-Casino-Main-main/assets/::1776789147
+::res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/::1776792107
+::res://Chipper-Chips-Captive-Casino-Main-main/Materials/::1776792102
+::res://Chipper-Chips-Captive-Casino-Main-main/Scenes/::1776792101
+::res://Chipper-Chips-Captive-Casino-Main-main/Shaders/::1776792097
+::res://Chipper-Chips-Captive-Casino-Main-main/Sprites/::1776792094
+::res://Materials/::1776792078
+Test.tres::StandardMaterial3D::9130540803107508986::1776792076::0::1::::<><><>0<>0<><>::uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
+::res://Scenes/::1776792065
+HUD.tscn::PackedScene::3003875356226297617::1776792065::0::1::::<><><>0<>0<><>::uid://coswl8t6jaddh::::res://Chipper Chips Captive Casino Main/Scripts/Stamania Bar.gd<>uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
+player_camera_scene.tscn::PackedScene::6722169382651843720::1776790963::0::1::::<><><>0<>0<><>::
+Testing Scene.tscn::PackedScene::1139111703070817452::1776790966::0::1::::<><><>0<>0<><>::uid://dlmgawbb67ctt::::res://Chipper Chips Captive Casino Main/Sprites/level1Backgorund.png<>uid://dgpjxoygnvyy4::::res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn
+::res://Scripts/::1776792068
+Stamania Bar.gd::GDScript::5794001159507914921::1776792065::0::1::::<>TextureProgressBar<><>0<>0<><>::
+::res://Shaders/::1776790971
+CoolReflective.gdshader::Shader::7090074537325050694::1776790969::0::1::::<><><>0<>0<><>::
+::res://Sprites/::1776791019
+FlashLightTexture.png::CompressedTexture2D::5056066425552736981::1776790977::1776793951::1::::<><><>0<>0<>d193ffab5df6dff443c68db084145550<>res://.godot/imported/FlashLightTexture.png-fcc8b4f8c4df751987edb15d6d566626.ctex::
+icon.svg::CompressedTexture2D::8210038845935161815::1776790982::1776793951::1::::<><><>0<>0<>558c7d776077cbc31932ff13195cb37e<>res://.godot/imported/icon.svg-b67cfb692a937e61d2bda8561d9e8db7.ctex::
+iLoveTestingCutout.png::CompressedTexture2D::2144433091450311007::1776790989::1776793952::1::::<><><>0<>0<>933fd73778b7f09b1fdf3f39fb2e8524<>res://.godot/imported/iLoveTestingCutout.png-18430532901cc5696691384ad4e398f3.s3tc.ctex::
+level1Backgorund.png::CompressedTexture2D::7956477323249605617::1776791002::1776793952::1::::<><><>0<>0<>a638dbf352f3970ead26555bd3857c57<>res://.godot/imported/level1Backgorund.png-9e7fd99281044a837bac8555870fe171.s3tc.ctex::
+OtherFlash.png::CompressedTexture2D::8032005839627201595::1776791010::1776793951::1::::<><><>0<>0<>0df6496a808f999dfddee43242578b65<>res://.godot/imported/OtherFlash.png-f0fec40e8e833bb3a1c8500d2751fac6.ctex::
+testTile.png::CompressedTexture2D::8051083194862038035::1776791016::1776793952::1::::<><><>0<>0<>df56e7c31143dd61ead0a7014aff4866<>res://.godot/imported/testTile.png-e3feabc592aebb16f29ff3074e2fce0f.s3tc.ctex::

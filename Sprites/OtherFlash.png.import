@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmo07y4qr38ah"
-path="res://.godot/imported/OtherFlash.png-848917f707c18b532d26ee3326ef93c4.ctex"
+path="res://.godot/imported/OtherFlash.png-f0fec40e8e833bb3a1c8500d2751fac6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chipper Chips Captive Casino Main/Sprites/OtherFlash.png"
-dest_files=["res://.godot/imported/OtherFlash.png-848917f707c18b532d26ee3326ef93c4.ctex"]
+source_file="res://Sprites/OtherFlash.png"
+dest_files=["res://.godot/imported/OtherFlash.png-f0fec40e8e833bb3a1c8500d2751fac6.ctex"]
 
 [params]
 
