@@ -9,5 +9,6 @@ func _ready() -> void:
 
 
 func update():
-	if not player.stamina >= 100:#make sure no extra stamina
-		self.value = player.stamina
+	
+	
+	self.value = player.stamina
