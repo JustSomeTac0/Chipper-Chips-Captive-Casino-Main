@@ -1,15 +1,21 @@
-[gd_scene format=3 uid="uid://k4ynb7bu2877"]
+[gd_scene format=3 uid="uid://d13ap5b2koici"]
 
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
-[ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Chipper Chips Captive Casino Main/Materials/Test.tres" id="1_pegwi"]
-[ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Chipper Chips Captive Casino Main/Shaders/CoolReflective.gdshader" id="2_b8mr1"]
-[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
+[ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Materials/Test.tres" id="1_pegwi"]
+[ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Shaders/CoolReflective.gdshader" id="2_b8mr1"]
+[ext_resource type="Script" uid="uid://c0wg823q3dwb1" path="res://Scripts/DoorOpener.gd" id="3_7nxp3"]
+[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ijf"]
 render_priority = 0
 shader = ExtResource("2_b8mr1")
 shader_parameter/atlas_size = Vector2(0, 0)
 shader_parameter/highlight_amount = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_23q0k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7nxp3"]
+size = Vector3(1.0938721, 1.0317383, 17.408081)
 
 [sub_resource type="Sky" id="Sky_1i5qp"]
 
@@ -258,172 +264,136 @@ transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694,
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 2.1670227)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Map/Storage" unique_id=1650605527]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 0.15523028, -0.07203171, 2.1979742)
-operation = 2
-size = Vector3(1.0073223, 0.6801605, 0.5847397)
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Map/Storage" unique_id=1107578664]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 0.6900359, 0.24526533, 2.235101)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D" unique_id=1528120849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D" unique_id=636080404]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D" unique_id=1526742514]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D" unique_id=2058201195]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="Map/Storage" unique_id=1697790783]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.099516295, 0.024683097, 0, -0.024683097, 0.099516295, 0.6900359, 0.24677426, 2.2488697)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D2" unique_id=1208345549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 1.140625)
-size = Vector3(1.0602951, 0.03869629, 3.28125)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D2" unique_id=1032956051]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.37114e-08, 0, 0, 2.6645353e-15, 1, -4.6875596, -3.0994024, 1.3893967)
-size = Vector3(0.7319565, 0.03869629, 3.7788086)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D2" unique_id=1699755851]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.37114e-08, 0, 0, 2.6645353e-15, 1, -5.7389, -3.099402, 1.3178043)
-size = Vector3(0.7319565, 0.03869629, 3.63562)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D2" unique_id=256589176]
-transform = Transform3D(1, 0, 0, 0, 0.90971076, 0, 0, -2.682209e-07, 1.3640323, -5.217594, -2.749959, 1.4819641)
-size = Vector3(1.0602951, 0.03869629, 2.6529965)
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="Map/Storage" unique_id=847527854]
-transform = Transform3D(0.102531694, 0, 0, 0, -0.102531694, -8.963605e-09, 0, 8.963605e-09, -0.102531694, 0.15523028, 0.00819005, 2.6966226)
-operation = 2
-size = Vector3(1.0073223, 0.6801605, 0.5847397)
-
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="Map/Storage" unique_id=144376995]
-transform = Transform3D(0.102531694, 0, 0, 0, -0.102531694, -8.963605e-09, 0, 8.963605e-09, -0.102531694, 0.6900359, -0.3091072, 2.6594956)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D3" unique_id=154371362]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D3" unique_id=1253967740]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D3" unique_id=891985614]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D3" unique_id=1666915640]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
 [node name="CSGBox3D11" type="CSGBox3D" parent="Map/Storage" unique_id=156988330]
 transform = Transform3D(-4.4818025e-09, 0, 0.102531694, 0, 0.102531694, 0, -0.102531694, 0, -4.4818025e-09, 0.89712894, -0.030383458, 0.62070435)
 operation = 2
 size = Vector3(1.9928282, 2.0381927, 0.5847397)
-
-[node name="CSGMesh3D4" type="CSGMesh3D" parent="Map/Storage" unique_id=138555454]
-transform = Transform3D(-4.4818025e-09, 0, 0.102531694, 0, 0.102531694, 0, -0.102531694, 0, -4.4818025e-09, 1.138156, 0.2633589, 1.1081963)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D4" unique_id=1743367977]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, -0.29003906)
-size = Vector3(1.0602951, 0.03869629, 1.5800781)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D4" unique_id=1385895353]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, -0.3269043)
-size = Vector3(0.7319565, 0.03869629, 1.6538086)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D4" unique_id=56450237]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, -0.27978516)
-size = Vector3(0.7319565, 0.03869629, 1.5595703)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D4" unique_id=1612264577]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, -0.34423828)
-size = Vector3(1.0602951, 0.03869629, 1.6884766)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Map/Storage" unique_id=1188264661]
 transform = Transform3D(-4.4818025e-09, 8.963605e-09, -0.102531694, 0, -0.102531694, -8.963605e-09, -0.102531694, -3.9181158e-16, 4.4818025e-09, 1.47704, 0.026283607, 0.62324554)
 operation = 2
 size = Vector3(1.0073223, 0.6801605, 0.5847397)
 
-[node name="CSGMesh3D8" type="CSGMesh3D" parent="Map/Storage" unique_id=183538172]
-transform = Transform3D(-9.492487e-09, -0.07672161, -0.20114705, 8.343252e-10, 0.1836159, -0.08404678, 0.21799998, -4.0434593e-09, -8.436989e-09, 0.77700007, 0.507, 1.7670001)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8" unique_id=761121822]
-transform = Transform3D(1, 1.9184654e-13, 0, 3.5527137e-15, 1, 8.614586e-16, 3.5527137e-15, 7.178325e-16, 1, -5.217597, -3.2432854, -0.052808285)
-size = Vector3(1.0602951, 0.03869629, 1.3573151)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8" unique_id=165111148]
-transform = Transform3D(-4.3711385e-08, -1, 0, 1, -4.3711392e-08, 8.614586e-16, 2.4095483e-15, -3.5527137e-15, 1, -4.687562, -2.701711, -0.69228077)
-size = Vector3(1.1264095, 0.03869629, 1.8987274)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8" unique_id=1800465056]
-transform = Transform3D(-4.3711385e-08, -1, 0, 1, -4.3711392e-08, 8.614586e-16, 2.4095483e-15, -3.5527137e-15, 1, -5.738902, -2.708665, -0.70744705)
-size = Vector3(1.1118221, 0.03869629, 1.8618164)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8" unique_id=1962949297]
-transform = Transform3D(1, -4.6774176e-09, 1.9118076e-09, 4.420375e-09, 0.99306834, 0.11753738, -2.4482958e-09, -0.11753726, 0.9930686, -5.217597, -2.2917552, -0.44515896)
-size = Vector3(1.0602951, 0.03869629, 1.3480835)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8" unique_id=1917617928]
-transform = Transform3D(-5.982089e-08, -1, 4.1457113e-09, 0.9248843, -5.3751034e-08, 0.38024718, -0.38024768, 2.6581027e-08, 0.924885, -5.7414055, -3.0084138, -0.33254814)
-size = Vector3(1.1149931, 0.03869629, 1.5553589)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Map/Storage/CSGMesh3D8/CSGBox3D5" unique_id=1118569603]
-transform = Transform3D(-0.9987616, -0.011131279, -0.048509605, 0.012237402, -0.9996726, -0.022564692, -0.04824292, -0.023130368, 0.9985685, 0.017279953, -1.0595989, 0.023954868)
-size = Vector3(1.1149931, 0.03869629, 1.5553589)
-
-[node name="CSGMesh3D7" type="CSGMesh3D" parent="Map/Storage" unique_id=1631626498]
-transform = Transform3D(-1.0947718e-08, -1.739713e-08, 0.218, 1.9058165e-08, 0.19900002, 1.9058165e-08, -0.218, 1.7397138e-08, -1.0947718e-08, 1.5125532, 0.66052234, -0.5070861)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D7" unique_id=1196365277]
-transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -3.4574704, -0.5308838)
-size = Vector3(1.0602951, 0.03869629, 2.0617676)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D7" unique_id=1243829956]
-transform = Transform3D(-4.3711495e-08, -0.99999917, -3.5527137e-15, 0.9999974, -4.3711076e-08, 7.335026e-14, 9.026584e-16, -7.81597e-14, 0.99999917, -4.6875587, -2.9728804, -0.5325918)
-size = Vector3(0.9849968, 0.03869629, 2.0651855)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D7" unique_id=1940412545]
-transform = Transform3D(-4.3711395e-08, -0.99999917, 1.0658141e-14, 0.99999875, -4.3711246e-08, 7.3350255e-14, 9.026572e-16, -1.7763568e-14, 0.99999917, -5.738899, -2.9623208, -0.5308833)
-size = Vector3(1.006115, 0.03869629, 2.0617676)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D7" unique_id=97665054]
-transform = Transform3D(0.99999994, -7.1054274e-15, 3.5527137e-15, 0, 0.9999999, 9.401408e-15, 0, 3.0977905e-15, 0.99999994, -5.217594, -2.516275, -0.5344238)
-size = Vector3(1.0602951, 0.03869629, 2.0688477)
-
-[node name="CSGMesh3D6" type="CSGMesh3D" parent="Map/Storage" unique_id=18815462]
-transform = Transform3D(-4.4818025e-09, 8.963605e-09, -0.12046596, 0, -0.102531694, -1.0531468e-08, -0.102531694, -3.9181158e-16, 5.265734e-09, 2.5898964, -0.2910137, 0.087744534)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/CSGMesh3D6" unique_id=306047292]
-transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -3.4574704, -0.5308838)
-size = Vector3(1.0602951, 0.03869629, 2.0617676)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/CSGMesh3D6" unique_id=135232804]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, -1.6703743e-22, 1.9106853e-15, 0, 1, -4.6875596, -3.099401, -0.5325928)
-size = Vector3(0.7319565, 0.03869629, 2.0651855)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/CSGMesh3D6" unique_id=97704395]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, -1.6703743e-22, 1.9106853e-15, 0, 1, -5.7389, -3.099401, -0.5308838)
-size = Vector3(0.7319565, 0.03869629, 2.0617676)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/CSGMesh3D6" unique_id=980833116]
-transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -2.7334626, -0.5344238)
-size = Vector3(1.0602951, 0.03869629, 2.0688477)
-
 [node name="SpotLight3D" type="SpotLight3D" parent="Map/Storage" unique_id=1374297953]
 transform = Transform3D(0.102531694, 0, 0, 0, 0.005893199, 0.10236219, 0, -0.10236219, 0.005893199, -0.3903151, 0.0884684, 0)
 shadow_enabled = true
 spot_range = 6.0448413
 spot_angle = 35.370724
+
+[node name="Vents" type="CSGMesh3D" parent="Map/Storage" unique_id=505243937]
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Map/Storage/Vents" unique_id=1631626498]
+transform = Transform3D(-1.0947718e-08, -1.739713e-08, 0.218, 1.9058165e-08, 0.19900002, 1.9058165e-08, -0.218, 1.7397138e-08, -1.0947718e-08, 1.5125533, 0.66052234, -0.5070861)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D7" unique_id=1196365277]
+transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -3.4574704, -0.5308838)
+size = Vector3(1.0602951, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D7" unique_id=1243829956]
+transform = Transform3D(-4.3711495e-08, -0.99999917, -3.5527137e-15, 0.9999974, -4.3711076e-08, 7.335026e-14, 9.026584e-16, -7.81597e-14, 0.99999917, -4.6875587, -2.9728804, -0.5325918)
+size = Vector3(0.9849968, 0.03869629, 2.0651855)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D7" unique_id=1940412545]
+transform = Transform3D(-4.3711395e-08, -0.99999917, 1.0658141e-14, 0.99999875, -4.3711246e-08, 7.3350255e-14, 9.026572e-16, -1.7763568e-14, 0.99999917, -5.738899, -2.9623208, -0.5308833)
+size = Vector3(1.006115, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D7" unique_id=97665054]
+transform = Transform3D(0.99999994, -7.1054274e-15, 3.5527137e-15, 0, 0.9999999, 9.401408e-15, 0, 3.0977905e-15, 0.99999994, -5.217594, -2.516275, -0.5344238)
+size = Vector3(1.0602951, 0.03869629, 2.0688477)
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Map/Storage/Vents" unique_id=183538172]
+transform = Transform3D(-9.492487e-09, -0.076721616, -0.20114705, 8.343253e-10, 0.18361591, -0.08404678, 0.218, -4.0434593e-09, -8.436989e-09, 0.77700007, 0.507, 1.7670002)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8" unique_id=761121822]
+transform = Transform3D(1, 1.9184654e-13, 0, 3.5527137e-15, 1, 8.614586e-16, 3.5527137e-15, 7.178325e-16, 1, -5.217597, -3.2432854, -0.052808285)
+size = Vector3(1.0602951, 0.03869629, 1.3573151)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8" unique_id=165111148]
+transform = Transform3D(-4.3711385e-08, -1, 0, 1, -4.3711392e-08, 8.614586e-16, 2.4095483e-15, -3.5527137e-15, 1, -4.687562, -2.701711, -0.69228077)
+size = Vector3(1.1264095, 0.03869629, 1.8987274)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8" unique_id=1800465056]
+transform = Transform3D(-4.3711385e-08, -1, 0, 1, -4.3711392e-08, 8.614586e-16, 2.4095483e-15, -3.5527137e-15, 1, -5.738902, -2.708665, -0.70744705)
+size = Vector3(1.1118221, 0.03869629, 1.8618164)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8" unique_id=1962949297]
+transform = Transform3D(1, -4.6774176e-09, 1.9118076e-09, 4.420375e-09, 0.99306834, 0.11753738, -2.4482958e-09, -0.11753726, 0.9930686, -5.217597, -2.2917552, -0.44515896)
+size = Vector3(1.0602951, 0.03869629, 1.3480835)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8" unique_id=1917617928]
+transform = Transform3D(-5.982089e-08, -1, 4.1457113e-09, 0.9248843, -5.3751034e-08, 0.38024718, -0.38024768, 2.6581027e-08, 0.924885, -5.7414055, -3.0084138, -0.33254814)
+size = Vector3(1.1149931, 0.03869629, 1.5553589)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map/Storage/Vents/CSGMesh3D8/CSGBox3D5" unique_id=1118569603]
+transform = Transform3D(-0.9987616, -0.011131279, -0.048509605, 0.012237402, -0.9996726, -0.022564692, -0.04824292, -0.023130368, 0.9985685, 0.017279953, -1.0595989, 0.023954868)
+size = Vector3(1.1149931, 0.03869629, 1.5553589)
+
+[node name="RampVent" type="CSGMesh3D" parent="Map/Storage/Vents" unique_id=1770378280]
+transform = Transform3D(0.218, -1.7397145e-08, 1.0483717e-09, 1.5784462e-08, 0.17223664, 0.080694616, -1.0773921e-08, -0.09967749, 0.13943537, 1.409396, 0.52758807, 2.2073014)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/Vents/RampVent" unique_id=1530844678]
+transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -3.4574704, -0.5308838)
+size = Vector3(1.0602951, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/Vents/RampVent" unique_id=894435804]
+transform = Transform3D(-4.3711495e-08, -0.99999917, -3.5527137e-15, 0.9999974, -4.3711076e-08, 7.335026e-14, 9.026584e-16, -7.81597e-14, 0.99999917, -4.6875587, -2.9728804, -0.5325918)
+size = Vector3(0.9849968, 0.03869629, 2.0651855)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/Vents/RampVent" unique_id=745088206]
+transform = Transform3D(-4.3711395e-08, -0.99999917, 1.0658141e-14, 0.99999875, -4.3711246e-08, 7.3350255e-14, 9.026572e-16, -1.7763568e-14, 0.99999917, -5.738899, -2.9623208, -0.5308833)
+size = Vector3(1.006115, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/Vents/RampVent" unique_id=1736876047]
+transform = Transform3D(0.9999999, -5.3290705e-15, -4.440892e-13, 1.0125234e-13, 0.9999999, 2.9802322e-08, -2.060574e-13, -5.9604645e-08, 0.9999999, -5.217596, -2.5162756, -0.16674614)
+size = Vector3(1.0602951, 0.03869629, 1.9912109)
+
+[node name="StraightVent3" type="CSGMesh3D" parent="Map/Storage/Vents" unique_id=1847180889]
+transform = Transform3D(0.218, -1.7397145e-08, 2.621696e-10, 1.9058167e-08, 0.19900002, 3.522027e-09, -1.4186362e-09, -1.7397136e-08, 0.040287297, 1.409396, 0.5012493, 2.2279007)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent3" unique_id=1727438264]
+transform = Transform3D(1, -4.2113245e-14, 5.551115e-16, -3.972807e-13, 0.9999947, -1.3322676e-13, 1.7763568e-13, -7.1054274e-13, 0.9999993, -5.217594, -3.4574685, 1.2689056)
+size = Vector3(1.0602951, 0.03869629, 4.555725)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent3" unique_id=230864401]
+transform = Transform3D(-4.3712014e-08, -0.9999992, -2.7755576e-15, 0.9999891, -4.371107e-08, -6.57252e-14, -8.81073e-13, -8.881784e-14, 0.99999845, -4.6875596, -2.972879, 1.6260452)
+size = Vector3(0.9849968, 0.03869629, 5.32547)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent3" unique_id=1906735895]
+transform = Transform3D(-4.3712156e-08, -0.9999992, 1.1435297e-14, 0.9999873, -4.3711225e-08, -1.1901591e-13, -1.1368684e-12, -2.1316282e-14, 0.99999845, -5.7389, -2.962318, 1.6406364)
+size = Vector3(1.006115, 0.03869629, 5.461334)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent3" unique_id=2080408363]
+transform = Transform3D(0.9999999, -4.9218676e-14, 4.107825e-15, -1.200194e-12, 0.99998385, -4.121148e-13, 0, -1.7053026e-12, 0.9999993, -5.217596, -2.5162723, 0.33834076)
+size = Vector3(1.0602951, 0.03869629, 2.6917725)
+
+[node name="VentWallRemover" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent3" unique_id=1453323732]
+transform = Transform3D(0.47031754, -4.1116586e-08, 3.0605922e-09, -4.504143e-08, -0.5152072, 1.3855583e-13, 3.0605367e-09, 7.6738615e-13, -0.47031733, -5.207377, -2.9911265, -1.001442)
+operation = 2
+size = Vector3(2.121765, 1.7160015, 1.6655912)
+
+[node name="StraightVent" type="CSGMesh3D" parent="Map/Storage/Vents" unique_id=1770940010]
+transform = Transform3D(0.218, -1.7397145e-08, 2.621696e-10, 1.9058167e-08, 0.19900002, 3.522027e-09, -1.4186362e-09, -1.7397136e-08, 0.040287297, 1.409396, 0.66052234, 2.6803074)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent" unique_id=527423146]
+transform = Transform3D(1, 0, 0, 0, 1, -1.6703743e-22, 0, -1.6703741e-22, 1, -5.217594, -3.4574704, -0.5308838)
+size = Vector3(1.0602951, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent" unique_id=808646463]
+transform = Transform3D(-4.371153e-08, -0.9999992, -2.7755576e-15, 0.99999547, -4.371107e-08, 4.2632564e-14, -3.126388e-13, -8.881784e-14, 0.99999845, -4.6875596, -2.97288, -2.033615)
+size = Vector3(0.9849968, 0.03869629, 5.0672607)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent" unique_id=1164867374]
+transform = Transform3D(-4.3711616e-08, -0.9999992, 1.1435297e-14, 0.99999404, -4.3711225e-08, -5.3290705e-15, -5.400125e-13, -2.1316282e-14, 0.99999845, -5.7389, -2.9623199, -1.7356415)
+size = Vector3(1.006115, 0.03869629, 4.4713135)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent" unique_id=1129110480]
+transform = Transform3D(0.9999999, -2.7902388e-14, 4.107825e-15, -1.4859075e-13, 0.999998, -3.375078e-14, 0, -2.2737368e-13, 0.9999993, -5.217596, -2.5162742, -2.2908783)
+size = Vector3(1.0602951, 0.03869629, 5.581787)
+
+[node name="VentWallRemover" type="CSGBox3D" parent="Map/Storage/Vents/StraightVent" unique_id=1557195935]
+transform = Transform3D(0.47031754, -4.11166e-08, 3.0605922e-09, -4.504143e-08, -0.5152075, 1.2789769e-13, 3.0605367e-09, 7.531753e-13, -0.47031733, -5.2073774, -2.96741, 0.61592865)
+operation = 2
+size = Vector3(2.121765, 1.6239309, 0.8487606)
 
 [node name="Lobby" type="CSGMesh3D" parent="Map" unique_id=1864456493]
 transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
@@ -672,164 +642,166 @@ size = Vector3(0.27093506, 0.011230469, 1.294565)
 transform = Transform3D(1, -5.960263e-22, -4.2351647e-22, -1.5560886e-12, 1, 1.4210855e-14, -1.3309005e-19, 0, 1.0000001, -9.685755e-08, -3.3081672, -1.319478)
 size = Vector3(0.27093506, 0.011230469, 1.3073257)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Map/Vip" unique_id=1929513008]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 2.4822397, 0.08134248, 3.9431083)
+[node name="Vents" type="CSGMesh3D" parent="Map/Vip" unique_id=1686854497]
+
+[node name="StraightVent3" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=102171097]
+transform = Transform3D(0.218, -1.7397145e-08, 2.621696e-10, 1.9058167e-08, 0.19900002, 3.522027e-09, -1.4186362e-09, -1.7397136e-08, 0.040287297, 1.915648, 0.6753438, 4.1113195)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent3" unique_id=1835720449]
+transform = Transform3D(1, -1.6290552e-13, 5.551115e-16, -2.1381104e-12, 0.9999706, -7.7982065e-13, 9.734435e-13, -2.927436e-12, 0.9999993, -5.217594, -3.4574661, 20.300255)
+size = Vector3(1.0602951, 0.03869629, 42.711685)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent3" unique_id=627403050]
+transform = Transform3D(-4.3713264e-08, -0.9999992, -2.7755576e-15, 0.9999713, -4.371107e-08, -3.7125858e-13, -2.3590019e-12, -8.881784e-14, 0.99999845, -4.6875596, -2.9728775, 17.452362)
+size = Vector3(0.9849968, 0.03869629, 36.978153)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent3" unique_id=1234653626]
+transform = Transform3D(-4.3713e-08, -0.9999992, 1.1435297e-14, 0.9999767, -4.3711225e-08, -3.002043e-13, -2.4726887e-12, -2.1316282e-14, 0.99999845, -5.7389, -2.962317, 20.26384)
+size = Vector3(1.006115, 0.03869629, 42.7078)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent3" unique_id=1042039509]
+transform = Transform3D(0.9999999, -1.7001095e-13, 4.107825e-15, -2.180743e-12, 0.9999707, -7.6383344e-13, 0, -2.927436e-12, 0.9999993, -5.217598, -2.5162706, 20.307861)
+size = Vector3(1.0602951, 0.03869629, 42.63083)
+
+[node name="StraightVent4" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=1064413386]
+transform = Transform3D(6.8354344e-09, 1.7397136e-08, -0.040287297, 1.9058165e-08, 0.19900002, 3.5220258e-09, 0.218, -1.7397147e-08, 1.2302656e-09, 2.1022816, 0.6753439, 6.808086)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent4" unique_id=1129428901]
+transform = Transform3D(1, -2.4868996e-13, -2.4868996e-14, -3.0127012e-12, 0.99996465, -8.8694254e-13, 9.521273e-13, -4.3052176e-12, 0.9999993, -5.217594, -3.4574647, 16.915737)
+size = Vector3(1.0602951, 0.03869629, 37.853275)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent4" unique_id=726622985]
+transform = Transform3D(-4.3713428e-08, -0.9999992, -3.1086245e-15, 0.9999713, -4.3709775e-08, -2.296905e-13, -4.369478e-12, -8.526513e-14, 0.99999845, -4.687559, -2.972877, 16.98816)
+size = Vector3(0.9849968, 0.03869629, 37.758118)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent4" unique_id=807850906]
+transform = Transform3D(-4.3714223e-08, -0.9999992, 1.110223e-14, 0.99995863, -4.3709065e-08, -3.0074478e-13, -8.746421e-12, -1.4210855e-14, 0.99999845, -5.738901, -2.962315, 14.093388)
+size = Vector3(1.006115, 0.03869629, 31.995989)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent4" unique_id=2103220082]
+transform = Transform3D(0.9999999, -3.8369308e-13, -5.2846616e-14, -4.2277293e-12, 0.9999572, -1.0148402e-12, 0, -6.038942e-12, 0.9999993, -5.217598, -2.5162706, 14.171448)
+size = Vector3(1.0602951, 0.03869629, 32.099148)
+
+[node name="StraightVent5" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=664262325]
+transform = Transform3D(-1.0947718e-08, -1.7397136e-08, 0.040287297, 1.9058167e-08, 0.19900002, 3.522027e-09, -0.218, 1.7397147e-08, -2.0231836e-09, 2.9943256, 0.6753439, 4.371382)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent5" unique_id=239626586]
+transform = Transform3D(1, 6.963319e-13, 4.440892e-15, -3.858247e-12, 0.99994797, -1.2194696e-12, 9.947598e-13, -3.489133e-12, 0.9999993, -5.217594, -3.457462, 5.5361404)
+size = Vector3(1.0602951, 0.03869629, 13.954552)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent5" unique_id=654476347]
+transform = Transform3D(-4.3712653e-08, -0.9999992, -2.6645353e-15, 0.9999492, -4.3710024e-08, -3.7214738e-13, -5.831592e-12, -1.1368684e-13, 0.99999845, -4.687559, -2.9728746, 5.6427917)
+size = Vector3(0.9849968, 0.03869629, 13.894541)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent5" unique_id=2005524191]
+transform = Transform3D(-4.3712525e-08, -0.9999992, 1.15463195e-14, 0.99996096, -4.3710024e-08, -3.010931e-13, -5.0926277e-12, -5.684342e-14, 0.99999845, -5.738899, -2.962314, 8.4145355)
+size = Vector3(1.006115, 0.03869629, 19.648607)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent5" unique_id=1185447922]
+transform = Transform3D(0.9999999, 5.968559e-13, 4.440892e-15, -3.7800874e-12, 0.9999505, -1.1590735e-12, 1.1368684e-13, -3.4607115e-12, 0.9999993, -5.217598, -2.5162694, 8.345718)
+size = Vector3(1.0602951, 0.03869629, 19.504972)
+
+[node name="StraightVent6" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=839672959]
+transform = Transform3D(0.218, -1.7397149e-08, 2.9912792e-09, 1.9058165e-08, 0.19900002, 3.5220258e-09, -1.6364519e-08, -1.7397136e-08, 0.040287297, 4.7482615, 0.6753439, 4.184747)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent6" unique_id=1966037907]
+transform = Transform3D(1, -4.7724395e-13, -1.3322676e-14, -4.284489e-12, 0.999956, -8.721912e-13, 9.379164e-13, -5.002221e-12, 0.9999993, -5.217594, -3.4574625, 31.194443)
+size = Vector3(1.0602951, 0.03869629, 9.295776)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent6" unique_id=1699554477]
+transform = Transform3D(-4.3713918e-08, -0.9999992, -2.6645353e-15, 0.9999624, -4.3709065e-08, -4.3698378e-13, -8.498091e-12, -5.684342e-14, 0.99999845, -4.687559, -2.9728765, 30.828278)
+size = Vector3(0.9849968, 0.03869629, 10.077782)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent6" unique_id=2017615220]
+transform = Transform3D(-4.371524e-08, -0.9999992, 1.0658141e-14, 0.9999458, -4.3709065e-08, -5.631051e-13, -1.4011903e-11, 0, 0.99999845, -5.738901, -2.9623127, 27.817368)
+size = Vector3(1.006115, 0.03869629, 4.5479603)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent6" unique_id=387379640]
+transform = Transform3D(0.9999999, -7.117231e-13, -3.907985e-14, -5.9897916e-12, 0.99994546, -9.929835e-13, 0, -6.849632e-12, 0.9999993, -5.2159424, -2.5222085, 29.532257)
+size = Vector3(1.0602951, 0.03869629, 1.7131228)
+
+[node name="RampVent" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=1022604175]
+transform = Transform3D(-0.218, 2.6111227e-08, -1.3238198e-08, 1.5784462e-08, 0.17223664, 0.080694616, 2.9832087e-08, 0.09967749, -0.13943537, 2.476404, 0.7124865, 5.413143)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/RampVent" unique_id=480365973]
+transform = Transform3D(1, -1.4210855e-14, 0, -7.1054274e-14, 1, 2.9802322e-08, -2.842171e-14, -5.9604645e-08, 1, -5.2175903, -3.45747, -0.70178604)
+size = Vector3(1.0602951, 0.03869629, 2.1650467)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/RampVent" unique_id=1450833754]
+transform = Transform3D(-4.3711495e-08, -0.99999917, -3.5527137e-15, 0.9999974, -4.3711076e-08, 7.335026e-14, 9.026584e-16, -7.81597e-14, 0.99999917, -4.6875587, -2.9728804, -0.5325918)
+size = Vector3(0.9849968, 0.03869629, 2.0651855)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/RampVent" unique_id=1223904050]
+transform = Transform3D(-4.3711395e-08, -0.99999917, 1.0658141e-14, 0.99999875, -4.3711246e-08, 7.3350255e-14, 9.026572e-16, -1.7763568e-14, 0.99999917, -5.738899, -2.9623208, -0.5308833)
+size = Vector3(1.006115, 0.03869629, 2.0617676)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/RampVent" unique_id=1153245871]
+transform = Transform3D(0.9999999, 0, -5.3290705e-13, 4.7606363e-13, 0.9999999, 2.9802322e-08, -4.689582e-13, -5.9604645e-08, 0.9999999, -5.2175922, -2.5162745, -0.2397461)
+size = Vector3(1.0602951, 0.03869629, 2.137207)
+
+[node name="StraightVent7" type="CSGMesh3D" parent="Map/Vip/Vents" unique_id=200112799]
+transform = Transform3D(0.218, -1.7397149e-08, 2.9912792e-09, 1.9058165e-08, 0.19900002, 3.5220258e-09, -1.6364519e-08, -1.7397136e-08, 0.040287297, 4.7482615, 0.83483624, 3.8152425)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent7" unique_id=1896217508]
+transform = Transform3D(1, -8.538317e-13, -1.3322676e-14, -6.892181e-12, 0.9999382, -8.721912e-13, 9.379164e-13, -6.849632e-12, 0.9999993, -5.217594, -3.4574585, 29.024445)
+size = Vector3(1.0602951, 0.03869629, 1.6621361)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent7" unique_id=1199501853]
+transform = Transform3D(-4.371403e-08, -0.9999992, -2.6645353e-15, 0.99996096, -4.3709065e-08, -4.618528e-13, -9.094947e-12, -5.684342e-14, 0.99999845, -4.687559, -2.972876, 31.954895)
+size = Vector3(0.9849968, 0.03869629, 7.8245354)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent7" unique_id=80455843]
+transform = Transform3D(-4.3715644e-08, -0.9999992, 1.0658141e-14, 0.9999407, -4.3709065e-08, -6.554757e-13, -1.6257218e-11, 0, 0.99999845, -5.738901, -2.9623108, 30.462242)
+size = Vector3(1.006115, 0.03869629, 4.8274198)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vents/StraightVent7" unique_id=2097670155]
+transform = Transform3D(0.9999999, -8.183045e-13, -3.907985e-14, -6.529804e-12, 0.9999419, -9.929835e-13, 0, -7.247536e-12, 0.9999993, -5.2159424, -2.5222068, 30.091911)
+size = Vector3(1.0602951, 0.03869629, 4.149228)
+
+[node name="DoorWallRemover" type="CSGBox3D" parent="Map/Vip" unique_id=1929513008]
+transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 2.4996388, 0.08134248, 3.9431083)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Map/Vip" unique_id=456413457]
+[node name="DoorWallRemover2" type="CSGBox3D" parent="Map/Vip" unique_id=456413457]
 transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 2.4822397, 0.08134248, 5.2385473)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="Map/Vip" unique_id=1497498318]
+[node name="DoorWallRemover3" type="CSGBox3D" parent="Map/Vip" unique_id=1497498318]
 transform = Transform3D(-4.4818025e-09, 0, -0.102531694, 0, 0.102531694, 0, 0.102531694, 0, -4.4818025e-09, 2.037896, 0.08134248, 4.599594)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Map/Vip" unique_id=624027261]
+[node name="DoorWallRemover4" type="CSGBox3D" parent="Map/Vip" unique_id=624027261]
 transform = Transform3D(-4.4818025e-09, 0, -0.102531694, 0, 0.102531694, 0, 0.102531694, 0, -4.4818025e-09, 2.999991, 0.08134248, 4.599594)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Map/Vip" unique_id=1474095015]
+[node name="DoorWallRemover5" type="CSGBox3D" parent="Map/Vip" unique_id=1474095015]
 transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 2.5283282, 0.08134248, 2.660889)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Map/Vip" unique_id=957406839]
-transform = Transform3D(-0.102531694, 7.8362316e-16, -8.963605e-09, 0, -0.102531694, -8.963605e-09, -8.963605e-09, -8.963605e-09, 0.102531694, 0.6900359, 0.008190048, 4.0795565)
+[node name="VentWallRemover" type="CSGBox3D" parent="Map/Vip" unique_id=347758893]
+transform = Transform3D(0.10252923, -2.8194168e-13, -7.396414e-10, 1.4280295e-13, -0.10252621, -1.6564421e-09, -7.573219e-09, 8.963159e-09, -0.018947816, 3.613054, 0.23960198, 4.941347)
 operation = 2
-size = Vector3(1.0073223, 0.6801605, 0.5847397)
+size = Vector3(2.121765, 1.7160015, 1.6655912)
 
-[node name="CSGMesh3D3" type="CSGMesh3D" parent="Map/Vip" unique_id=2073647944]
-transform = Transform3D(-0.102531694, 7.8362316e-16, -8.963605e-09, 0, -0.102531694, -8.963605e-09, -8.963605e-09, -8.963605e-09, 0.102531694, 0.15523024, -0.3091072, 4.1166835)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/CSGMesh3D3" unique_id=386124616]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/CSGMesh3D3" unique_id=741529544]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/CSGMesh3D3" unique_id=1449111273]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/CSGMesh3D3" unique_id=1515325606]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="Map/Vip" unique_id=1837556645]
-transform = Transform3D(1.0694889e-08, 8.963605e-09, -0.102531694, 1.443046e-16, -0.102531716, -8.963605e-09, -0.102531694, 9.106646e-16, -1.0694889e-08, 2.161114, 0.07150598, 5.8741603)
+[node name="VentWallRemover2" type="CSGBox3D" parent="Map/Vip" unique_id=1113017019]
+transform = Transform3D(-5.025604e-09, 8.963161e-09, -0.018947816, 1.4498857e-13, -0.10252624, -1.6564425e-09, -0.10252923, 2.8121315e-13, 2.8432928e-10, 2.9440148, 0.080109544, 5.5065913)
 operation = 2
-size = Vector3(1.9928282, 2.0381927, 0.5847397)
+size = Vector3(2.121765, 1.7160015, 2.7175612)
 
-[node name="Vent" type="CSGMesh3D" parent="Map/Vip" unique_id=680043138]
-transform = Transform3D(1.0694889e-08, 8.963605e-09, -0.102531694, 1.443046e-16, -0.102531716, -8.963605e-09, -0.102531694, 9.106646e-16, -1.0694889e-08, 2.1239872, -0.3091072, 5.2138286)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/Vent" unique_id=1135705046]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371157e-08, -8.043712e-22, 2.5459727e-15, 0, 1, -5.410137, -3.6963837, 0)
-size = Vector3(2.1165829, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/Vent" unique_id=776731782]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.3711577e-08, -8.043712e-22, 2.5459727e-15, 0, 1, -7.4783936, -3.7059662, 9.536743e-06)
-size = Vector3(2.0935116, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/Vent" unique_id=1898576437]
-transform = Transform3D(1, 0, 0, -8.4703295e-22, 1, -8.043712e-22, 0, -9.264426e-22, 1, -6.4542007, -2.6710267, 0)
-size = Vector3(2.0678082, 0.03869629, 1)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/Vent" unique_id=623860575]
-transform = Transform3D(1, 0, 0, -8.4703295e-22, 1, -8.043712e-22, 0, -9.264426e-22, 1, -6.441139, -4.7365274, 1.1444092e-05)
-size = Vector3(2.041378, 0.03869629, 1)
-
-[node name="CSGMesh3D6" type="CSGMesh3D" parent="Map/Vip" unique_id=1184577407]
-transform = Transform3D(-1.7312853e-09, -8.963605e-09, 0.102531694, 1.4430472e-16, -0.102531716, -8.963605e-09, 0.102531694, -1.2704119e-16, 1.7312853e-09, 2.983411, -0.3091072, 5.887102)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/CSGMesh3D6" unique_id=1273732287]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/CSGMesh3D6" unique_id=1607908864]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/CSGMesh3D6" unique_id=1093740158]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/CSGMesh3D6" unique_id=597631491]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="Map/Vip" unique_id=1474003933]
-transform = Transform3D(-1.7312853e-09, -8.963605e-09, 0.102531694, 1.4430472e-16, -0.102531716, -8.963605e-09, 0.102531694, -1.2704119e-16, 1.7312853e-09, 2.9462848, 0.07514586, 5.335477)
+[node name="VentWallRemover3" type="CSGBox3D" parent="Map/Vip" unique_id=77457395]
+transform = Transform3D(3.0915237e-09, -8.963131e-09, 0.018947816, 1.4134589e-13, -0.10252579, -1.6564411e-09, 0.10252923, -3.0816886e-13, 8.8593854e-11, 2.1887686, 0.08010974, 5.6728783)
 operation = 2
-size = Vector3(1.9928282, 2.0381927, 0.5847397)
+size = Vector3(2.121765, 1.7160015, 2.7294471)
 
-[node name="CSGMesh3D7" type="CSGMesh3D" parent="Map/Vip" unique_id=1648073255]
-transform = Transform3D(-1.7312853e-09, -8.963605e-09, 0.102531694, 1.4430472e-16, -0.102531716, -8.963605e-09, 0.102531694, -1.2704119e-16, 1.7312853e-09, 2.983411, -0.3091072, 5.887102)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/CSGMesh3D7" unique_id=1648670192]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/CSGMesh3D7" unique_id=317234532]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/CSGMesh3D7" unique_id=1102746952]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/CSGMesh3D7" unique_id=1973290371]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D20" type="CSGBox3D" parent="Map/Vip" unique_id=2025254720]
-transform = Transform3D(-0.102531694, 5.188528e-16, -6.213087e-09, 1.4430472e-16, -0.102531716, -8.963605e-09, -6.213087e-09, -8.963605e-09, 0.102531694, 3.651214, 0.22305527, 4.9606624)
+[node name="VentWallRemover4" type="CSGBox3D" parent="Map/Vip" unique_id=1120596946]
+transform = Transform3D(0.10252923, -2.8194168e-13, 5.4390625e-10, 1.4498857e-13, -0.10252624, -1.6564425e-09, -5.4390803e-10, 8.96316e-09, -0.018947816, 0.78044, 0.080109484, 4.0709743)
 operation = 2
-size = Vector3(1.9928282, 2.0381927, 0.5847397)
-
-[node name="CSGMesh3D8" type="CSGMesh3D" parent="Map/Vip" unique_id=1944172168]
-transform = Transform3D(-0.102531694, 5.188528e-16, -6.213087e-09, 1.4430472e-16, -0.102531716, -8.963605e-09, -6.213087e-09, -8.963605e-09, 0.102531694, 3.021686, -0.07037425, 4.9977894)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/CSGMesh3D8" unique_id=189092224]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/CSGMesh3D8" unique_id=2019863330]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/CSGMesh3D8" unique_id=126058284]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/CSGMesh3D8" unique_id=268659089]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGMesh3D9" type="CSGMesh3D" parent="Map/Vip" unique_id=1555408419]
-transform = Transform3D(-0.102531694, 5.188528e-16, -6.213087e-09, 1.4430472e-16, -0.102531716, -8.963605e-09, -6.213087e-09, -8.963605e-09, 0.102531694, 3.021686, -0.07037425, 4.9977894)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Map/Vip/CSGMesh3D9" unique_id=212075611]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -3.4574704, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Map/Vip/CSGMesh3D9" unique_id=1857466276]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6875596, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Map/Vip/CSGMesh3D9" unique_id=1881394451]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.7389, -3.099401, 0)
-size = Vector3(0.7319565, 0.03869629, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Map/Vip/CSGMesh3D9" unique_id=1746028507]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.217594, -2.7334626, 0)
-size = Vector3(1.0602951, 0.03869629, 1)
+size = Vector3(2.121765, 1.7160015, 1.6655912)
 
 [node name="Staff" type="CSGMesh3D" parent="Map" unique_id=959862580]
 transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0.001033783, 0, -0.00310421)
@@ -1336,11 +1308,25 @@ transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694,
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
 
+[node name="DoorsVents" type="Node" parent="Map" unique_id=480967721]
+
+[node name="Door" type="MeshInstance3D" parent="Map/DoorsVents" unique_id=1551278635]
+transform = Transform3D(1.5186901, 0, 0, 0, 2.2490845, 0, 0, 0, 0.08602452, -5.758004, -2.5121748, 3.8843982)
+mesh = SubResource("BoxMesh_23q0k")
+
+[node name="Area3D" type="Area3D" parent="Map/DoorsVents/Door" unique_id=1916773970]
+script = ExtResource("3_7nxp3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/DoorsVents/Door/Area3D" unique_id=437283997]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.0073850155, 0.01586914, 0.5717163)
+shape = SubResource("BoxShape3D_7nxp3")
+debug_color = Color(0, 0.591099, 0.7421073, 0.41960785)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1446552579]
 environment = SubResource("Environment_1i5qp")
 
 [node name="Player" parent="." unique_id=818413224 instance=ExtResource("1_1i5qp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.269453, 1.0402217, 6.272119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.709811, 1.0402217, 6.272119)
 
 [node name="TestCardboardFella" type="Sprite3D" parent="." unique_id=757623143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7078, 1.107768, 0.6681595)

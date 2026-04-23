@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5s1q8wvituvn"
-path.s3tc="res://.godot/imported/iLoveTestingCutout.png-892e0e438ae53c0f4710f814d7d5760f.s3tc.ctex"
+path.s3tc="res://.godot/imported/iLoveTestingCutout.png-18430532901cc5696691384ad4e398f3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png"
-dest_files=["res://.godot/imported/iLoveTestingCutout.png-892e0e438ae53c0f4710f814d7d5760f.s3tc.ctex"]
+source_file="res://Sprites/iLoveTestingCutout.png"
+dest_files=["res://.godot/imported/iLoveTestingCutout.png-18430532901cc5696691384ad4e398f3.s3tc.ctex"]
 
 [params]
 
