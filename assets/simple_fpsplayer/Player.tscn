@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dgpjxoygnvyy4"]
 
-[ext_resource type="Script" uid="uid://dqv31vp8jkp7a" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
-[ext_resource type="PackedScene" uid="uid://bi2dng2ui1qyr" path="res://Chipper Chips Captive Casino Main/Scenes/HUD.tscn" id="2_7xlnr"]
-[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper Chips Captive Casino Main/Sprites/iLoveTestingCutout.png" id="2_ckusu"]
-[ext_resource type="Script" uid="uid://yguvjfk2srxr" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
-[ext_resource type="Texture2D" uid="uid://dmo07y4qr38ah" path="res://Chipper Chips Captive Casino Main/Sprites/OtherFlash.png" id="3_n2yuy"]
+[ext_resource type="Script" uid="uid://dqv31vp8jkp7a" path="res://assets/simple_fpsplayer/Player.gd" id="1_1fhis"]
+[ext_resource type="PackedScene" uid="uid://bi2dng2ui1qyr" path="res://Scenes/HUD.tscn" id="2_7xlnr"]
+[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="2_ckusu"]
+[ext_resource type="Script" uid="uid://yguvjfk2srxr" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
+[ext_resource type="Texture2D" uid="uid://dmo07y4qr38ah" path="res://Sprites/OtherFlash.png" id="3_n2yuy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 height = 2.0283203

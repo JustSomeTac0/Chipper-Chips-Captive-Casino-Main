@@ -8,7 +8,7 @@ const DEACCEL = 30
 var SPEED = 8.5
 const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
-const MOUSE_SENSITIVITY = 0.7
+const MOUSE_SENSITIVITY = 0.3
 var weight = 2
 var regenTime = 0.1 #base Stamina Regen time
 

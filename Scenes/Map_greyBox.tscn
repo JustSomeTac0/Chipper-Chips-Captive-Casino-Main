@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
 [ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Materials/Test.tres" id="1_pegwi"]
 [ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Shaders/CoolReflective.gdshader" id="2_b8mr1"]
+[ext_resource type="Script" uid="uid://c0wg823q3dwb1" path="res://Scripts/DoorOpener.gd" id="3_7nxp3"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ijf"]
@@ -10,6 +11,11 @@ render_priority = 0
 shader = ExtResource("2_b8mr1")
 shader_parameter/atlas_size = Vector2(0, 0)
 shader_parameter/highlight_amount = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_23q0k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7nxp3"]
+size = Vector3(1.0938721, 1.0317383, 17.408081)
 
 [sub_resource type="Sky" id="Sky_1i5qp"]
 
@@ -1301,6 +1307,20 @@ size = Vector3(1.5095825, 2.2525635, 1.9038391)
 transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 5.4850907, 0.08134248, 4.064092)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 1.9038391)
+
+[node name="DoorsVents" type="Node" parent="Map" unique_id=480967721]
+
+[node name="Door" type="MeshInstance3D" parent="Map/DoorsVents" unique_id=1551278635]
+transform = Transform3D(1.5186901, 0, 0, 0, 2.2490845, 0, 0, 0, 0.08602452, -5.758004, -2.5121748, 3.8843982)
+mesh = SubResource("BoxMesh_23q0k")
+
+[node name="Area3D" type="Area3D" parent="Map/DoorsVents/Door" unique_id=1916773970]
+script = ExtResource("3_7nxp3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/DoorsVents/Door/Area3D" unique_id=437283997]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.0073850155, 0.01586914, 0.5717163)
+shape = SubResource("BoxShape3D_7nxp3")
+debug_color = Color(0, 0.591099, 0.7421073, 0.41960785)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1446552579]
 environment = SubResource("Environment_1i5qp")
