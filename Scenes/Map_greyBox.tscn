@@ -34,6 +34,7 @@ fog_enabled = true
 fog_light_color = Color(0.00967607, 0, 0.14160633, 1)
 
 [node name="Map" type="Node3D" unique_id=841301764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.486931, 0, 4.864298)
 
 [node name="Map" type="Node" parent="." unique_id=64800920]
 

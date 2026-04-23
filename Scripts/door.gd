@@ -16,4 +16,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	$".".rotate(Vector3.ZERO, 90)
+	$".".rotation = Vector3(0, 180, 0)
+	print("aaa")
