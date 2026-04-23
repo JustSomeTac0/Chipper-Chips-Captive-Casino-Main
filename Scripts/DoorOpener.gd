@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 	
 
-func _on_area_3d_body_entered(body: CharacterBody3D) -> void:
+func _on_area_3d_body_entered(body: CharacterBody3D) -> void:   #$putpathhere.set_rotation_degrees(Vector3(xVaule,yVaule,zVaule))
 	print("aaaaaaaaaaa")
 
 
