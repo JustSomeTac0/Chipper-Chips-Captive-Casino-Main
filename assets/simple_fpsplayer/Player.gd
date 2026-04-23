@@ -182,3 +182,5 @@ func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen T
 			stamina += 1
 			staminaChanged.emit()
 			waitfForTimer = false
+			
+			
