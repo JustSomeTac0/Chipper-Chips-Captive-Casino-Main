@@ -24,6 +24,7 @@ var waitfForTimer = false
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
 var stamina: int = 100 #PULL
+var maxStamina
 var sprinting: bool = false
 var StaminaRegenTimer
 
@@ -40,6 +41,10 @@ func _ready():
 	flashlight = $rotation_helper/Camera3D/flashlight_player
 	hitbox = $body
 	StaminaRegenTimer = $StaminaRegenTimer
+	maxStamina = $Hud/CanvasLayer/TextureProgressBar.max_value
+	
+	
+	print(maxStamina)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -173,6 +178,7 @@ func _physics_process(delta):
 
 func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen Timer call StaminaRegenTimer.start(regenTime) to start it
 	if not Input.is_key_pressed(KEY_SHIFT):
-		stamina += 1
-		staminaChanged.emit()
-		waitfForTimer = false
+		if not self.stamina >= maxStamina:
+			stamina += 1
+			staminaChanged.emit()
+			waitfForTimer = false
