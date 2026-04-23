@@ -1326,7 +1326,7 @@ debug_color = Color(0, 0.591099, 0.7421073, 0.41960785)
 environment = SubResource("Environment_1i5qp")
 
 [node name="Player" parent="." unique_id=818413224 instance=ExtResource("1_1i5qp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.269453, 1.0402217, 6.272119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.709811, 1.0402217, 6.272119)
 
 [node name="TestCardboardFella" type="Sprite3D" parent="." unique_id=757623143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7078, 1.107768, 0.6681595)

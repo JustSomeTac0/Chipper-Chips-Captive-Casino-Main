@@ -10,9 +10,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-	
-func _on_character_body_3d_body_entered(body: Node3D) -> void:
-	print("dsaghhjdgsjk")
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_area_3d_body_entered(body: CharacterBody3D) -> void:
 	print("aaaaaaaaaaa")
+
+
+func _on_area_3d_body_exited(body: CharacterBody3D) -> void:
+	print("bbbbbbbbbbbbbbb")

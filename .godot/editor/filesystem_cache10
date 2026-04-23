@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776960674
+::res://::1776961108
 ::res://assets/::1776790915
-::res://assets/simple_fpsplayer/::1776960367
+::res://assets/simple_fpsplayer/::1776960817
 ability_grab.gd::GDScript::1698170836289804579::1776790913::0::1::::<>RayCast3D<><>0<>0<><>::
-Player.gd::GDScript::8327383116236291644::1776960367::0::1::::<>CharacterBody3D<><>0<>0<><>::
-Player.tscn::PackedScene::7611949078106151781::1776960367::0::1::::<><><>0<>0<><>::uid://dqv31vp8jkp7a::::res://assets/simple_fpsplayer/Player.gd<>uid://bi2dng2ui1qyr::::res://Scenes/HUD.tscn<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png<>uid://yguvjfk2srxr::::res://assets/simple_fpsplayer/ability_grab.gd<>uid://dmo07y4qr38ah::::res://Sprites/OtherFlash.png
+Player.gd::GDScript::8327383116236291644::1776960817::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Player.tscn::PackedScene::7611949078106151781::1776960817::0::1::::<><><>0<>0<><>::uid://dqv31vp8jkp7a::::res://assets/simple_fpsplayer/Player.gd<>uid://bi2dng2ui1qyr::::res://Scenes/HUD.tscn<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png<>uid://yguvjfk2srxr::::res://assets/simple_fpsplayer/ability_grab.gd<>uid://dmo07y4qr38ah::::res://Sprites/OtherFlash.png
 ::res://Chipper-Chips-Captive-Casino-Main-main/::1776792108
 ::res://Chipper-Chips-Captive-Casino-Main-main/assets/::1776789147
 ::res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/::1776792107
@@ -14,13 +14,13 @@ Player.tscn::PackedScene::7611949078106151781::1776960367::0::1::::<><><>0<>0<><
 ::res://Chipper-Chips-Captive-Casino-Main-main/Sprites/::1776792094
 ::res://Materials/::1776792078
 Test.tres::StandardMaterial3D::9130540803107508986::1776792076::0::1::::<><><>0<>0<><>::uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
-::res://Scenes/::1776960541
+::res://Scenes/::1776961023
 HUD.tscn::PackedScene::3003875356226297617::1776792065::0::1::::<><><>0<>0<><>::uid://coswl8t6jaddh::::res://Chipper Chips Captive Casino Main/Scripts/Stamania Bar.gd<>uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
-Map_greyBox.tscn::PackedScene::9042002928176380444::1776960541::0::1::::<><><>0<>0<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://d3c5w5bdspqww::::res://Materials/Test.tres<>uid://c8aqqyqao136i::::res://Shaders/CoolReflective.gdshader<>uid://c0wg823q3dwb1::::res://Scripts/DoorOpener.gd<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png
+Map_greyBox.tscn::PackedScene::9042002928176380444::1776961023::0::1::::<><><>0<>0<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://d3c5w5bdspqww::::res://Materials/Test.tres<>uid://c8aqqyqao136i::::res://Shaders/CoolReflective.gdshader<>uid://c0wg823q3dwb1::::res://Scripts/DoorOpener.gd<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png
 player_camera_scene.tscn::PackedScene::6722169382651843720::1776790963::0::1::::<><><>0<>0<><>::
 Testing Scene.tscn::PackedScene::1139111703070817452::1776790966::0::1::::<><><>0<>0<><>::uid://dlmgawbb67ctt::::res://Chipper Chips Captive Casino Main/Sprites/level1Backgorund.png<>uid://dgpjxoygnvyy4::::res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn
-::res://Scripts/::1776960541
-DoorOpener.gd::GDScript::6573403464231292268::1776960541::0::1::::<>MeshInstance3D<><>0<>0<><>::
+::res://Scripts/::1776961023
+DoorOpener.gd::GDScript::6573403464231292268::1776961023::0::1::::<>Area3D<><>0<>0<><>::
 Stamania Bar.gd::GDScript::5794001159507914921::1776792065::0::1::::<>TextureProgressBar<><>0<>0<><>::
 ::res://Shaders/::1776790971
 CoolReflective.gdshader::Shader::7090074537325050694::1776790969::0::1::::<><><>0<>0<><>::
