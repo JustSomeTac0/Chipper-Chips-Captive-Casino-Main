@@ -1,2 +1,4 @@
 res://Scenes/Map_greyBox.tscn
 res://Scripts/DoorOpener.gd
+res://assets/simple_fpsplayer/Player.gd
+res://Scripts/Stamania Bar.gd
