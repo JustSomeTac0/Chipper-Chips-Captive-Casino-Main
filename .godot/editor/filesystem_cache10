@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776964684
+::res://::1777046854
 ::res://assets/::1776790915
 ::res://assets/simple_fpsplayer/::1776963749
 ability_grab.gd::GDScript::1698170836289804579::1776790913::0::1::::<>RayCast3D<><>0<>0<><>::
@@ -14,13 +14,13 @@ Player.tscn::PackedScene::7611949078106151781::1776960817::0::1::::<><><>0<>0<><
 ::res://Chipper-Chips-Captive-Casino-Main-main/Sprites/::1776792094
 ::res://Materials/::1776792078
 Test.tres::StandardMaterial3D::9130540803107508986::1776792076::0::1::::<><><>0<>0<><>::uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
-::res://Scenes/::1776963687
+::res://Scenes/::1776964951
 HUD.tscn::PackedScene::3003875356226297617::1776792065::0::1::::<><><>0<>0<><>::uid://coswl8t6jaddh::::res://Chipper Chips Captive Casino Main/Scripts/Stamania Bar.gd<>uid://dmyaftrs2dtwt::::res://Chipper Chips Captive Casino Main/Sprites/testTile.png
-Map_greyBox.tscn::PackedScene::9042002928176380444::1776963687::0::1::::<><><>0<>0<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://d3c5w5bdspqww::::res://Materials/Test.tres<>uid://c8aqqyqao136i::::res://Shaders/CoolReflective.gdshader<>uid://b7rpob8m0hxwl::::res://Scripts/door.gd<>uid://c0wg823q3dwb1::::res://Scripts/DoorOpener.gd<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png
+Map_greyBox.tscn::PackedScene::9042002928176380444::1776964951::0::1::::<><><>0<>0<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://d3c5w5bdspqww::::res://Materials/Test.tres<>uid://c8aqqyqao136i::::res://Shaders/CoolReflective.gdshader<>uid://b7rpob8m0hxwl::::res://Scripts/door.gd<>uid://c0wg823q3dwb1::::res://Scripts/DoorOpener.gd<>uid://5s1q8wvituvn::::res://Sprites/iLoveTestingCutout.png
 player_camera_scene.tscn::PackedScene::6722169382651843720::1776790963::0::1::::<><><>0<>0<><>::
 Testing Scene.tscn::PackedScene::1139111703070817452::1776790966::0::1::::<><><>0<>0<><>::uid://dlmgawbb67ctt::::res://Chipper Chips Captive Casino Main/Sprites/level1Backgorund.png<>uid://dgpjxoygnvyy4::::res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn
-::res://Scripts/::1776964450
-door.gd::GDScript::4668493962016150875::1776963653::0::1::::<>MeshInstance3D<><>0<>0<><>::
+::res://Scripts/::1776964927
+door.gd::GDScript::4668493962016150875::1776964927::0::1::::<>MeshInstance3D<><>0<>0<><>::
 DoorOpener.gd::GDScript::6573403464231292268::1776964450::0::1::::<>Area3D<><>0<>0<><>::
 Stamania Bar.gd::GDScript::5794001159507914921::1776961507::0::1::::<>TextureProgressBar<><>0<>0<><>::
 ::res://Shaders/::1776790971

@@ -15,6 +15,6 @@ func _process(delta: float) -> void:
 
 
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	$".".rotation = Vector3(0, 180, 0)
+func _on_area_3d_body_entered(body: CharacterBody3D) -> void:
+	$".".rotation = Vector3(0, 300, 0)
 	print("aaa")
