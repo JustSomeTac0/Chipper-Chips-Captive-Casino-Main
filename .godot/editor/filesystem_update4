@@ -5,3 +5,4 @@ res://Scenes/Testing Scene.tscn
 res://Scripts/PathNodeScript.gd
 res://Scripts/Goon1.gd
 res://Scenes/Goon.tscn
+res://assets/simple_fpsplayer/Player.gd

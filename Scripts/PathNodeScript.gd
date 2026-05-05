@@ -13,6 +13,21 @@ enum NodeType{
 }
 @export var node_type: NodeType = NodeType.NORMAL
 
+func _ready():
+	print(global_transform)
+	print(global_transform.basis.get_scale())
+	var m = MeshInstance3D.new()
+	m.mesh = SphereMesh.new()
+
+	var mat = StandardMaterial3D.new()
+	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	mat.albedo_color = Color.RED
+
+	m.material_override = mat
+	m.scale = Vector3.ONE * 0.25
+
+	add_child(m)
+
 func _process(delta):
 	draw_connections()
 

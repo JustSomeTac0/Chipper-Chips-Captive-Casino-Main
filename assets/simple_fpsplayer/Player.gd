@@ -86,11 +86,6 @@ func _input(event):
 
 
 
-
-
-
-
-
 func _physics_process(delta):
 	var moving = false
 	# Add the gravity. Pulls value from project settings.
