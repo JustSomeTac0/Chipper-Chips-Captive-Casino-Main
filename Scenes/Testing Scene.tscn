@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qh2ad3val6fo"]
 
-[ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper Chips Captive Casino Main/Sprites/level1Backgorund.png" id="1_c6x0b"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper Chips Captive Casino Main/assets/simple_fpsplayer/Player.tscn" id="2_ebker"]
+[ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Sprites/level1Backgorund.png" id="1_c6x0b"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_ebker"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pai55"]
 size = Vector3(51.99407, 0.20582847, 41.645565)

@@ -1,2 +1,7 @@
-res://Scripts/door.gd
 res://Scenes/Map_greyBox.tscn
+res://Scenes/goon_1.tscn
+res://assets/simple_fpsplayer/Player.tscn
+res://Scenes/Testing Scene.tscn
+res://Scripts/PathNodeScript.gd
+res://Scripts/Goon1.gd
+res://Scenes/Goon.tscn

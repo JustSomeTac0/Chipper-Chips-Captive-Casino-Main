@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Scripts/door.gd" id="3_0vfgs"]
 [ext_resource type="Script" uid="uid://c0wg823q3dwb1" path="res://Scripts/DoorOpener.gd" id="3_7nxp3"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
+[ext_resource type="Script" uid="uid://ch58f350h8yrl" path="res://Scripts/PathNodeScript.gd" id="5_cqujs"]
+[ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Scenes/Goon.tscn" id="7_nbklu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ijf"]
 render_priority = 0
@@ -17,6 +19,11 @@ shader_parameter/highlight_amount = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7nxp3"]
 size = Vector3(1.0938721, 1.0317383, 17.408081)
+
+[sub_resource type="SphereMesh" id="SphereMesh_07vj6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eisij"]
+albedo_color = Color(0, 1, 1, 1)
 
 [sub_resource type="Sky" id="Sky_1i5qp"]
 
@@ -39,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.486931, 0, 4.864298)
 [node name="Map" type="Node" parent="." unique_id=64800920]
 
 [node name="Storage" type="CSGMesh3D" parent="Map" unique_id=1892084382]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 material = SubResource("ShaderMaterial_k8ijf")
@@ -398,7 +405,7 @@ operation = 2
 size = Vector3(2.121765, 1.6239309, 0.8487606)
 
 [node name="Lobby" type="CSGMesh3D" parent="Map" unique_id=1864456493]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 
@@ -439,7 +446,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0819488, -0.04248292, -1.46
 size = Vector3(2.9677734, 0.011230469, 0.5310447)
 
 [node name="Main" type="CSGMesh3D" parent="Map" unique_id=853966440]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 
@@ -448,7 +455,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0819488, -0.030224435, 0.74
 size = Vector3(2.9677734, 0.011230469, 3.7072983)
 
 [node name="Vip" type="CSGMesh3D" parent="Map" unique_id=1897287757]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 
@@ -806,7 +813,7 @@ operation = 2
 size = Vector3(2.121765, 1.7160015, 1.6655912)
 
 [node name="Staff" type="CSGMesh3D" parent="Map" unique_id=959862580]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0.001033783, 0, -0.00310421)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.541515, 0, -0.00310421)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 
@@ -998,7 +1005,7 @@ transform = Transform3D(-4.371139e-08, -1.0000002, 8.74228e-08, 1, -4.37114e-08,
 size = Vector3(0.27093506, 0.011230469, 0.9155731)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Map/Staff" unique_id=1265397084]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 6.2706203, -0.2694905, 0.99854064)
+transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 6.27, -0.269, 0.999)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 2.1670227)
 
@@ -1008,7 +1015,7 @@ operation = 2
 size = Vector3(1.5095825, 2.2525635, 2.1670227)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Map/Staff" unique_id=375058308]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 6.2620773, -0.2694905, -0.34684595)
+transform = Transform3D(0.102531694, 0, 0, 0, 0.102531694, 0, 0, 0, 0.102531694, 6.27, -0.269, -0.347)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 2.1670227)
 
@@ -1272,7 +1279,7 @@ operation = 2
 size = Vector3(0.5380106, 0.039993286, 0.3028183)
 
 [node name="Security" type="CSGMesh3D" parent="Map" unique_id=1665458549]
-transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, 0, 0, 0)
+transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
 
@@ -1313,7 +1320,7 @@ size = Vector3(1.5095825, 2.2525635, 1.9038391)
 [node name="DoorsVents" type="Node" parent="Map" unique_id=480967721]
 
 [node name="Door" type="MeshInstance3D" parent="Map/DoorsVents" unique_id=1551278635]
-transform = Transform3D(1.5186901, 0, 0, 0, 2.2490845, 0, 0, 0, 0.08602452, -5.758004, -2.5121748, 3.8843982)
+transform = Transform3D(1.5186901, 0, 0, 0, 2.2490845, 0, 0, 0, 0.08602452, -35.300552, -2.5121748, 3.8843982)
 mesh = SubResource("BoxMesh_23q0k")
 script = ExtResource("3_0vfgs")
 
@@ -1325,14 +1332,142 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.0073850155,
 shape = SubResource("BoxShape3D_7nxp3")
 debug_color = Color(0, 0.591099, 0.7421073, 0.41960785)
 
+[node name="EnemyPaths" type="Node" parent="." unique_id=1269075689]
+
+[node name="BaseNodes" type="Node" parent="EnemyPaths" unique_id=2044294367]
+
+[node name="OfficePathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1921225860 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.003517, -3.6, 3.35)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode2"), NodePath("../OfficePathNode8")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode1" unique_id=1923295542]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1033819948 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, -3.6, 0)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../OfficePathNode3")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode2" unique_id=967401281]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=72413083 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -3.6, 0)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode2"), NodePath("../OfficePathNode4")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode3" unique_id=531804324]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=254678960 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.6, 0)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode3"), NodePath("../OfficePathNode5")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode4" unique_id=947678598]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1975904529 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.6, 3.35)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode4"), NodePath("../OfficePathNode6"), NodePath("../OfficePathNode9")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode5" unique_id=1152072835]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1290221994 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.6, 8)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode5"), NodePath("../OfficePathNode7")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode6" unique_id=1358872770]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1076001405 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -3.6, 8)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode6"), NodePath("../OfficePathNode8")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode7" unique_id=732217324]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=683838952 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.003517, -3.6, 8)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../OfficePathNode7")]
+node_type = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode8" unique_id=210359782]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1126478608 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.6, 3.35)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode5"), NodePath("../OfficePathNode10"), NodePath("../OfficePathNodeW")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode9" unique_id=1289103096]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=1729527719 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.6, 10.25)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode9")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNode10" unique_id=1686489163]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNodeW" type="Marker3D" parent="EnemyPaths/BaseNodes" unique_id=743189349 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.6, -4)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode9")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/OfficePathNodeW" unique_id=466325283]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VentNodes" type="Node" parent="EnemyPaths" unique_id=1670038326]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1446552579]
 environment = SubResource("Environment_1i5qp")
 
 [node name="Player" parent="." unique_id=818413224 instance=ExtResource("1_1i5qp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.709811, 1.0402217, 6.272119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.011986, 1.0402217, 4.9143105)
+
+[node name="Goon1" parent="." unique_id=1257103791 node_paths=PackedStringArray("current_node") instance=ExtResource("7_nbklu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.47545, -2.6714227, 0)
+current_node = NodePath("../EnemyPaths/BaseNodes/OfficePathNode1")
 
 [node name="TestCardboardFella" type="Sprite3D" parent="." unique_id=757623143]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7078, 1.107768, 0.6681595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16525269, 1.107768, 0.6681595)
 billboard = 2
 shaded = true
 texture_filter = 0
