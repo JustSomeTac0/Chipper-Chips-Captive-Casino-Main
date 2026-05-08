@@ -4,7 +4,6 @@ extends CharacterBody3D
 @export var chase_speed: float = 8.0
 @export var current_node: Waypoint
 
-#constants
 var forgetfulness  = randf_range(-3, 3)
 var thoroughness = randf_range(0.8, 1.2)
 var laziness = randf_range(0.8, 1.2)
@@ -20,10 +19,6 @@ var waiting: bool = false
 func _ready():
 	global_transform.origin = current_node.global_transform.origin
 	choose_next_node()
-	print(forgetfulness)
-	print(thoroughness)
-	print(laziness)
-	print(attention_span)
 	
 func _physics_process(delta):
 	if waiting or target_node == null:
@@ -54,7 +49,6 @@ func choose_next_node():
 	
 	if previous_node != null and previous_node in options and options.size() > 1:
 		if randf_range(0 + forgetfulness, 100) > 90:
-			print("turning around!")
 			waiting = true
 			await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
 			waiting = false

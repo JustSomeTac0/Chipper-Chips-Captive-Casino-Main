@@ -14,8 +14,6 @@ enum NodeType{
 @export var node_type: NodeType = NodeType.NORMAL
 
 func _ready():
-	print(global_transform)
-	print(global_transform.basis.get_scale())
 	var m = MeshInstance3D.new()
 	m.mesh = SphereMesh.new()
 
