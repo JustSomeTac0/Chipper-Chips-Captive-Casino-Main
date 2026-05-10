@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blofy5qj2g5n7"]
 
-[ext_resource type="Script" uid="uid://bw75qnes0vln8" path="res://Scripts/Goon1.gd" id="1_ldfjj"]
-[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="2_fgknb"]
+[ext_resource type="Script" uid="uid://bw75qnes0vln8" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd" id="1_ldfjj"]
+[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
 
@@ -17,7 +17,6 @@ animations = [{
 }]
 
 [node name="Goon1" type="CharacterBody3D" unique_id=1257103791]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1783485, 0)
 script = ExtResource("1_ldfjj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732039325]

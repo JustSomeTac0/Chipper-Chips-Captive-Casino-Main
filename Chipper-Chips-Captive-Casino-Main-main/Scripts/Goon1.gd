@@ -85,10 +85,27 @@ func arrive_at_node():
 	current_node = target_node
 
 	velocity = Vector3.ZERO
-
-	if randf() < 0.2 * laziness:
-		waiting = true
-		await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
-		waiting = false
+	match current_node.pause_rate:
+		Waypoint.PauseRate.NORMAL:
+			if randf() < 0.2 * laziness:
+				waiting = true
+				await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
+				waiting = false
+		Waypoint.PauseRate.LOW:
+			if randf() < 0.1 * laziness:
+				waiting = true
+				await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
+				waiting = false
+		Waypoint.PauseRate.HIGH:
+			if randf() < 0.3 * laziness:
+				waiting = true
+				await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
+				waiting = false
+		Waypoint.PauseRate.NEVER:
+			pass
+		Waypoint.PauseRate.ALWAYS:
+			waiting = true
+			await get_tree().create_timer(randf_range(0.5, 2.0) * laziness).timeout
+			waiting = false
 
 	choose_next_node()

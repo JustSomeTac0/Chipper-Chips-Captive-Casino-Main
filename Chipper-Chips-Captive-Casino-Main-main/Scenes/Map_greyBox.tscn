@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d13ap5b2koici"]
 
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
-[ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Materials/Test.tres" id="1_pegwi"]
-[ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Shaders/CoolReflective.gdshader" id="2_b8mr1"]
-[ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Scripts/door.gd" id="3_0vfgs"]
-[ext_resource type="Script" uid="uid://c0wg823q3dwb1" path="res://Scripts/DoorOpener.gd" id="3_7nxp3"]
-[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
-[ext_resource type="Script" uid="uid://ch58f350h8yrl" path="res://Scripts/PathNodeScript.gd" id="5_cqujs"]
-[ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Scenes/Goon.tscn" id="7_nbklu"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
+[ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Chipper-Chips-Captive-Casino-Main-main/Materials/Test.tres" id="1_pegwi"]
+[ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/CoolReflective.gdshader" id="2_b8mr1"]
+[ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/door.gd" id="3_0vfgs"]
+[ext_resource type="Script" uid="uid://c0wg823q3dwb1" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/DoorOpener.gd" id="3_7nxp3"]
+[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="4_k8ijf"]
+[ext_resource type="Script" uid="uid://ch58f350h8yrl" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/PathNodeScript.gd" id="5_cqujs"]
+[ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn" id="7_nbklu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ijf"]
 render_priority = 0
@@ -308,12 +308,6 @@ size = Vector3(1.0073223, 0.6801605, 0.5847397)
 transform = Transform3D(-4.4818025e-09, 0, -0.07688152, 0, 0.102531694, 0, 0.102531694, 0, -3.3605985e-09, 1.003833, -0.25933832, 1.152526)
 operation = 2
 size = Vector3(1.5095825, 2.2525635, 0.6525879)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Map/Storage" unique_id=1374297953]
-transform = Transform3D(0.102531694, 0, 0, 0, 0.005893199, 0.10236219, 0, -0.10236219, 0.005893199, -0.3903151, 0.0884684, 0)
-shadow_enabled = true
-spot_range = 6.0448413
-spot_angle = 35.370724
 
 [node name="Vents" type="CSGMesh3D" parent="Map/Storage" unique_id=505243937]
 
@@ -1135,257 +1129,300 @@ debug_color = Color(0, 0.591099, 0.7421073, 0.41960785)
 
 [node name="Staff" type="Node" parent="EnemyPaths/BaseNodes" unique_id=980528507]
 
-[node name="OfficePathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1126478608 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1126478608 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.5, 3.35)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../../../SideRooms/Staff/OfficePathNode5"), NodePath("../OfficePathNode10"), NodePath("../OfficePathNode21")]
+connected_nodes = [NodePath("../../../SideRooms/Staff/OfficeSideNode5"), NodePath("../OfficePathNode2"), NodePath("../OfficePathNode11")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode9" unique_id=1289103096]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode1" unique_id=1289103096]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1729527719 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1729527719 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.5, 13.5)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode9"), NodePath("../../../SideRooms/Staff/OfficePathNode11"), NodePath("../OfficePathNode13")]
+connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../../../SideRooms/Staff/OfficeSideNode9"), NodePath("../OfficePathNode3")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode10" unique_id=1686489163]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode2" unique_id=1686489163]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode13" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=728767857 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=728767857 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.75, -3.5, 13.5)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode10"), NodePath("../OfficePathNode14")]
+connected_nodes = [NodePath("../OfficePathNode2"), NodePath("../OfficePathNode4")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode13" unique_id=754116134]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode3" unique_id=754116134]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode14" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1277072021 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1277072021 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -3.5, 19)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode13"), NodePath("../OfficePathNode15")]
+connected_nodes = [NodePath("../OfficePathNode3"), NodePath("../OfficePathNode5")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode14" unique_id=348015120]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode4" unique_id=348015120]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode15" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=368501801 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=368501801 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -3.5, 23.65)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode4"), NodePath("../OfficePathNode6")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode5" unique_id=894332251]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1402285522 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.364721, -2.8723154, 23.65)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode5"), NodePath("../OfficePathNode7")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode6" unique_id=252232219]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1713748227 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.365, -2.872, 22)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode8"), NodePath("../OfficePathNode6")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode7" unique_id=383212962]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=55048166 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.308, -1, 22)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode9"), NodePath("../OfficePathNode7")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode8" unique_id=1380664621]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1390062280 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.308, -1, 23.75)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode10"), NodePath("../OfficePathNode8")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode9" unique_id=126218661]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=162931634 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.72, -0.2, 23.75)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode9"), NodePath("../../Security/SecurityPathNode1")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode10" unique_id=2115737056]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode11" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=743189349 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.5, -6.4000015)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../OfficePathNode12")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode11" unique_id=466325283]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode12" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=768290792 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.090616, -3.5870802, -6.3877716)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode11"), NodePath("../OfficePathNode13")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode12" unique_id=63641858]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode13" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1736203106 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.090616, -3.5870802, 6.0607686)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode12"), NodePath("../OfficePathNode14")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode13" unique_id=1913989994]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode14" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=113172933 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.51551, -3.5870802, 6.0607686)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../OfficePathNode13"), NodePath("../OfficePathNode15")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode14" unique_id=1510112388]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="OfficePathNode15" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1196082755 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.51551, -3.5870802, -3.6176581)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../OfficePathNode14"), NodePath("../OfficePathNode16")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode15" unique_id=894332251]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode15" unique_id=1591823750]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode16" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1402285522 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.364721, -2.8723154, 23.65)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode15"), NodePath("../OfficePathNode17")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode16" unique_id=252232219]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode17" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1713748227 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.365, -2.872, 22)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode18"), NodePath("../OfficePathNode16")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode17" unique_id=383212962]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode18" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=55048166 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.308, -1, 22)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode19"), NodePath("../OfficePathNode17")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode18" unique_id=1380664621]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode19" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1390062280 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.308, -1, 23.75)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode20"), NodePath("../OfficePathNode18")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode19" unique_id=126218661]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode20" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=162931634 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.72, -0.2, 23.75)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode19"), NodePath("../../Security/SecurityPathNode1")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode20" unique_id=2115737056]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode21" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=743189349 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -3.5, -6.4000015)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode9"), NodePath("../OfficePathNode22")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode21" unique_id=466325283]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode22" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=768290792 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.090616, -3.5870802, -6.3877716)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode21"), NodePath("../OfficePathNode23")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode22" unique_id=63641858]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode23" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1736203106 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.090616, -3.5870802, 6.0607686)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode22"), NodePath("../OfficePathNode24")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode23" unique_id=1913989994]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode24" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=113172933 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.51551, -3.5870802, 6.0607686)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode23"), NodePath("../OfficePathNode25")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode24" unique_id=1510112388]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode25" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1196082755 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.51551, -3.5870802, -3.6176581)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode24"), NodePath("../OfficePathNode26")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode25" unique_id=1591823750]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="OfficePathNode26" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=2019258113 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode16" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=2019258113 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.51551, -3.5870802, -11.607544)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode25"), NodePath("../OfficePathNode27")]
+connected_nodes = [NodePath("../OfficePathNode15"), NodePath("../OfficePathNode17")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode26" unique_id=678883144]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode16" unique_id=678883144]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode27" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=769207263 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode17" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=769207263 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.38618, -3.5870802, -11.607544)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode26"), NodePath("../OfficePathNode28"), NodePath("../OfficePathNode30")]
+connected_nodes = [NodePath("../OfficePathNode16"), NodePath("../OfficePathNode18"), NodePath("../OfficePathNode20")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode27" unique_id=1704499542]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode17" unique_id=1704499542]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode28" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1883311772 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode18" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1883311772 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 29.58614, -3.5870802, -13.903897)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode27"), NodePath("../OfficePathNode29"), NodePath("../OfficePathNode30")]
+connected_nodes = [NodePath("../OfficePathNode17"), NodePath("../OfficePathNode19"), NodePath("../OfficePathNode20")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode28" unique_id=1868315952]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode18" unique_id=1868315952]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode29" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=434700909 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode19" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=434700909 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.38618, -3.5870802, -16.60619)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode28"), NodePath("../OfficePathNode30")]
+connected_nodes = [NodePath("../OfficePathNode18"), NodePath("../OfficePathNode20")]
+pause_rate = 2
+face_direction = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode29" unique_id=1000613686]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode19" unique_id=1000613686]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode30" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1837507162 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode20" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1837507162 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26.391182, -3.5870802, -13.903897)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode27"), NodePath("../OfficePathNode28"), NodePath("../OfficePathNode29"), NodePath("../OfficePathNode31")]
+connected_nodes = [NodePath("../OfficePathNode17"), NodePath("../OfficePathNode18"), NodePath("../OfficePathNode19"), NodePath("../OfficePathNode21")]
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode30" unique_id=1588287841]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode20" unique_id=1588287841]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode31" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1837074493 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficePathNode21" type="Marker3D" parent="EnemyPaths/BaseNodes/Staff" unique_id=1837074493 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 17.943827, -0.1, -13.903897)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode30"), NodePath("../../Lobby/LobbyPathNode14")]
+connected_nodes = [NodePath("../OfficePathNode20"), NodePath("../../Lobby/LobbyPathNode14")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode31" unique_id=1438076594]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Staff/OfficePathNode21" unique_id=1438076594]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Security" type="Node" parent="EnemyPaths/BaseNodes" unique_id=363988085]
 
-[node name="SecurityPathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1403695040]
+[node name="SecurityPathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1403695040 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.869, -0.1, 26.635)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../Staff/OfficePathNode10"), NodePath("../SecurityPathNode2")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Security/SecurityPathNode1" unique_id=1469341913]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="SecurityPathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=2013916251]
+[node name="SecurityPathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=2013916251 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.869, -0.1, 34.009956)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../SecurityPathNode1"), NodePath("../SecurityPathNode3")]
+pause_rate = 2
+turn_rate = 1
+face_direction = 4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Security/SecurityPathNode2" unique_id=1712767904]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="SecurityPathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1489278917]
+[node name="SecurityPathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1489278917 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.869, -0.1, 43.882294)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../SecurityPathNode2"), NodePath("../SecurityPathNode4")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Security/SecurityPathNode3" unique_id=791288936]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="SecurityPathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1156329169]
+[node name="SecurityPathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=1156329169 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.154627, -0.1, 43.882294)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../SecurityPathNode3"), NodePath("../SecurityPathNode5")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Security/SecurityPathNode4" unique_id=816225609]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="SecurityPathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=879713602]
+[node name="SecurityPathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Security" unique_id=879713602 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.557165, -0.1, 43.882294)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../SecurityPathNode4"), NodePath("../../Vip/VipPathNode16")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Security/SecurityPathNode5" unique_id=1813899559]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1394,344 +1431,401 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Vip" type="Node" parent="EnemyPaths/BaseNodes" unique_id=213962427]
 
-[node name="VipPathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=188182007]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.557165, -0.1, 37.627083)
+[node name="VipPathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1596978003 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.764724, -0.1, 27.854912)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode2"), NodePath("../../Main/MainPathNode38")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode1" unique_id=909920122]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode1" unique_id=490178149]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=829391079]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.509938, -0.1, 37.627083)
+[node name="VipPathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1091096147 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.764724, -0.1, 32.97657)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode7"), NodePath("../VipPathNode3"), NodePath("../VipPathNode1")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode2" unique_id=1386031751]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode2" unique_id=1982369942]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1874142003]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9269848, -0.1, 37.627083)
+[node name="VipPathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1872068183 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.7710788, -0.1, 35.12816)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode8"), NodePath("../VipPathNode2"), NodePath("../VipPathNode4")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode3" unique_id=1990015434]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode3" unique_id=142590730]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1653954928]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89015245, -0.1, 37.627083)
+[node name="VipPathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1409365995 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.7710788, -0.1, 37.3356)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode3"), NodePath("../VipPathNode5")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode4" unique_id=187409148]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode4" unique_id=1647175570]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=95690704]
+[node name="VipPathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1574017774 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.198016, -0.1, 37.388077)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode4"), NodePath("../VipPathNode6"), NodePath("../VipPathNode34")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode5" unique_id=1193879971]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=361437084 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.6693892, -0.1, 37.388077)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode7"), NodePath("../VipPathNode5")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode6" unique_id=1960513792]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1233632486 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.6693892, -0.1, 35.12816)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode21"), NodePath("../VipPathNode2"), NodePath("../VipPathNode6")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode7" unique_id=1703932774]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=95690704 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89015245, -0.1, 35.12347)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode20"), NodePath("../VipPathNode9"), NodePath("../VipPathNode3")]
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode5" unique_id=2088754937]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode8" unique_id=2088754937]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=18261959]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89015245, -0.1, 32.34337)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode6" unique_id=264972210]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=667163447]
+[node name="VipPathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=667163447 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89015245, -0.1, 28.946014)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode8"), NodePath("../VipPathNode10")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode7" unique_id=833716058]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode9" unique_id=833716058]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1713286122]
+[node name="VipPathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1713286122 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9951682, -0.1, 28.946014)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode19"), NodePath("../VipPathNode9"), NodePath("../VipPathNode11")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode8" unique_id=2002025317]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode10" unique_id=2002025317]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=878827082]
+[node name="VipPathNode11" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=878827082 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.651118, -0.1, 28.946014)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode10"), NodePath("../VipPathNode12"), NodePath("../VipPathNode18")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode9" unique_id=1706221835]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode11" unique_id=1706221835]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1371503718]
+[node name="VipPathNode12" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1371503718 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.517214, -0.1, 28.946014)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode16"), NodePath("../VipPathNode11"), NodePath("../VipPathNode13"), NodePath("../VipPathNode14")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode10" unique_id=1370080119]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode12" unique_id=1370080119]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode11" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=205957887]
+[node name="VipPathNode13" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=205957887 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.388481, -0.1, 28.946014)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode12"), NodePath("../VipPathNode14")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode11" unique_id=2048912937]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode13" unique_id=2048912937]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode12" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=631998530]
+[node name="VipPathNode14" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=631998530 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.589716, -0.1, 33.137386)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode16"), NodePath("../VipPathNode12"), NodePath("../VipPathNode13"), NodePath("../VipPathNode15"), NodePath("../VipPathNode18")]
+pause_rate = 2
+turn_rate = 1
+face_direction = 4
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode12" unique_id=1230047905]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode14" unique_id=1230047905]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode13" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=832829804]
+[node name="VipPathNode15" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=832829804 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.388481, -0.1, 37.661835)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode16"), NodePath("../VipPathNode14")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode13" unique_id=174394246]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode15" unique_id=174394246]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode14" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1483347489]
+[node name="VipPathNode16" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=188182007 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.557165, -0.1, 37.627083)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../Security/SecurityPathNode5"), NodePath("../VipPathNode17"), NodePath("../VipPathNode12"), NodePath("../VipPathNode15"), NodePath("../VipPathNode14")]
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode16" unique_id=909920122]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode17" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=829391079 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.509938, -0.1, 37.627083)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode16"), NodePath("../VipPathNode19"), NodePath("../VipPathNode18")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode17" unique_id=1386031751]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode18" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1483347489 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.669647, -0.1, 33.137386)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode17"), NodePath("../VipPathNode11"), NodePath("../VipPathNode14")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode14" unique_id=893023664]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode18" unique_id=893023664]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode15" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=765730919]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.901102, -0.1, 33.137386)
+[node name="VipPathNode19" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1874142003 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9269848, -0.1, 37.627083)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode17"), NodePath("../VipPathNode20"), NodePath("../VipPathNode10")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode15" unique_id=2021997231]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode19" unique_id=1990015434]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode16" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1318048576]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -21.022001, -0.1, 29.010147)
+[node name="VipPathNode20" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1653954928 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89015245, -0.1, 37.627083)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode19"), NodePath("../VipPathNode8")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode16" unique_id=2081459011]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode20" unique_id=187409148]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode17" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1846740951]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -16.974775, -0.1, 29.010147)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode17" unique_id=170732581]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode18" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=182279112]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.391821, -0.1, 29.010147)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode18" unique_id=809761844]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode19" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1220989750]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.35499, -0.1, 29.010147)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode19" unique_id=1472694765]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode20" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1942496976]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.35499, -0.1, 32.087444)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode20" unique_id=1474609530]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode21" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=536386202]
+[node name="VipPathNode21" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=536386202 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.35499, -0.1, 35.12816)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode33"), NodePath("../VipPathNode22")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode21" unique_id=324761650]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode22" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=784948905]
+[node name="VipPathNode22" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=784948905 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.35499, -0.1, 37.691216)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode21"), NodePath("../VipPathNode23")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode22" unique_id=976325584]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode23" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1122639595]
+[node name="VipPathNode23" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1122639595 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.460005, -0.1, 37.691216)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode32"), NodePath("../VipPathNode22"), NodePath("../VipPathNode24")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode23" unique_id=516915025]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode24" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=647724257]
+[node name="VipPathNode24" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=647724257 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -17.115953, -0.1, 37.691216)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode23"), NodePath("../VipPathNode25"), NodePath("../VipPathNode31")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode24" unique_id=632076827]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode25" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=536609933]
+[node name="VipPathNode25" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=536609933 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -20.982052, -0.1, 37.691216)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode29"), NodePath("../VipPathNode24"), NodePath("../VipPathNode26"), NodePath("../VipPathNode27"), NodePath("../../../VentNodes/Vip/VipVentNode1")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode25" unique_id=804248789]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode26" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=482134867]
+[node name="VipPathNode26" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=482134867 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -25.85332, -0.1, 37.691216)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode25"), NodePath("../VipPathNode27")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode26" unique_id=1449001553]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode27" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=419814243]
+[node name="VipPathNode27" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=419814243 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -24.054552, -0.1, 33.499844)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode29"), NodePath("../VipPathNode25"), NodePath("../VipPathNode26"), NodePath("../VipPathNode28"), NodePath("../VipPathNode31")]
+pause_rate = 2
+turn_rate = 1
+face_direction = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode27" unique_id=905145139]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode28" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=240514386]
+[node name="VipPathNode28" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=240514386 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -25.85332, -0.1, 28.975395)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode29"), NodePath("../VipPathNode27")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode28" unique_id=1627958518]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode29" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=2063244635]
+[node name="VipPathNode29" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1318048576 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -21.022001, -0.1, 29.010147)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode30"), NodePath("../VipPathNode25"), NodePath("../VipPathNode27"), NodePath("../VipPathNode28")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode29" unique_id=2081459011]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode30" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1846740951 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -16.974775, -0.1, 29.010147)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode29"), NodePath("../VipPathNode32"), NodePath("../VipPathNode31")]
+pause_rate = 1
+turn_rate = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode30" unique_id=170732581]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipPathNode31" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=2063244635 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -17.134485, -0.1, 33.499844)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode30"), NodePath("../VipPathNode24"), NodePath("../VipPathNode27")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode29" unique_id=1111489836]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode31" unique_id=1111489836]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode30" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1637084477]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.365938, -0.1, 33.499844)
+[node name="VipPathNode32" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=182279112 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.391821, -0.1, 29.010147)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode30"), NodePath("../VipPathNode33"), NodePath("../VipPathNode23")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode30" unique_id=819145564]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode32" unique_id=809761844]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode31" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1233632486]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.6693892, -0.1, 35.12816)
+[node name="VipPathNode33" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1220989750 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.35499, -0.1, 29.010147)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode32"), NodePath("../VipPathNode21")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode31" unique_id=1703932774]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode33" unique_id=1472694765]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode32" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1872068183]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.7710788, -0.1, 35.12816)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode32" unique_id=142590730]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode33" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1091096147]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.764724, -0.1, 32.97657)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode33" unique_id=1982369942]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode34" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1596978003]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.764724, -0.1, 27.854912)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode34" unique_id=490178149]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode35" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1409365995]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.7710788, -0.1, 37.3356)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode35" unique_id=1647175570]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode36" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=361437084]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.6693892, -0.1, 37.388077)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode36" unique_id=1960513792]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode37" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1574017774]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.198016, -0.1, 37.388077)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode37" unique_id=1193879971]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="VipPathNode38" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1756431737]
+[node name="VipPathNode34" type="Marker3D" parent="EnemyPaths/BaseNodes/Vip" unique_id=1756431737 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.198016, -0.1, 45.06107)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipPathNode5"), NodePath("../../../SideRooms/Vip/VipSideNode1"), NodePath("../../../SideRooms/Vip/VipSideNode2"), NodePath("../../../SideRooms/Vip/VipSideNode3")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode38" unique_id=1710408192]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Vip/VipPathNode34" unique_id=1710408192]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
@@ -1741,106 +1835,129 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 [node name="StoragePathNode1" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1034346502 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -27.681334, -3.5, -13.904)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../../Lobby/LobbyPathNode1")]
+connected_nodes = [NodePath("../../Lobby/LobbyPathNode1"), NodePath("../StoragePathNode2"), NodePath("../../../SideRooms/Storage/StorageSideNode1")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode1" unique_id=456442618]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1300478061]
+[node name="StoragePathNode2" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1300478061 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -35.32905, -3.5, -13.904)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode1"), NodePath("../StoragePathNode3"), NodePath("../../../SideRooms/Storage/StorageSideNode7")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode2" unique_id=490144928]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=35582828]
+[node name="StoragePathNode3" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=35582828 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -35.32905, -3.5, 0.63079786)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode2"), NodePath("../StoragePathNode4")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode3" unique_id=1207289194]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1815256395]
+[node name="StoragePathNode4" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1815256395 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -35.32905, -3.5, 11.361177)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode3"), NodePath("../StoragePathNode5")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode4" unique_id=400885168]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1235179601]
+[node name="StoragePathNode5" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1235179601 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -29.47092, -3.5, 11.361177)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode4"), NodePath("../StoragePathNode6"), NodePath("../../../SideRooms/Storage/StorageSideNode11")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode5" unique_id=1299169708]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=493254672]
+[node name="StoragePathNode6" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=493254672 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -18.973171, -3.5, 11.361177)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode5"), NodePath("../StoragePathNode7")]
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode6" unique_id=1374124489]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1944997277]
+[node name="StoragePathNode7" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1944997277 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.948908, -3.5, 13.983985)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode6"), NodePath("../StoragePathNode8")]
+pause_rate = 3
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode7" unique_id=1621648408]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1608754934]
+[node name="StoragePathNode8" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1608754934 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.948908, -2.1719756, 8.481866)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode7"), NodePath("../StoragePathNode9")]
+pause_rate = 3
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode8" unique_id=535016606]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1182369799]
+[node name="StoragePathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=1182369799 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -16.503246, -2.1719756, 8.481866)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode8"), NodePath("../StoragePathNode10")]
+pause_rate = 3
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode9" unique_id=864631744]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=821865203]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.948908, -1.0091071, 13.975541)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode10" unique_id=1529773511]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="StoragePathNode11" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=2147007211]
+[node name="StoragePathNode10" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=2147007211 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -16.245678, -1.0091071, 13.975541)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode9"), NodePath("../StoragePathNode11")]
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode11" unique_id=2115566034]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode10" unique_id=2115566034]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StoragePathNode12" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=771006952]
+[node name="StoragePathNode11" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=821865203 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.948908, -1.0091071, 13.975541)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode10"), NodePath("../StoragePathNode12")]
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode11" unique_id=1529773511]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="StoragePathNode12" type="Marker3D" parent="EnemyPaths/BaseNodes/Storage" unique_id=771006952 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.948908, -0.040079206, 11.162865)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StoragePathNode10"), NodePath("../../Main/MainPathNode19")]
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Storage/StoragePathNode12" unique_id=315482386]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1853,6 +1970,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.544678, -0.1, -13.903897)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../../Storage/StoragePathNode1"), NodePath("../LobbyPathNode2")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode1" unique_id=33638846]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1873,6 +1992,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.5116808, -0.1, -13.903897)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode2"), NodePath("../LobbyPathNode4")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode3" unique_id=1732026041]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1893,6 +2014,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.31277704, -0.1, -17.960922)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode4"), NodePath("../LobbyPathNode6"), NodePath("../LobbyPathNode7"), NodePath("../LobbyPathNode9"), NodePath("../LobbyPathNode10"), NodePath("../LobbyPathNode11")]
+turn_rate = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode5" unique_id=1364808862]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1903,6 +2025,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12.021268, -0.1, -17.960922)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode5"), NodePath("../LobbyPathNode7"), NodePath("../LobbyPathNode9")]
+pause_rate = 1
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode6" unique_id=1133637459]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1913,6 +2037,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -8.963528, -0.1, -23.274492)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode5"), NodePath("../LobbyPathNode6"), NodePath("../LobbyPathNode9")]
+pause_rate = 1
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode7" unique_id=1219149944]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1923,6 +2049,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.31277704, -0.1, -27.927769)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode9")]
+pause_rate = 2
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode8" unique_id=1495156825]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1933,6 +2061,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.31277704, -0.1, -23.129555)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode5"), NodePath("../LobbyPathNode6"), NodePath("../LobbyPathNode7"), NodePath("../LobbyPathNode8"), NodePath("../LobbyPathNode10"), NodePath("../LobbyPathNode11")]
+pause_rate = 1
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode9" unique_id=1219557148]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1943,6 +2073,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.494015, -0.1, -23.274492)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode5"), NodePath("../LobbyPathNode9"), NodePath("../LobbyPathNode11")]
+pause_rate = 1
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode10" unique_id=1695411492]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1953,6 +2085,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.018725, -0.1, -17.960922)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode5"), NodePath("../LobbyPathNode9"), NodePath("../LobbyPathNode10")]
+pause_rate = 1
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode11" unique_id=1563816770]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1963,6 +2097,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.0093746, -0.1, -13.903897)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../LobbyPathNode4"), NodePath("../LobbyPathNode13")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode12" unique_id=2025248132]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -1982,7 +2118,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 [node name="LobbyPathNode14" type="Marker3D" parent="EnemyPaths/BaseNodes/Lobby" unique_id=1171070458 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.307407, -0.1, -13.903897)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../../Staff/OfficePathNode31"), NodePath("../LobbyPathNode13")]
+connected_nodes = [NodePath("../../Staff/OfficePathNode21"), NodePath("../LobbyPathNode13")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Lobby/LobbyPathNode14" unique_id=1193539576]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2005,6 +2143,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.378337, -0.1, -9.298597)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode1"), NodePath("../MainPathNode3"), NodePath("../MainPathNode6"), NodePath("../MainPathNode8")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode2" unique_id=1158179048]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2015,6 +2155,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.321608, -0.1, -9.298597)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode2"), NodePath("../MainPathNode4")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode3" unique_id=2142638282]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2025,6 +2167,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.508422, -0.1, -4.266798)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode3"), NodePath("../MainPathNode5"), NodePath("../MainPathNode6"), NodePath("../MainPathNode35")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode4" unique_id=1058229063]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2035,6 +2179,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.3722434, -0.1, -1.8789325)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode1"), NodePath("../MainPathNode4"), NodePath("../MainPathNode6"), NodePath("../MainPathNode14")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode5" unique_id=155603448]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2045,6 +2191,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.09852409, -0.1, -4.396364)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode1"), NodePath("../MainPathNode2"), NodePath("../MainPathNode4"), NodePath("../MainPathNode5"), NodePath("../MainPathNode7"), NodePath("../MainPathNode11")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode6" unique_id=1442686057]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2055,6 +2202,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12.010639, -0.1, -4.396364)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode6"), NodePath("../MainPathNode8"), NodePath("../MainPathNode9")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode7" unique_id=1117083821]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2065,6 +2214,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12.010639, -0.1, -9.298597)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode1"), NodePath("../MainPathNode7")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode8" unique_id=1227144546]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2074,7 +2225,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 [node name="MainPathNode9" type="Marker3D" parent="EnemyPaths/BaseNodes/Main" unique_id=1526411660 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12.010639, -0.1, 0.00335145)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../MainPathNode7"), NodePath("../MainPathNode10"), NodePath("../MainPathNode20")]
+connected_nodes = [NodePath("../MainPathNode7"), NodePath("../MainPathNode10"), NodePath("../../../VentNodes/Storage/StorageVentNode1")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode9" unique_id=348310332]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2085,6 +2238,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -6.9126186, -0.1, 0.00335145)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode9"), NodePath("../MainPathNode11"), NodePath("../MainPathNode17")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode10" unique_id=2138188395]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2095,6 +2250,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.09852409, -0.1, 0.00335145)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode6"), NodePath("../MainPathNode10"), NodePath("../MainPathNode12")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode11" unique_id=960961061]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2105,6 +2262,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.15779781, -0.1, 3.9919143)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode11"), NodePath("../MainPathNode13"), NodePath("../MainPathNode14")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode12" unique_id=665939145]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2115,6 +2274,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -2.9078383, -0.1, 6.6458454)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode12"), NodePath("../MainPathNode15")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode13" unique_id=852507387]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2125,6 +2286,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.2201533, -0.1, 6.498352)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode12"), NodePath("../MainPathNode15"), NodePath("../MainPathNode5"), NodePath("../MainPathNode26")]
+pause_rate = 2
+turn_rate = 1
+face_direction = 4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode14" unique_id=1343686404]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2135,6 +2299,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.15779781, -0.1, 9.413196)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode13"), NodePath("../MainPathNode14"), NodePath("../MainPathNode16")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode15" unique_id=124543631]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2145,6 +2311,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -0.09852409, 0.040630717, 14.267387)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode15"), NodePath("../MainPathNode17"), NodePath("../MainPathNode24")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode16" unique_id=4125754]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2155,6 +2323,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -6.9126186, 0.040630717, 14.267387)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode10"), NodePath("../MainPathNode16"), NodePath("../MainPathNode18")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode17" unique_id=49537673]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2165,6 +2335,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -12.010639, 0.040630717, 14.267387)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode17"), NodePath("../MainPathNode19"), NodePath("../MainPathNode21")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode18" unique_id=984786874]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2174,19 +2346,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 [node name="MainPathNode19" type="Marker3D" parent="EnemyPaths/BaseNodes/Main" unique_id=1181929948 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -12.010639, 0.040630717, 11.35923)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../MainPathNode18"), NodePath("../MainPathNode20")]
+connected_nodes = [NodePath("../MainPathNode18"), NodePath("../../../VentNodes/Storage/StorageVentNode1"), NodePath("../../Storage/StoragePathNode12")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode19" unique_id=2003896586]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="MainPathNode20" type="Marker3D" parent="EnemyPaths/BaseNodes/Main" unique_id=1239048765 node_paths=PackedStringArray("connected_nodes")]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -12.010639, 0.040630717, 6.16518)
-script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../MainPathNode9"), NodePath("../MainPathNode19")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode20" unique_id=169657244]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
@@ -2195,6 +2359,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -12.010639, 0.040631104, 18.667103)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode18"), NodePath("../MainPathNode22"), NodePath("../MainPathNode24")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode21" unique_id=1925763031]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2205,6 +2371,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -12.010639, 0.040631536, 23.569336)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode21"), NodePath("../MainPathNode23")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode22" unique_id=1186879632]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2215,6 +2383,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 0.1986742, 0.040631536, 23.569336)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode22"), NodePath("../MainPathNode24"), NodePath("../MainPathNode25"), NodePath("../MainPathNode26")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode23" unique_id=2023873306]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2225,6 +2394,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -0.09852409, 0.040631104, 18.667103)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode16"), NodePath("../MainPathNode21"), NodePath("../MainPathNode23"), NodePath("../MainPathNode25"), NodePath("../MainPathNode26"), NodePath("../MainPathNode28")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode24" unique_id=1401305505]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2235,6 +2405,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 4.378337, 0.040631536, 23.569336)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode23"), NodePath("../MainPathNode24"), NodePath("../MainPathNode27")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode25" unique_id=1688915451]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2245,6 +2417,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 7.372244, 0.04063089, 16.149672)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode14"), NodePath("../MainPathNode23"), NodePath("../MainPathNode24"), NodePath("../MainPathNode28")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode26" unique_id=642474082]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2255,6 +2428,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 12.321608, 0.040631536, 23.569336)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode25"), NodePath("../MainPathNode28")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode27" unique_id=528007025]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2265,6 +2440,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 13.508422, 0.040631097, 18.537537)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode26"), NodePath("../MainPathNode27"), NodePath("../MainPathNode29")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode28" unique_id=1368323577]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2275,6 +2452,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 13.508422, 0.04063071, 14.181344)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode28"), NodePath("../MainPathNode30"), NodePath("../MainPathNode36")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode29" unique_id=999015868]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2285,6 +2464,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 10.272419, 0.021327302, 13.212471)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode29"), NodePath("../MainPathNode31")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode30" unique_id=837543485]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2295,6 +2476,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 7.925308, 0.021327153, 11.494987)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode30"), NodePath("../MainPathNode32")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode31" unique_id=311232563]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2315,6 +2498,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.925308, -0.08069668, 2.775753)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode32"), NodePath("../MainPathNode34")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode33" unique_id=451303862]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2325,6 +2510,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.272419, -0.08069668, 1.0582683)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode33"), NodePath("../MainPathNode35")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode34" unique_id=1108290235]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2335,6 +2522,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.508422, -0.1, 0.089395285)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode4"), NodePath("../MainPathNode34"), NodePath("../MainPathNode36")]
+pause_rate = 1
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode35" unique_id=204286308]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2345,6 +2534,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.508422, 1.4612435, 7.0012665)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode29"), NodePath("../MainPathNode35"), NodePath("../MainPathNode37")]
+turn_rate = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode36" unique_id=1077671664]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2355,8 +2545,20 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.656901, 1.4612435, 7.0012665)
 script = ExtResource("5_cqujs")
 connected_nodes = [NodePath("../MainPathNode36")]
+pause_rate = 2
+face_direction = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode37" unique_id=688383891]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="MainPathNode38" type="Marker3D" parent="EnemyPaths/BaseNodes/Main" unique_id=31010865 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -4.7054043, 0.040631536, 23.569336)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../MainPathNode21"), NodePath("../MainPathNode23")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/BaseNodes/Main/MainPathNode38" unique_id=1967936975]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
@@ -2365,247 +2567,277 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Staff" type="Node" parent="EnemyPaths/SideRooms" unique_id=855339229]
 
-[node name="OfficePathNode1" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1921225860 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode1" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1921225860 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, -3.5, 3.35)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode2"), NodePath("../OfficePathNode8")]
+connected_nodes = [NodePath("../OfficeSideNode2"), NodePath("../OfficeSideNode8")]
 node_type = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode1" unique_id=1923295542]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode1" unique_id=1923295542]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode2" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1033819948 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode2" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1033819948 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, -3.5, 0)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../OfficePathNode3")]
+connected_nodes = [NodePath("../OfficeSideNode1"), NodePath("../OfficeSideNode3")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode2" unique_id=967401281]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode2" unique_id=967401281]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode3" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=72413083 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode3" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=72413083 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -3.5, 0)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode2"), NodePath("../OfficePathNode4")]
+connected_nodes = [NodePath("../OfficeSideNode2"), NodePath("../OfficeSideNode4")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode3" unique_id=531804324]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode3" unique_id=531804324]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode4" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=254678960 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode4" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=254678960 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.5, 0)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode3"), NodePath("../OfficePathNode5")]
+connected_nodes = [NodePath("../OfficeSideNode3"), NodePath("../OfficeSideNode5")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode4" unique_id=947678598]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode4" unique_id=947678598]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode5" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1975904529 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode5" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1975904529 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.5, 3.35)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode4"), NodePath("../OfficePathNode6"), NodePath("../../../BaseNodes/Staff/OfficePathNode9")]
+connected_nodes = [NodePath("../OfficeSideNode4"), NodePath("../OfficeSideNode6"), NodePath("../../../BaseNodes/Staff/OfficePathNode1")]
 node_type = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode5" unique_id=1152072835]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode5" unique_id=1152072835]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode6" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1290221994 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode6" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1290221994 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -3.5, 8)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode5"), NodePath("../OfficePathNode7")]
+connected_nodes = [NodePath("../OfficeSideNode5"), NodePath("../OfficeSideNode7")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode6" unique_id=1358872770]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode6" unique_id=1358872770]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode7" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1076001405 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode7" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1076001405 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, -3.5, 8)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode6"), NodePath("../OfficePathNode8")]
+connected_nodes = [NodePath("../OfficeSideNode6"), NodePath("../OfficeSideNode8")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode7" unique_id=732217324]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode7" unique_id=732217324]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode8" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=683838952 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode8" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=683838952 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.004, -3.5, 8)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode1"), NodePath("../OfficePathNode7")]
+connected_nodes = [NodePath("../OfficeSideNode1"), NodePath("../OfficeSideNode7")]
 node_type = 1
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode8" unique_id=210359782]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode8" unique_id=210359782]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode11" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1036062423 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode9" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1036062423 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, -3.5, 17.7)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../../../BaseNodes/Staff/OfficePathNode10"), NodePath("../OfficePathNode12")]
+connected_nodes = [NodePath("../../../BaseNodes/Staff/OfficePathNode2"), NodePath("../OfficeSideNode10")]
+pause_rate = 1
+turn_rate = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode11" unique_id=347880556]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode9" unique_id=347880556]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="OfficePathNode12" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1199421090 node_paths=PackedStringArray("connected_nodes")]
+[node name="OfficeSideNode10" type="Marker3D" parent="EnemyPaths/SideRooms/Staff" unique_id=1199421090 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, -3.5, 24)
 script = ExtResource("5_cqujs")
-connected_nodes = [NodePath("../OfficePathNode11")]
+connected_nodes = [NodePath("../OfficeSideNode9")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficePathNode12" unique_id=137103768]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Staff/OfficeSideNode10" unique_id=137103768]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Vip" type="Node" parent="EnemyPaths/SideRooms" unique_id=2046320059]
 
-[node name="VipPathNode38" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=745124381]
+[node name="VipSideNode1" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=745124381 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.83671, -0.1, 45.06107)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Vip/VipPathNode34")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipPathNode38" unique_id=1872803291]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipSideNode1" unique_id=1872803291]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode39" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=80145991]
+[node name="VipSideNode2" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=80145991 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.70475, -0.1, 45.06107)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Vip/VipPathNode34")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipPathNode39" unique_id=1988734346]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipSideNode2" unique_id=1988734346]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="VipPathNode40" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=1644323800]
+[node name="VipSideNode3" type="Marker3D" parent="EnemyPaths/SideRooms/Vip" unique_id=1644323800 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.198016, -0.1, 53.69377)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Vip/VipPathNode34"), NodePath("../../../VentNodes/Vip/VipVentNode3"), NodePath("../../../VentNodes/Vip/VipVentNode4")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipPathNode40" unique_id=595920432]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Vip/VipSideNode3" unique_id=595920432]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Storage" type="Node" parent="EnemyPaths/SideRooms" unique_id=1600060258]
 
-[node name="StorageSideNode1" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=76629725]
+[node name="StorageSideNode1" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=76629725 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -27.681334, -3.5, -8.571489)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Storage/StoragePathNode1"), NodePath("../StorageSideNode2")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode1" unique_id=1608462085]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode2" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1160485795]
+[node name="StorageSideNode2" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1160485795 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -23.250528, -3.5, -8.722002)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode1"), NodePath("../StorageSideNode3"), NodePath("../StorageSideNode5")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode2" unique_id=1142053018]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode3" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1556021390]
+[node name="StorageSideNode3" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1556021390 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -23.228865, -3.5, -6.791593)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode2"), NodePath("../StorageSideNode4")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode3" unique_id=1007259409]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode4" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1933216544]
+[node name="StorageSideNode4" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1933216544 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -24.943493, -3.5, -6.791593)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode3")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode4" unique_id=489299594]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode5" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1045650201]
+[node name="StorageSideNode5" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1045650201 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -23.228865, -3.5, -10.707502)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode2"), NodePath("../StorageSideNode6")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode5" unique_id=562613387]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode6" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=606079228]
+[node name="StorageSideNode6" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=606079228 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -24.917866, -3.5, -10.691175)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode5")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode6" unique_id=1574240017]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode7" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=825979306]
+[node name="StorageSideNode7" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=825979306 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -35.32905, -3.5, -19.787098)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Storage/StoragePathNode2"), NodePath("../StorageSideNode8")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode7" unique_id=2074391444]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode8" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=997173407]
+[node name="StorageSideNode8" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=997173407 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -32.232742, -3.5, -19.787098)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode7"), NodePath("../StorageSideNode9")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode8" unique_id=1972670545]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode9" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=2080462254]
+[node name="StorageSideNode9" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=2080462254 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -29.396505, -3.5, -19.787098)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode8"), NodePath("../StorageSideNode10")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode9" unique_id=1210906568]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode10" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1276975515]
+[node name="StorageSideNode10" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1276975515 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -26.93979, -3.5, -19.787098)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode9")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode10" unique_id=1487821015]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode11" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1540158544]
+[node name="StorageSideNode11" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1540158544 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -29.422195, -3.5, 15.284996)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Storage/StoragePathNode5"), NodePath("../StorageSideNode12")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode11" unique_id=364419459]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageSideNode12" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1692695731]
+[node name="StorageSideNode12" type="Marker3D" parent="EnemyPaths/SideRooms/Storage" unique_id=1692695731 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -29.422195, -3.5, 17.989794)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageSideNode11")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/SideRooms/Storage/StorageSideNode12" unique_id=627645819]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -2620,121 +2852,178 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Vip" type="Node" parent="EnemyPaths/VentNodes" unique_id=1837974743]
 
-[node name="StorageVentNode6" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=449026672]
+[node name="VipVentNode1" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=314295677 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -22.065266, 0.09359431, 39.30258)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Vip/VipPathNode25"), NodePath("../VipVentNode2")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode1" unique_id=605166922]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="VipVentNode2" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=449026672 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -22.065266, 0.09359431, 55.462017)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipVentNode1"), NodePath("../VipVentNode3")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode6" unique_id=1826139113]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode2" unique_id=1826139113]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode7" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=314295677]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -22.065266, 0.09359431, 39.903545)
+[node name="VipVentNode3" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1421386683 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -7.7881145, 0.09359431, 55.462017)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipVentNode2"), NodePath("../../../SideRooms/Vip/VipSideNode3")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode7" unique_id=605166922]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode3" unique_id=1224961050]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode8" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1421386683]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -8.65906, 0.09359431, 55.462017)
+[node name="VipVentNode4" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1940607164 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -1.6417243, 0.09359431, 53.722332)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../SideRooms/Vip/VipSideNode3"), NodePath("../VipVentNode5")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode8" unique_id=1224961050]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode4" unique_id=1946462641]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode9" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1940607164]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -0.49430275, 0.09359431, 53.722332)
+[node name="VipVentNode5" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1034132958 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 5.8812184, 0.09359431, 53.722332)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipVentNode4"), NodePath("../VipVentNode6")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode9" unique_id=1946462641]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode5" unique_id=591342016]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode10" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1034132958]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 6.2158546, 0.09359431, 53.722332)
+[node name="VipVentNode6" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1606375181 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 5.6629763, 1.5950947, 47.713097)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../VipVentNode5")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode10" unique_id=591342016]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.54578257, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="StorageVentNode11" type="Marker3D" parent="EnemyPaths/VentNodes/Vip" unique_id=1606375181]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, 5.6629763, 1.5950947, 48.429543)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/StorageVentNode11" unique_id=1221878182]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Vip/VipVentNode6" unique_id=1221878182]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Storage" type="Node" parent="EnemyPaths/VentNodes" unique_id=520775383]
 
-[node name="StorageVentNode1" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=914004117]
+[node name="StorageVentNode1" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=1239048765 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -13.131515, 0.040630717, 6.16518)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../../../BaseNodes/Main/MainPathNode9"), NodePath("../../../BaseNodes/Main/MainPathNode19"), NodePath("../StorageVentNode2")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode1" unique_id=169657244]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="StorageVentNode2" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=914004117 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -21.565233, -1.1437368, 6.0940313)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode1"), NodePath("../StorageVentNode3")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode1" unique_id=1119345012]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode2" unique_id=1119345012]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode2" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=1690199750]
+[node name="StorageVentNode3" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=1690199750 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -21.565233, -1.1437368, 1.5193436)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode2"), NodePath("../StorageVentNode4")]
+node_type = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode2" unique_id=2064677217]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode3" unique_id=2064677217]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode3" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=1412129289]
+[node name="StorageVentNode4" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=1412129289 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -21.565233, -3.36726, -3.2202966)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode3"), NodePath("../StorageVentNode5")]
+node_type = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode3" unique_id=23999608]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode4" unique_id=23999608]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode4" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=140309263]
+[node name="StorageVentNode5" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=140309263 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -24.604385, -3.5, -3.3382974)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode4"), NodePath("../StorageVentNode6")]
+node_type = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode4" unique_id=1056454042]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode5" unique_id=1056454042]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode5" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=26471830]
+[node name="StorageVentNode6" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=26471830 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -24.604385, -3.5, 6.188)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode5")]
+node_type = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode5" unique_id=1745279851]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode6" unique_id=1745279851]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
-[node name="StorageVentNode6" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=388345276]
-transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -26.883816, -1.5883869, 22.213243)
-script = ExtResource("5_cqujs")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode6" unique_id=339179766]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-mesh = SubResource("SphereMesh_07vj6")
-surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
-
-[node name="StorageVentNode7" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=2026846413]
+[node name="StorageVentNode7" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=2026846413 node_paths=PackedStringArray("connected_nodes")]
 transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -26.84865, -1.5690846, 20.74483)
 script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode8")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode7" unique_id=95946063]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_07vj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
+
+[node name="StorageVentNode8" type="Marker3D" parent="EnemyPaths/VentNodes/Storage" unique_id=388345276 node_paths=PackedStringArray("connected_nodes")]
+transform = Transform3D(-1, 0, 8.742278e-08, 7.642742e-15, -1, 8.742278e-08, 8.742278e-08, 8.742278e-08, 1, -26.883816, -0.031066239, 27.026476)
+script = ExtResource("5_cqujs")
+connected_nodes = [NodePath("../StorageVentNode7"), NodePath("../../../BaseNodes/Vip/VipPathNode28")]
+node_type = 2
+pause_rate = 3
+turn_rate = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyPaths/VentNodes/Storage/StorageVentNode8" unique_id=339179766]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("SphereMesh_07vj6")
 surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
@@ -2755,6 +3044,24 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="WindowNodes" type="Node" parent="EnemyPaths" unique_id=351825789]
 
+[node name="Lights" type="Node" parent="." unique_id=634427569]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1374297953]
+transform = Transform3D(1, 0, 0, 0, 0.057476852, 0.99834687, 0, -0.99834687, 0.057476852, -33.349323, 0.86283964, 0)
+shadow_enabled = true
+spot_range = 6.0448413
+spot_angle = 35.370724
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=487530671]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.07935071, 5.6242533, -1.6259694)
+light_color = Color(0.99999994, 0.9372807, 0.8311383, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.0
+spot_range = 10.0
+spot_angle = 15.0
+spot_angle_attenuation = 0.53588665
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1446552579]
 environment = SubResource("Environment_1i5qp")
 
@@ -2763,8 +3070,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.29
 
 [node name="Goon1" parent="." unique_id=1257103791 node_paths=PackedStringArray("current_node") instance=ExtResource("7_nbklu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.14373, -2.6484816, 0)
-speed = 8.0
-current_node = NodePath("../EnemyPaths/SideRooms/Staff/OfficePathNode1")
+speed = 2.5
+current_node = NodePath("../EnemyPaths/BaseNodes/Main/MainPathNode1")
 
 [node name="TestCardboardFella" type="Sprite3D" parent="." unique_id=757623143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16525269, 1.107768, -1.895263)

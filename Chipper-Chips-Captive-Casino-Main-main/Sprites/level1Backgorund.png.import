@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlmgawbb67ctt"
-path.s3tc="res://.godot/imported/level1Backgorund.png-9e7fd99281044a837bac8555870fe171.s3tc.ctex"
+path.s3tc="res://.godot/imported/level1Backgorund.png-b8d5ed3ddddc317f387861abf0b8e2ce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Sprites/level1Backgorund.png"
-dest_files=["res://.godot/imported/level1Backgorund.png-9e7fd99281044a837bac8555870fe171.s3tc.ctex"]
+source_file="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/level1Backgorund.png"
+dest_files=["res://.godot/imported/level1Backgorund.png-b8d5ed3ddddc317f387861abf0b8e2ce.s3tc.ctex"]
 
 [params]
 

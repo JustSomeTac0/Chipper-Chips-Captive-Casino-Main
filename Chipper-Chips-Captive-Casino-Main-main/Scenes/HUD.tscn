@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bi2dng2ui1qyr"]
 
-[ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper Chips Captive Casino Main/Scripts/Stamania Bar.gd" id="1_8u1te"]
-[ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper Chips Captive Casino Main/Sprites/testTile.png" id="1_stexo"]
+[ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/testTile.png" id="1_stexo"]
+[ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Stamania Bar.gd" id="2_73ole"]
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
 
@@ -23,4 +23,4 @@ texture_under = ExtResource("1_stexo")
 texture_progress = ExtResource("1_stexo")
 tint_under = Color(0.35425574, 2.4215783e-06, 0.009051529, 1)
 tint_progress = Color(0, 1, 1, 1)
-script = ExtResource("1_8u1te")
+script = ExtResource("2_73ole")

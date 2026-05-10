@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cebgw7xdr3hi0"
-path="res://.godot/imported/FlashLightTexture.png-fcc8b4f8c4df751987edb15d6d566626.ctex"
+uid="uid://dmo07y4qr38ah"
+path="res://.godot/imported/OtherFlash.png-2af2474502884b1c8e9029fd0bb5c081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/FlashLightTexture.png"
-dest_files=["res://.godot/imported/FlashLightTexture.png-fcc8b4f8c4df751987edb15d6d566626.ctex"]
+source_file="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/OtherFlash.png"
+dest_files=["res://.godot/imported/OtherFlash.png-2af2474502884b1c8e9029fd0bb5c081.ctex"]
 
 [params]
 
