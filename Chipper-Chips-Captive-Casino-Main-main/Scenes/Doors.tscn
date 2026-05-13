@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://sk7hwovy0cd2"]
+
+[ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/door.gd" id="1_cig1t"]
+[ext_resource type="AudioStream" uid="uid://bun0mwm8d5es2" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/Sounds/Roblox Doors Rooms Door Open Sound Effect.mp3" id="2_cig1t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rs1cx"]
+size = Vector3(1, 1.8702393, 2.0552063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cig1t"]
+size = Vector3(2.4648438, 2.6748047, 5.4020996)
+
+[node name="Node3D" type="Node3D" unique_id=1292509876]
+script = ExtResource("1_cig1t")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1831796458]
+use_collision = true
+size = Vector3(1.6015625, 2.4060059, 0.2)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CSGBox3D" unique_id=1016698758]
+stream = ExtResource("2_cig1t")
+volume_db = 80.0
+
+[node name="Area3D" type="Area3D" parent="." unique_id=21419740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6078942)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2129644496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.024, -0.5104128)
+shape = SubResource("BoxShape3D_rs1cx")
+
+[node name="Area3D2" type="Area3D" parent="." unique_id=602361149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48099363)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1718007888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.6678649)
+shape = SubResource("BoxShape3D_rs1cx")
+
+[node name="Area3D3" type="Area3D" parent="." unique_id=1168182624]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=1068017303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015289307, 0)
+shape = SubResource("BoxShape3D_cig1t")
+debug_color = Color(0.6016312, 0.368745, 1, 0.41960785)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_exited" from="Area3D3" to="." method="_on_area_3d_3_body_exited"]

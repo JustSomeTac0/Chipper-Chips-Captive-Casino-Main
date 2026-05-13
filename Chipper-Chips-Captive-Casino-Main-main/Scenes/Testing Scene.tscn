@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qh2ad3val6fo"]
 
 [ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/level1Backgorund.png" id="1_c6x0b"]
+[ext_resource type="PackedScene" uid="uid://sk7hwovy0cd2" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Doors.tscn" id="2_eaykp"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn" id="2_ebker"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pai55"]
@@ -38,6 +39,9 @@ shape = SubResource("BoxShape3D_pai55")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=948197164]
 transform = Transform3D(51.99407, 0, 0, 0, 0.20582847, 0, 0, 0, 41.645565, 0.003978499, 0, 0)
 mesh = SubResource("BoxMesh_lk8nq")
+
+[node name="Marker3D" parent="Ground" unique_id=972581575 instance=ExtResource("2_eaykp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8835754, 1.1018957, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=269315319]
 environment = SubResource("Environment_c6x0b")

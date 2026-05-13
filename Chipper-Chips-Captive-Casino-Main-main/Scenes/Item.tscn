@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b1tk6jdsase6q"]
+
+[ext_resource type="Script" uid="uid://bqrds33ohf0se" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Item.gd" id="1_4lfgn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_cosa2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1igmn"]
+radius = 1.5226802
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1852272048]
+script = ExtResource("1_4lfgn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=621312450]
+mesh = SubResource("SphereMesh_cosa2")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="MeshInstance3D" unique_id=1358340845]
+aabb = AABB(-0.25, -0.25, -0.25, 0.5, 0.5, 0.5)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=210130883]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1203135555]
+shape = SubResource("SphereShape3D_1igmn")
+
+[connection signal="screen_entered" from="MeshInstance3D/VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="MeshInstance3D/VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

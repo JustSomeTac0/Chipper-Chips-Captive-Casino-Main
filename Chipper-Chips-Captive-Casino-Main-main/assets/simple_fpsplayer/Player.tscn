@@ -20,8 +20,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody3D" unique_id=818413224]
+[node name="Player" type="CharacterBody3D" unique_id=818413224 groups=["player"]]
 disable_mode = 2
+collision_layer = 255
+collision_mask = 255
 floor_max_angle = 0.802851
 script = ExtResource("1_1fhis")
 
@@ -30,7 +32,7 @@ wait_time = 0.1
 
 [node name="Hud" parent="." unique_id=1366660728 instance=ExtResource("2_7xlnr")]
 
-[node name="body" type="CollisionShape3D" parent="." unique_id=1314790822]
+[node name="body" type="CollisionShape3D" parent="." unique_id=1314790822 groups=["player_body"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036902368, 0)
 shape = SubResource("CapsuleShape3D_euj4i")
 
@@ -44,7 +46,7 @@ sprite_frames = SubResource("SpriteFrames_n2yuy")
 [node name="rotation_helper" type="Node3D" parent="." unique_id=1017277431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="Camera3D" type="Camera3D" parent="rotation_helper" unique_id=1423988991]
+[node name="Camera3D" type="Camera3D" parent="rotation_helper" unique_id=1423988991 groups=["camera"]]
 
 [node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D" unique_id=1832081135]
 transform = Transform3D(0.9999909, 0.0010289253, 0.0041538402, -0.0010287459, 0.99999946, -4.5329776e-05, -0.004153885, 4.105611e-05, 0.9999914, 0.24691164, 0, 0)
@@ -61,10 +63,10 @@ shadow_normal_bias = 0.927
 shadow_blur = 1.289
 distance_fade_begin = 2.15
 distance_fade_shadow = 9.8
-spot_range = 8.135626
-spot_attenuation = 0.61
-spot_angle = 25.127089
-spot_angle_attenuation = 1.4640871
+spot_range = 10.0
+spot_attenuation = 0.5
+spot_angle = 25.0
+spot_angle_attenuation = 0.7845848
 
 [node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D" unique_id=1449266271]
 target_position = Vector3(0, 0, -2)
@@ -72,5 +74,8 @@ script = ExtResource("2_gwqkd")
 
 [node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab" unique_id=1239682052]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=2039042163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5727258, 0)
 
 [connection signal="timeout" from="StaminaRegenTimer" to="." method="_on_stamina_regen_timer_timeout"]

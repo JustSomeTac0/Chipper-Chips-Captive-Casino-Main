@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c74627kf6b48k"]
+
+[ext_resource type="Script" uid="uid://b0c57jlh667pt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/LockerScript.gd" id="1_b2fk1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75ng1"]
+size = Vector3(1, 1.5860596, 0.8800049)
+
+[sub_resource type="SphereMesh" id="SphereMesh_b2fk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75ng1"]
+shading_mode = 0
+albedo_color = Color(0.46666667, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b2fk1"]
+size = Vector3(2.8513184, 1.6271973, 1.9365234)
+
+[node name="Node3D" type="Node3D" unique_id=1207668250]
+script = ExtResource("1_b2fk1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1558993142]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1987003131]
+shape = SubResource("BoxShape3D_75ng1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D" unique_id=1945197122]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1696252343]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("SphereMesh_b2fk1")
+surface_material_override/0 = SubResource("StandardMaterial3D_75ng1")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="MeshInstance3D" unique_id=23444575]
+aabb = AABB(-0.5, -0.5, -0.5, 1, 1, 1)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1590116192]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=261338013]
+shape = SubResource("BoxShape3D_b2fk1")
+
+[connection signal="screen_entered" from="MeshInstance3D/VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="MeshInstance3D/VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

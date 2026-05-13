@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ygfhj45xiuoy"
+path.s3tc="res://.godot/imported/metal_stairs_bottom_1.png-ad33ac19d6074feda62b0f1ff6ee9073.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "46cafccad086ca928bef4e78264658d7"
+}
+
+[deps]
+
+source_file="res://Chipper-Chips-Captive-Casino-Main-main/assets/Models/Metal_stairs/metal_stairs_bottom_1.png"
+dest_files=["res://.godot/imported/metal_stairs_bottom_1.png-ad33ac19d6074feda62b0f1ff6ee9073.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
