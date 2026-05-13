@@ -1,5 +1,5 @@
-StaticBody3D
 CollisionShape3D
+StaticBody3D
 MeshInstance3D
 Node
 VisibleOnScreenNotifier3D
