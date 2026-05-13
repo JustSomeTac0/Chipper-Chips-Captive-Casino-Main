@@ -19,6 +19,10 @@ config/icon="res://Chipper Chips Captive Casino Main/Sprites/icon.svg"
 
 Global="*uid://cx8drfmnbeyr7"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 camera=""

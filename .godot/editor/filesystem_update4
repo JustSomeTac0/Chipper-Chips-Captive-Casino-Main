@@ -1,1 +1,6 @@
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Materials/Test.tres
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Stamania Bar.gd
+res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.gd
+res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn

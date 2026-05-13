@@ -23,7 +23,7 @@ var hitbox #THIS
 var waitfForTimer = false
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
-var stamina: int = 100 #PULL
+var stamina: int = 120 #PULL
 var maxStamina
 var sprinting: bool = false
 var StaminaRegenTimer
