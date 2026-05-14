@@ -77,6 +77,7 @@ texture = ExtResource("3_841ab")
 [node name="Effects" type="Node2D" parent="." unique_id=1489292701]
 
 [node name="Energized" type="Node2D" parent="Effects" unique_id=842680978]
+position = Vector2(1152, -2)
 script = ExtResource("6_hfyj3")
 
 [node name="Effect Timer" type="Timer" parent="Effects/Energized" unique_id=817184578]
@@ -88,11 +89,12 @@ one_shot = true
 
 [node name="EffectProgressBar" type="TextureProgressBar" parent="Effects/Energized" unique_id=344910923]
 texture_filter = 1
-offset_left = 955.0
-offset_top = 3.0
-offset_right = 1159.0
-offset_bottom = 103.0
+offset_left = -102.0
+offset_right = 102.0
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
 max_value = 100.42
+nine_patch_stretch = true
 texture_under = ExtResource("7_kgy7w")
 texture_progress = ExtResource("7_utd5k")
 texture_progress_offset = Vector2(-1.745, 1.33)
