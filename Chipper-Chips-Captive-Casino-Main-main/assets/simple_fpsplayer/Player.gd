@@ -42,7 +42,7 @@ func _ready():
 	hitbox = $body
 	StaminaRegenTimer = $StaminaRegenTimer
 	maxStamina = $Hud/CanvasLayer/TextureProgressBar.max_value
-	
+
 	
 	print(maxStamina)
 	
@@ -103,24 +103,26 @@ func _physics_process(delta):
 	
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
-		SPEED = 6
-		isCrouched = true
-		regenTime = 0.05
-		weight = 4 # fall faster 
-		velocity.y -= 0.4 # ditto
-		hitboxRadius = 0.3
-		hitboxHeight = 1.2
-		hitbox.shape.radius = float(hitboxRadius)
-		hitbox.shape.height = float(hitboxHeight)
+		if isCrouched == false:
+			SPEED = 6
+			isCrouched = true
+			regenTime = regenTime / 2
+			weight = 4 # fall faster 
+			velocity.y -= 0.4 # ditto
+			hitboxRadius = 0.3
+			hitboxHeight = 1.2
+			hitbox.shape.radius = float(hitboxRadius)
+			hitbox.shape.height = float(hitboxHeight)
 	else:
-		SPEED = 8.5
-		isCrouched = false
-		regenTime = 0.1
-		weight = 2
-		hitboxRadius = 0.5
-		hitboxHeight = 2.0
-		hitbox.shape.radius = float(hitboxRadius)
-		hitbox.shape.height = float(hitboxHeight)
+		if isCrouched == true:
+			SPEED = 8.5
+			isCrouched = false
+			regenTime = regenTime * 2
+			weight = 2
+			hitboxRadius = 0.5
+			hitboxHeight = 2.0
+			hitbox.shape.radius = float(hitboxRadius)
+			hitbox.shape.height = float(hitboxHeight)
 	
 	
 	
