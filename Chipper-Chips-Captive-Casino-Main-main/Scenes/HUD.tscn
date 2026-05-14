@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bi2dng2ui1qyr"]
 
-[ext_resource type="Texture2D" uid="uid://d0ig3mpq8yie" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/StaminabarBackgorund2.png" id="1_5qe0c"]
 [ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Stamania Bar.gd" id="2_73ole"]
 [ext_resource type="Texture2D" uid="uid://b66ir1yo5wdiq" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/StaminabarBackgorund1.png" id="2_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://bok1j4k6mt0l3" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Staminabar1.png" id="3_841ab"]
@@ -17,56 +16,57 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0000038
-offset_top = -254.0
-offset_right = 77.496
-offset_bottom = 100.66504
+offset_top = -164.0
+offset_right = 64.20804
+offset_bottom = 187.83203
 grow_vertical = 0
-scale = Vector2(5.5682564, 0.7058353)
+scale = Vector2(3.642843, 0.4617688)
 max_value = 120.0
 value = 120.0
 nine_patch_stretch = true
-texture_under = ExtResource("1_5qe0c")
+texture_under = ExtResource("2_hfyj3")
+texture_over = ExtResource("2_hfyj3")
 texture_progress = ExtResource("2_hfyj3")
 script = ExtResource("2_73ole")
 
-[node name="NegativeSlot3" type="Sprite2D" parent="CanvasLayer" unique_id=39320058]
+[node name="NegativeSlot3" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=39320058]
 texture_filter = 1
-position = Vector2(282.061, 448)
-scale = Vector2(0.678787, 1)
+position = Vector2(40.048, 134.592)
+scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="NegativeSlot2" type="Sprite2D" parent="CanvasLayer" unique_id=1799173819]
+[node name="NegativeSlot2" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=1799173819]
 texture_filter = 1
-position = Vector2(190.89749, 448)
-scale = Vector2(0.7020501, 1)
+position = Vector2(27.118, 131.759)
+scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="NegativeSlot1" type="Sprite2D" parent="CanvasLayer" unique_id=869239372]
+[node name="NegativeSlot1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=869239372]
 texture_filter = 1
-position = Vector2(102, 448)
-scale = Vector2(0.71000016, 1)
+position = Vector2(14.793172, 132.55765)
+scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="PostiveSlot1" type="Sprite2D" parent="CanvasLayer" unique_id=1730559669]
+[node name="PostiveSlot1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=1730559669]
 texture_filter = 1
-position = Vector2(100.000015, 570.8)
-scale = Vector2(0.71000016, 1)
+position = Vector2(14.367, 260)
+scale = Vector2(0.13519996, 1.1732553)
 texture = ExtResource("5_utd5k")
 
-[node name="PostiveSlot2" type="Sprite2D" parent="CanvasLayer" unique_id=753336056]
+[node name="PostiveSlot2" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=753336056]
 texture_filter = 1
-position = Vector2(188.8975, 570.8)
-scale = Vector2(0.71000016, 1)
+position = Vector2(27.118, 260)
+scale = Vector2(0.135, 1.211)
 texture = ExtResource("5_utd5k")
 
-[node name="PostiveSlot3" type="Sprite2D" parent="CanvasLayer" unique_id=827748296]
+[node name="PostiveSlot3" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=827748296]
 texture_filter = 1
-position = Vector2(281, 570)
-scale = Vector2(0.71000016, 1)
+position = Vector2(40.048, 260)
+scale = Vector2(0.135, 1.211)
 texture = ExtResource("5_utd5k")
 
-[node name="Staminabar1" type="Sprite2D" parent="CanvasLayer" unique_id=169049449]
-texture_filter = 1
-position = Vector2(214.00002, 521.8)
-scale = Vector2(1.2, 1.2)
+[node name="Staminabar1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=169049449]
+texture_filter = 3
+position = Vector2(31.068974, 208.26393)
+scale = Vector2(0.176, 1.385)
 texture = ExtResource("3_841ab")
