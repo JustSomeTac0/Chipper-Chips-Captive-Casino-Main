@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn" id="1_1i5qp"]
 [ext_resource type="Material" uid="uid://d3c5w5bdspqww" path="res://Chipper-Chips-Captive-Casino-Main-main/Materials/Test.tres" id="1_pegwi"]
-[ext_resource type="Shader" uid="uid://c8aqqyqao136i" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/CoolReflective.gdshader" id="2_b8mr1"]
 [ext_resource type="PackedScene" uid="uid://sk7hwovy0cd2" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Doors.tscn" id="3_cgx0n"]
 [ext_resource type="PackedScene" uid="uid://b3ow0m7basaku" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/Models/Metal_stairs/metal_stairs_bottom.gltf" id="3_s64yr"]
 [ext_resource type="PackedScene" uid="uid://c74627kf6b48k" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Locker.tscn" id="4_cosa2"]
@@ -14,12 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn" id="7_nbklu"]
 [ext_resource type="Script" uid="uid://cx8drfmnbeyr7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd" id="8_uofhw"]
 [ext_resource type="PackedScene" uid="uid://cf8w7v7mjr30f" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/Models/Other_Stairs.gltf" id="14_jyex6"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8ijf"]
-render_priority = 0
-shader = ExtResource("2_b8mr1")
-shader_parameter/atlas_size = Vector2(0, 0)
-shader_parameter/highlight_amount = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s64yr"]
 size = Vector3(2.7941067, 0.10498047, 1.5383606)
@@ -119,9 +112,10 @@ fog_light_color = Color(0.00967607, 0, 0.14160633, 1)
 transform = Transform3D(9.753082, 0, 0, 0, 9.753082, 0, 0, 0, 9.753082, -29.54255, 0, 0)
 material_override = ExtResource("1_pegwi")
 use_collision = true
-material = SubResource("ShaderMaterial_k8ijf")
+material = ExtResource("1_pegwi")
 
 [node name="Rooms" type="CSGMesh3D" parent="Map/Storage" unique_id=1709826976]
+material_override = ExtResource("1_pegwi")
 
 [node name="CSGBox3D58" type="CSGBox3D" parent="Map/Storage/Rooms" unique_id=55322146]
 transform = Transform3D(-1.3874032, 0, 0, 0, 0, 1, 2.5433119e-08, 1.798811, 0, 0.3772768, -0.11863047, 0.8985159)
@@ -247,6 +241,7 @@ size = Vector3(0.9294815, 0.011230469, 0.8053589)
 
 [node name="Hallways" type="CSGMesh3D" parent="Map/Storage" unique_id=1559801507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.010877032, 0)
+material_override = ExtResource("1_pegwi")
 
 [node name="Hall1" type="CSGMesh3D" parent="Map/Storage/Hallways" unique_id=359673708]
 
@@ -924,25 +919,31 @@ use_collision = true
 
 [node name="Rooms" type="CSGMesh3D" parent="Map/Staff" unique_id=46584772]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011424832, 0.00015610873, -0.0006408622)
+material_override = ExtResource("1_pegwi")
 
 [node name="CSGBox3D159" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=1543067255]
 transform = Transform3D(-7.8783046e-08, 1.7431469, 0, 0, 0, 1.0000001, 1.802346, 7.619536e-08, 0, 8.0649185, -0.19597895, 0.40445456)
+material_override = ExtResource("1_pegwi")
 size = Vector3(0.75891113, 0.011230469, 0.39144897)
 
 [node name="CSGBox3D158" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=720217770]
 transform = Transform3D(-7.8783046e-08, 0, -1.7431467, 0, 1, 0, 1.802346, 0, -7.6195356e-08, 7.3651376, -0.39069787, 0.40445453)
+material_override = ExtResource("1_pegwi")
 size = Vector3(0.75891113, 0.011230469, 0.8053589)
 
 [node name="CSGBox3D157" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=271384514]
 transform = Transform3D(-4.876485e-08, 1.7431469, 0, 0, 0, 1.0000001, 1.1156098, 7.619536e-08, 0, 6.1863656, -0.19597895, -1.4934307)
+material_override = ExtResource("1_pegwi")
 size = Vector3(0.75891113, 0.011230469, 0.39144897)
 
 [node name="CSGBox3D156" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=943643068]
 transform = Transform3D(-4.876485e-08, 0, -1.7431467, 0, 1, 0, 1.1156098, 0, -7.6195356e-08, 5.486585, -0.39069787, -1.4934307)
+material_override = ExtResource("1_pegwi")
 size = Vector3(0.75891113, 0.011230469, 0.8053589)
 
 [node name="CSGBox3D155" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=529162064]
 transform = Transform3D(3.4437162e-15, -7.8783046e-08, -1.7431467, -1, -4.371139e-08, 0, -7.8783046e-08, 1.802346, -7.6195356e-08, 7.3651376, -0.20122537, 1.0820091)
+material_override = ExtResource("1_pegwi")
 size = Vector3(0.3985901, 0.011230469, 0.8053589)
 
 [node name="CSGBox3D154" type="CSGBox3D" parent="Map/Staff/Rooms" unique_id=837427282]
@@ -1062,9 +1063,11 @@ transform = Transform3D(3.4437162e-15, -7.8783046e-08, -1.7431467, -1, -4.371139
 size = Vector3(0.3985901, 0.011230469, 0.31832123)
 
 [node name="Hallways" type="CSGMesh3D" parent="Map/Staff" unique_id=1970106420]
+material_override = ExtResource("1_pegwi")
 
 [node name="Hall1" type="CSGMesh3D" parent="Map/Staff/Hallways" unique_id=43587099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8517504, -0.02061334, 0)
+material_override = ExtResource("1_pegwi")
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="Map/Staff/Hallways/Hall1" unique_id=507816137]
 transform = Transform3D(1, 5.3731704e-16, 0, 3.3407484e-22, 1.0000002, -8.74228e-08, 0, 5.440532e-08, 0.6223243, -0.57903576, -0.36992398, 0.2983843)

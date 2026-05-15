@@ -24,10 +24,12 @@ func _ready() -> void:
 	Tired = $Tired
 	Fast = $Fast
 	Slow = $Slow
+	Drunk = $Drunk
 
 
 func handleEffects(effect): #just call the with the name of the effect like handleEffects(Energized)
 	var moveAmount = 50
+	print(effectList)
 	if effect in effectList: #this is for when the effect is already active
 		effect.effectTimer.start()
 	else:

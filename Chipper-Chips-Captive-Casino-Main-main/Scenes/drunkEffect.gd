@@ -3,10 +3,11 @@ var player
 var effectTimer
 var effectProgressBar
 var effectMaster
+var MapMaterial
 
 ###change this if another effect
-var Tired
-var isTired = false
+var Drunk
+var isDrunk = false
 ###
 
 func _ready() -> void:
@@ -15,23 +16,24 @@ func _ready() -> void:
 	effectProgressBar = $EffectProgressBar
 	effectProgressBar.max_value = effectTimer.wait_time
 	effectMaster = $".."
+	MapMaterial = $"../../../../Map/Storage".get_material()
+
 	###change this if another effect
-	Tired = self
+	Drunk = self
 	###
 
 ###change this if another effect
-func effectTiredActive():
-	isTired = true
-	player.regenTime = player.regenTime * 4
+func effectDrunkActive():
+	isDrunk = true
 	effectTimer.start()
-	effectMaster.handleEffects(Tired)
+	effectMaster.handleEffects(Drunk)
 ###
 
 
 func _on_effect_timer_timeout() -> void:
 	###change this if another effect
-	player.regenTime = player.regenTime / 4
-	isTired = false
+	isDrunk = false
+	MapMaterial.uv1_offset.x = 10.0
 	###
 	
 	
@@ -44,12 +46,16 @@ func _on_effect_timer_timeout() -> void:
 
 func _input(event): #testing
 	if Input.is_action_pressed("devButton"):
-		effectTiredActive()
+		effectDrunkActive()
 		
 
 
 func _process(delta: float) -> void:
 	###change this if another effect
-	if isTired == true:
+	if isDrunk == true:
 	###
+		for i in range(10):
+			MapMaterial.uv1_offset.x += 0.001 
+			await get_tree().create_timer(0.01).timeout
+			
 		effectProgressBar.value = effectTimer.time_left

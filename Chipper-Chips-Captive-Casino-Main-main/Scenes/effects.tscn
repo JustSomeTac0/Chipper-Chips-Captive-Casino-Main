@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bve7mkkaqyafk"]
+
+[ext_resource type="Script" uid="uid://ddch3ql1bpeua" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/effects.gd" id="1_xl7np"]
+[ext_resource type="Script" uid="uid://dxsstjem0vl3i" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/energizedEffect.gd" id="2_qifyo"]
+[ext_resource type="Texture2D" uid="uid://bt7c42fs36g7e" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/EffectEmpty.png" id="3_b5hco"]
+[ext_resource type="Texture2D" uid="uid://c140w0ans68sx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectEnergizedSym.png" id="4_onvdp"]
+[ext_resource type="Texture2D" uid="uid://b5evsg8cccdua" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectBase.png" id="5_ck2a1"]
+[ext_resource type="Script" uid="uid://b3yfhrwvk0g3e" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/fastEffect.gd" id="6_rfwnf"]
+[ext_resource type="Texture2D" uid="uid://bosyw5wdhuobp" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectFastSym.png" id="7_a8wc7"]
+[ext_resource type="Script" uid="uid://7wwquu25q6pc" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/slowEffect.gd" id="8_5umba"]
+[ext_resource type="Texture2D" uid="uid://k2xjcvl4iift" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectSlowSym.png" id="9_55uau"]
+[ext_resource type="Texture2D" uid="uid://12sdfal4605j" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectBase.png" id="10_vf34l"]
+[ext_resource type="Script" uid="uid://cnsbgdmjovxc3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/tiredEffect.gd" id="11_t2a8k"]
+[ext_resource type="Texture2D" uid="uid://lcqqggx42x75" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTiredSym.png" id="12_hfyo5"]
+[ext_resource type="Script" uid="uid://wkv6cfteev36" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/drunkEffect.gd" id="13_b5hco"]
+[ext_resource type="Texture2D" uid="uid://dqwmtobfw2mvx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectDrunkSym.png" id="14_onvdp"]
+
+[node name="Effects" type="Node2D" unique_id=1968707285]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("1_xl7np")
+
+[node name="Energized" type="Node2D" parent="." unique_id=846163221]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("2_qifyo")
+
+[node name="Effect Timer" type="Timer" parent="Energized" unique_id=1758791850]
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Energized" unique_id=1595319689]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("4_onvdp")
+texture_progress = ExtResource("5_ck2a1")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[node name="Fast" type="Node2D" parent="." unique_id=1966538294]
+script = ExtResource("6_rfwnf")
+
+[node name="Effect Timer" type="Timer" parent="Fast" unique_id=149354936]
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Fast" unique_id=1504497566]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("7_a8wc7")
+texture_progress = ExtResource("5_ck2a1")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[node name="Slow" type="Node2D" parent="." unique_id=550788061]
+script = ExtResource("8_5umba")
+
+[node name="Effect Timer" type="Timer" parent="Slow" unique_id=808703320]
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Slow" unique_id=1256398626]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("9_55uau")
+texture_progress = ExtResource("10_vf34l")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[node name="Tired" type="Node2D" parent="." unique_id=2021035979]
+script = ExtResource("11_t2a8k")
+
+[node name="Effect Timer" type="Timer" parent="Tired" unique_id=102425884]
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Tired" unique_id=52454530]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("12_hfyo5")
+texture_progress = ExtResource("10_vf34l")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[node name="Drunk" type="Node2D" parent="." unique_id=1069754011]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("13_b5hco")
+
+[node name="Effect Timer" type="Timer" parent="Drunk" unique_id=1839346883]
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Drunk" unique_id=2090838257]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("14_onvdp")
+texture_progress = ExtResource("10_vf34l")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[connection signal="timeout" from="Energized/Effect Timer" to="Energized" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Fast/Effect Timer" to="Fast" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Slow/Effect Timer" to="Slow" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Tired/Effect Timer" to="Tired" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Drunk/Effect Timer" to="Drunk" method="_on_effect_timer_timeout"]
