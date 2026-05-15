@@ -4,8 +4,20 @@ var effect
 
 
 #################all effects##############
+#postive#
 var Energized
+var Fast
+var Aware
+var Lucky
+var Tracking
+
+#negative#
 var Tired
+var Slow
+var Oblivious
+var Unlucky
+var Tracked
+var Drunk
 
 func _ready() -> void:
 	Energized = $Energized
