@@ -6,13 +6,24 @@
 [ext_resource type="Texture2D" uid="uid://desuuhvscgbmw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages2.png" id="4_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
 [ext_resource type="Script" uid="uid://ddch3ql1bpeua" path="res://Chipper-Chips-Captive-Casino-Main-main/effects.gd" id="6_fta1o"]
-[ext_resource type="Script" uid="uid://dxsstjem0vl3i" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/energizedEffect.gd" id="7_16fe3"]
 [ext_resource type="Texture2D" uid="uid://bt7c42fs36g7e" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/EffectEmpty.png" id="7_kgy7w"]
-[ext_resource type="Texture2D" uid="uid://c140w0ans68sx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectEnergizedSym.png" id="9_bo7fo"]
+[ext_resource type="Texture2D" uid="uid://be1s46ht0lbqw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectEnergized.png" id="7_utd5k"]
 [ext_resource type="Script" uid="uid://cnsbgdmjovxc3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/tiredEffect.gd" id="9_fta1o"]
-[ext_resource type="Texture2D" uid="uid://b5evsg8cccdua" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectBase.png" id="10_8n3da"]
-[ext_resource type="Texture2D" uid="uid://lcqqggx42x75" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTiredSym.png" id="11_gjpeo"]
-[ext_resource type="Texture2D" uid="uid://12sdfal4605j" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectBase.png" id="12_bo7fo"]
+[ext_resource type="Texture2D" uid="uid://tpw7re2i3dum" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTired.png" id="10_uj3og"]
+
+[sub_resource type="GDScript" id="GDScript_kgy7w"]
+script/source = "extends \"res://Chipper-Chips-Captive-Casino-Main-main/Scenes/energizedEffect.gd\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
 
@@ -83,7 +94,7 @@ texture = ExtResource("3_841ab")
 script = ExtResource("6_fta1o")
 
 [node name="Energized" type="Node2D" parent="Effects" unique_id=842680978]
-script = ExtResource("7_16fe3")
+script = SubResource("GDScript_kgy7w")
 
 [node name="Effect Timer" type="Timer" parent="Effects/Energized" unique_id=817184578]
 process_thread_group = 2
@@ -101,8 +112,7 @@ scale = Vector2(0.5, 0.5)
 max_value = 100.42
 nine_patch_stretch = true
 texture_under = ExtResource("7_kgy7w")
-texture_over = ExtResource("9_bo7fo")
-texture_progress = ExtResource("10_8n3da")
+texture_progress = ExtResource("7_utd5k")
 texture_progress_offset = Vector2(-1.745, 1.33)
 
 [node name="Tired" type="Node2D" parent="Effects" unique_id=610482876]
@@ -127,8 +137,7 @@ scale = Vector2(0.5, 0.5)
 max_value = 100.42
 nine_patch_stretch = true
 texture_under = ExtResource("7_kgy7w")
-texture_over = ExtResource("11_gjpeo")
-texture_progress = ExtResource("12_bo7fo")
+texture_progress = ExtResource("10_uj3og")
 texture_progress_offset = Vector2(-1.745, 1.33)
 
 [connection signal="timeout" from="Effects/Energized/Effect Timer" to="Effects/Energized" method="_on_effect_timer_timeout"]

@@ -5,9 +5,11 @@ var effect
 
 #################all effects##############
 var Energized
+var Tired
 
 func _ready() -> void:
 	Energized = $Energized
+	Tired = $Tired
 
 
 func handleEffects(effect): #just call the with the name of the effect like handleEffects(Energized)

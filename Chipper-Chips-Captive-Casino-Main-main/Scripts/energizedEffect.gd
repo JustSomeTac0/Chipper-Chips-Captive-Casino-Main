@@ -42,9 +42,9 @@ func _on_effect_timer_timeout() -> void:
 		await get_tree().create_timer(0.01).timeout
 	
 
-func _input(event): #testing
-	if Input.is_action_pressed("devButton"):
-		effectEnergizedActive()
+#func _input(event): #testing
+	#if Input.is_action_pressed("devButton"):
+		#effectEnergizedActive()
 		
 
 
