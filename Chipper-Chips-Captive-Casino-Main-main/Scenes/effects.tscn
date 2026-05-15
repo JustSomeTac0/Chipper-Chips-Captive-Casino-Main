@@ -19,6 +19,7 @@
 process_thread_group = 2
 process_thread_group_order = 0
 process_thread_messages = 0
+position = Vector2(131, 0)
 script = ExtResource("1_xl7np")
 
 [node name="Energized" type="Node2D" parent="." unique_id=846163221]
