@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bok1j4k6mt0l3" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Staminabar1.png" id="3_841ab"]
 [ext_resource type="Texture2D" uid="uid://desuuhvscgbmw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages2.png" id="4_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
+[ext_resource type="Script" uid="uid://ddch3ql1bpeua" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.gd" id="6_fta1o"]
 [ext_resource type="Script" uid="uid://dxsstjem0vl3i" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/energizedEffect.gd" id="6_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://bt7c42fs36g7e" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/EffectEmpty.png" id="7_kgy7w"]
 [ext_resource type="Texture2D" uid="uid://be1s46ht0lbqw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectEnergized.png" id="7_utd5k"]
@@ -75,9 +76,9 @@ scale = Vector2(0.176, 1.385)
 texture = ExtResource("3_841ab")
 
 [node name="Effects" type="Node2D" parent="." unique_id=1489292701]
+script = ExtResource("6_fta1o")
 
 [node name="Energized" type="Node2D" parent="Effects" unique_id=842680978]
-position = Vector2(1152, -2)
 script = ExtResource("6_hfyj3")
 
 [node name="Effect Timer" type="Timer" parent="Effects/Energized" unique_id=817184578]
@@ -89,8 +90,8 @@ one_shot = true
 
 [node name="EffectProgressBar" type="TextureProgressBar" parent="Effects/Energized" unique_id=344910923]
 texture_filter = 1
-offset_left = -102.0
-offset_right = 102.0
+offset_left = 1147.22
+offset_right = 1351.22
 offset_bottom = 100.0
 scale = Vector2(0.5, 0.5)
 max_value = 100.42
