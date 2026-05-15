@@ -1,4 +1,6 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/fast.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/effects.gd
 res://Chipper-Chips-Captive-Casino-Main-main/Scripts/fastEffect.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/slowEffect.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/effects.gd
+res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.gd

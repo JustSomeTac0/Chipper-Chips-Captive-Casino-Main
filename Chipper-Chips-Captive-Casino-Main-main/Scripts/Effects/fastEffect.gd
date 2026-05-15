@@ -22,7 +22,7 @@ func _ready() -> void:
 ###change this if another effect
 func effectFastActive(): #change this to player speed
 	isFast = true
-	player.regenTime = player.regenTime / 4
+	player.SPEED = player.SPEED * 1.2
 	effectTimer.start()
 	effectMaster.handleEffects(Fast)
 ###
@@ -30,7 +30,7 @@ func effectFastActive(): #change this to player speed
 
 func _on_effect_timer_timeout() -> void:
 	###change this if another effect
-	player.regenTime = player.regenTime * 4
+	player.SPEED = player.SPEED / 1.2
 	isFast = false
 	###
 	

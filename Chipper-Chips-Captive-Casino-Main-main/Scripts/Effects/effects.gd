@@ -23,6 +23,7 @@ func _ready() -> void:
 	Energized = $Energized
 	Tired = $Tired
 	Fast = $Fast
+	Slow = $Slow
 
 
 func handleEffects(effect): #just call the with the name of the effect like handleEffects(Energized)

@@ -104,7 +104,7 @@ func _physics_process(delta):
 	##Crouching things I addded
 	if Input.is_action_pressed("crouch"):
 		if isCrouched == false:
-			SPEED = 6
+			SPEED = SPEED - 1.5
 			isCrouched = true
 			regenTime = regenTime / 2
 			weight = 4 # fall faster 
@@ -115,7 +115,7 @@ func _physics_process(delta):
 			hitbox.shape.height = float(hitboxHeight)
 	else:
 		if isCrouched == true:
-			SPEED = 8.5
+			SPEED = SPEED + 1.5
 			isCrouched = false
 			regenTime = regenTime * 2
 			weight = 2
