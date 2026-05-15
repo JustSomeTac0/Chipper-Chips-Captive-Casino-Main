@@ -5,14 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://bok1j4k6mt0l3" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Staminabar1.png" id="3_841ab"]
 [ext_resource type="Texture2D" uid="uid://desuuhvscgbmw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages2.png" id="4_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
-[ext_resource type="Script" uid="uid://ddch3ql1bpeua" path="res://Chipper-Chips-Captive-Casino-Main-main/effects.gd" id="6_fta1o"]
+[ext_resource type="Script" uid="uid://ddch3ql1bpeua" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/effects.gd" id="6_fta1o"]
 [ext_resource type="Script" uid="uid://dxsstjem0vl3i" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/energizedEffect.gd" id="7_16fe3"]
 [ext_resource type="Texture2D" uid="uid://bt7c42fs36g7e" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/EffectEmpty.png" id="7_kgy7w"]
 [ext_resource type="Texture2D" uid="uid://c140w0ans68sx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectEnergizedSym.png" id="9_bo7fo"]
 [ext_resource type="Script" uid="uid://cnsbgdmjovxc3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/tiredEffect.gd" id="9_fta1o"]
 [ext_resource type="Texture2D" uid="uid://b5evsg8cccdua" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectBase.png" id="10_8n3da"]
+[ext_resource type="Script" uid="uid://b3yfhrwvk0g3e" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/fastEffect.gd" id="11_8n3da"]
 [ext_resource type="Texture2D" uid="uid://lcqqggx42x75" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTiredSym.png" id="11_gjpeo"]
 [ext_resource type="Texture2D" uid="uid://12sdfal4605j" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectBase.png" id="12_bo7fo"]
+[ext_resource type="Texture2D" uid="uid://bosyw5wdhuobp" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectFastSym.png" id="12_vhk2b"]
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
 
@@ -105,6 +107,29 @@ texture_over = ExtResource("9_bo7fo")
 texture_progress = ExtResource("10_8n3da")
 texture_progress_offset = Vector2(-1.745, 1.33)
 
+[node name="Fast" type="Node2D" parent="Effects" unique_id=1281618703]
+script = ExtResource("11_8n3da")
+
+[node name="Effect Timer" type="Timer" parent="Effects/Fast" unique_id=58765805]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 1
+wait_time = 20.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Effects/Fast" unique_id=1994435189]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("7_kgy7w")
+texture_over = ExtResource("12_vhk2b")
+texture_progress = ExtResource("10_8n3da")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
 [node name="Tired" type="Node2D" parent="Effects" unique_id=610482876]
 process_thread_group = 2
 process_thread_group_order = 0
@@ -132,4 +157,5 @@ texture_progress = ExtResource("12_bo7fo")
 texture_progress_offset = Vector2(-1.745, 1.33)
 
 [connection signal="timeout" from="Effects/Energized/Effect Timer" to="Effects/Energized" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Effects/Fast/Effect Timer" to="Effects/Fast" method="_on_effect_timer_timeout"]
 [connection signal="timeout" from="Effects/Tired/Effect Timer" to="Effects/Tired" method="_on_effect_timer_timeout"]

@@ -1,4 +1,4 @@
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/tiredEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/effects.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/energizedEffect.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/fast.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/effects.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/fastEffect.gd
