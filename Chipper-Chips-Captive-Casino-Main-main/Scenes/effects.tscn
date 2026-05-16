@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://12sdfal4605j" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectBase.png" id="10_vf34l"]
 [ext_resource type="Script" uid="uid://cnsbgdmjovxc3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/tiredEffect.gd" id="11_t2a8k"]
 [ext_resource type="Texture2D" uid="uid://lcqqggx42x75" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTiredSym.png" id="12_hfyo5"]
-[ext_resource type="Script" uid="uid://wkv6cfteev36" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/drunkEffect.gd" id="13_b5hco"]
+[ext_resource type="Script" uid="uid://wkv6cfteev36" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/drunkEffect.gd" id="13_b5hco"]
 [ext_resource type="Texture2D" uid="uid://dqwmtobfw2mvx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectDrunkSym.png" id="14_onvdp"]
 
 [node name="Effects" type="Node2D" unique_id=1968707285]

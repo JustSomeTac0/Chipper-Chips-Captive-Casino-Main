@@ -4,6 +4,9 @@ var effectTimer
 var effectProgressBar
 var effectMaster
 var MapMaterial
+var MaterialRotation = 0.001
+var MaterialRotationDirec = "x"
+
 
 ###change this if another effect
 var Drunk
@@ -27,13 +30,27 @@ func effectDrunkActive():
 	isDrunk = true
 	effectTimer.start()
 	effectMaster.handleEffects(Drunk)
+	drunkSpinEffect()
 ###
+
+#makes the textures spin in a circle kinda
+func drunkSpinEffect():
+	while isDrunk:
+		await get_tree().create_timer(1).timeout
+		if MaterialRotation == 0.001:
+			MaterialRotation = -0.001
+		elif MaterialRotation == -0.001:
+			MaterialRotation = 0.001
+	
+	
 
 
 func _on_effect_timer_timeout() -> void:
 	###change this if another effect
 	isDrunk = false
 	MapMaterial.uv1_offset.x = 10.0
+	MapMaterial.uv1_offset.z = 10.0
+	MapMaterial.uv1_offset.y = 10.0
 	###
 	
 	
@@ -54,8 +71,8 @@ func _process(delta: float) -> void:
 	###change this if another effect
 	if isDrunk == true:
 	###
-		for i in range(10):
-			MapMaterial.uv1_offset.x += 0.001 
-			await get_tree().create_timer(0.01).timeout
-			
+		for x in range(10):
+				MapMaterial.uv1_offset.x += MaterialRotation * delta * 300
+				MapMaterial.uv1_offset.z += MaterialRotation * delta * 300
+				MapMaterial.uv1_offset.y += MaterialRotation * delta * 300
 		effectProgressBar.value = effectTimer.time_left

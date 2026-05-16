@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/testTile.png" id="1_1w16d"]
 
 [resource]
+resource_name = "Test material"
 albedo_texture = ExtResource("1_1w16d")
 uv1_scale = Vector3(10, 10, 10)
 uv1_triplanar = true

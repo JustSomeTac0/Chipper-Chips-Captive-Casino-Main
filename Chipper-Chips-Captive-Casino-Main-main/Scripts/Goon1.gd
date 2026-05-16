@@ -1,25 +1,33 @@
 extends CharacterBody3D
 
+#speeds and start position#
 @export var speed: float = 2.0
 @export var chase_speed: float = 8.0
 @export var current_node: Waypoint
 
-var forgetfulness  = randf_range(-3, 3)
-var thoroughness = randf_range(0.8, 1.2)
-var laziness = randf_range(0.8, 1.2)
-var attention_span = randf_range(0.8, 1.2)
+#slight randomness to their prefrences in behavior#
+var forgetfulness  = randf_range(-3, 3) #Amount of turning around
+var thoroughness = randf_range(0.8, 1.2) #Likelyhood of checking side rooms
+var laziness = randf_range(0.8, 1.2) #Amount of pausinng and length of pauses
+var attention_span = randf_range(0.8, 1.2) #How long they stay in chase
 
-var side_room_weight = thoroughness
 
+var side_room_weight = thoroughness #side_room_weight is used so I can force them out of side rooms so they dont wander in circles forever 
+
+#variables for wandering#
 var target_node: Waypoint
 var previous_node: Waypoint
 var waiting: bool = false
+
+#variables for chasing#
+var in_chase = false
 
 
 func _ready():
 	global_transform.origin = current_node.global_transform.origin
 	choose_next_node()
 	
+
 func _physics_process(delta):
 	if waiting or target_node == null:
 		velocity = Vector3.ZERO
@@ -28,9 +36,7 @@ func _physics_process(delta):
 
 	var to_target = target_node.global_position - global_position
 	to_target.y = 0
-
 	var distance = to_target.length()
-
 
 	if distance < 0.4:
 		arrive_at_node()
@@ -38,7 +44,6 @@ func _physics_process(delta):
 
 	var direction = to_target / distance
 	velocity = direction * speed
-
 	move_and_slide()
 	
 

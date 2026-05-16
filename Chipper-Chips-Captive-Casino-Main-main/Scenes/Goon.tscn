@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bw75qnes0vln8" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd" id="1_ldfjj"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
+[ext_resource type="Script" uid="uid://cjgw5s45et2qt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/ray_cast_3d.gd" id="3_i3d0o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
 
@@ -30,5 +31,10 @@ shaded = true
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5f8en")
 frame_progress = 0.29142597
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2079142789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5224382, 0)
+target_position = Vector3(2, 0, 0)
+script = ExtResource("3_i3d0o")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2038698927]

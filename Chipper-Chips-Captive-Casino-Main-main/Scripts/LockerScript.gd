@@ -11,7 +11,7 @@ func _ready():
 	player = get_tree().get_first_node_in_group("player")
 	player_body = get_tree().get_first_node_in_group("player_body")
 	
-	
+
 func _unhandled_input(event: InputEvent) -> void:
 	if Global.hiding == false:
 		if in_range == true:
