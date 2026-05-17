@@ -1,10 +1,9 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/drunkEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd
 res://Chipper-Chips-Captive-Casino-Main-main/Scripts/ray_cast_3d.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/LockerScript.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/EnemyRaycast.gd
 res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Locker.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/assets/simple_fpsplayer/Player.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/drunkEffect.gd
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Item.tscn

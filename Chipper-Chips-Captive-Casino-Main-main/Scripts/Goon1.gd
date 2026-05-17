@@ -114,3 +114,7 @@ func arrive_at_node():
 			waiting = false
 
 	choose_next_node()
+
+
+func _on_ray_cast_3d_start_chase(who: Variant) -> void:
+	pass 

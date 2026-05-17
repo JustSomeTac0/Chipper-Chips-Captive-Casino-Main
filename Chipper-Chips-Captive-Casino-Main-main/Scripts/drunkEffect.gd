@@ -19,7 +19,7 @@ func _ready() -> void:
 	effectProgressBar = $EffectProgressBar
 	effectProgressBar.max_value = effectTimer.wait_time
 	effectMaster = $".."
-	MapMaterial = $"../../../../Map/Storage".get_material()
+	MapMaterial = $"../../../../Map/NavigationRegion3D/Storage".get_material()
 
 	###change this if another effect
 	Drunk = self

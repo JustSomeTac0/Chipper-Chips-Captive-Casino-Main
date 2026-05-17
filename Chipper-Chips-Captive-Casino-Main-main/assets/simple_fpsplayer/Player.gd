@@ -110,7 +110,7 @@ func _physics_process(delta):
 			weight = 4 # fall faster 
 			velocity.y -= 0.4 # ditto
 			hitboxRadius = 0.3
-			hitboxHeight = 1.2
+			hitboxHeight = 1
 			hitbox.shape.radius = float(hitboxRadius)
 			hitbox.shape.height = float(hitboxHeight)
 	else:

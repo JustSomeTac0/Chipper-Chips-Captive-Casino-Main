@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dmo07y4qr38ah" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/OtherFlash.png" id="3_n2yuy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
-height = 2.0283203
+radius = 0.3
+height = 1.5
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n2yuy"]
 animations = [{
@@ -33,7 +34,6 @@ wait_time = 0.1
 [node name="Hud" parent="." unique_id=1366660728 instance=ExtResource("2_7xlnr")]
 
 [node name="body" type="CollisionShape3D" parent="." unique_id=1314790822 groups=["player_body"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.036902368, 0)
 shape = SubResource("CapsuleShape3D_euj4i")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=713447757]

@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bw75qnes0vln8" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd" id="1_ldfjj"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
-[ext_resource type="Script" uid="uid://cjgw5s45et2qt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/ray_cast_3d.gd" id="3_i3d0o"]
+[ext_resource type="Script" uid="uid://cjgw5s45et2qt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/EnemyRaycast.gd" id="3_i3d0o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
+radius = 0.3
+height = 1.5
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5f8en"]
 animations = [{
@@ -17,11 +19,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxMesh" id="BoxMesh_i3d0o"]
+
 [node name="Goon1" type="CharacterBody3D" unique_id=1257103791]
 script = ExtResource("1_ldfjj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732039325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.057899535, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.085243285, 0)
 shape = SubResource("CapsuleShape3D_tj8fv")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=980361729]
@@ -34,7 +38,13 @@ frame_progress = 0.29142597
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=2079142789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5224382, 0)
-target_position = Vector3(2, 0, 0)
+target_position = Vector3(0, 0, -2)
 script = ExtResource("3_i3d0o")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RayCast3D" unique_id=1760915792]
+transform = Transform3D(3.803609e-08, 0, -0.09999993, 0, 0.09999993, 0, 1.8570263, 0, -8.096427e-09, 0.0010819435, 0, -0.94578546)
+mesh = SubResource("BoxMesh_i3d0o")
+
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2038698927]
+
+[connection signal="start_chase" from="RayCast3D" to="." method="_on_ray_cast_3d_start_chase"]
