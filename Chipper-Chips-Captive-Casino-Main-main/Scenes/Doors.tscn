@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sk7hwovy0cd2"]
 
-[ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Environement/door.gd" id="1_cig1t"]
+[ext_resource type="Script" uid="uid://b7rpob8m0hxwl" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/door.gd" id="1_cig1t"]
 [ext_resource type="AudioStream" uid="uid://bun0mwm8d5es2" path="res://Chipper-Chips-Captive-Casino-Main-main/assets/Sounds/Roblox Doors Rooms Door Open Sound Effect.mp3" id="2_cig1t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rs1cx"]

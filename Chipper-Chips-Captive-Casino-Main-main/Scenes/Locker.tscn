@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c74627kf6b48k"]
 
-[ext_resource type="Script" uid="uid://b0c57jlh667pt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Environement/LockerScript.gd" id="1_b2fk1"]
+[ext_resource type="Script" uid="uid://b0c57jlh667pt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/LockerScript.gd" id="1_b2fk1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_75ng1"]
 size = Vector3(1, 1.5860596, 0.8800049)

@@ -5,12 +5,12 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-var SPEED: float = 8.5
+var SPEED = 8.5
 const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.5
-var weight: int = 2
-var regenTime: float = 0.1 #base Stamina Regen time
+var weight = 2
+var regenTime = 0.1 #base Stamina Regen time
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -20,16 +20,16 @@ var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
 var hitbox #THIS 
-var waitfForTimer: bool = false
+var waitfForTimer = false
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
 var stamina: int = 120 #PULL
-var maxStamina: int
+var maxStamina
 var sprinting: bool = false
 var StaminaRegenTimer
 
-var isCrouched: bool = false # Add states for diffrent actions
-var isRunning: bool = false
+var isCrouched = false # Add states for diffrent actions
+var isRunning = false
 
 
 signal staminaChanged #call to update the Stamina bar
