@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bi2dng2ui1qyr"]
 
-[ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Stamania Bar.gd" id="2_73ole"]
+[ext_resource type="Script" uid="uid://coswl8t6jaddh" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/UI/Stamania Bar.gd" id="2_73ole"]
 [ext_resource type="Texture2D" uid="uid://b66ir1yo5wdiq" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/StaminabarBackgorund1.png" id="2_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://bok1j4k6mt0l3" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Staminabar1.png" id="3_841ab"]
 [ext_resource type="Texture2D" uid="uid://desuuhvscgbmw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages2.png" id="4_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
 [ext_resource type="PackedScene" uid="uid://bve7mkkaqyafk" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn" id="6_hfyj3"]
+
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
 

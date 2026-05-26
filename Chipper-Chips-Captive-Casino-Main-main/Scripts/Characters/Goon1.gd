@@ -6,13 +6,17 @@ extends CharacterBody3D
 @export var current_node: Waypoint
 
 #slight randomness to their prefrences in behavior#
-var forgetfulness  = randf_range(-3, 3) #Amount of turning around
-var thoroughness = randf_range(0.8, 1.2) #Likelyhood of checking side rooms
-var laziness = randf_range(0.8, 1.2) #Amount of pausinng and length of pauses
-var attention_span = randf_range(0.8, 1.2) #How long they stay in chase
+var forgetfulness: float  = randf_range(-3, 3) #Amount of turning around
+var thoroughness: float = randf_range(0.8, 1.2) #Likelyhood of checking side rooms
+var laziness: float = randf_range(0.8, 1.2) #Amount of pausinng and length of pauses
+var attention_span: float = randf_range(0.8, 1.2) #How long they stay in chase
+var side_room_weight: float = thoroughness #side_room_weight is used so I can force them out of side rooms so they dont wander in circles forever 
 
+@onready var	player: CharacterBody3D = get_tree().get_first_node_in_group("player")
+@onready var Nav_agent: NavigationAgent3D = $NavigationAgent3D
 
-var side_room_weight = thoroughness #side_room_weight is used so I can force them out of side rooms so they dont wander in circles forever 
+var direction: Vector3
+var target_dist: Vector3
 
 #variables for wandering#
 var target_node: Waypoint
@@ -20,37 +24,52 @@ var previous_node: Waypoint
 var waiting: bool = false
 
 #variables for chasing#
-var in_chase = false
+var in_chase: bool = false
 
 
+@warning_ignore("untyped_declaration")
 func _ready():
 	global_transform.origin = current_node.global_transform.origin
 	choose_next_node()
 	
 
-func _physics_process(delta):
-	if waiting or target_node == null:
-		velocity = Vector3.ZERO
+@warning_ignore("untyped_declaration", "unused_parameter")
+func _physics_process(delta: float) -> void:
+	if in_chase == false:
+		if waiting or target_node == null:
+			velocity = Vector3.ZERO
+			move_and_slide()
+			return
+
+		target_dist = target_node.global_position - global_position
+		target_dist.y = 0
+
+		if target_dist.length() < 0.4:
+			arrive_at_node()
+			return
+
+		direction = target_dist / target_dist.length()
+		velocity = direction * speed
 		move_and_slide()
-		return
+	if in_chase:
+		Nav_agent.set_target_position(player.global_position)
+		direction =  Nav_agent.get_next_path_position()
+		target_dist = target_node.global_position - global_position
+		target_dist.y = 0
 
-	var to_target = target_node.global_position - global_position
-	to_target.y = 0
-	var distance = to_target.length()
+		if target_dist.length() < 0.4:
+			pass
+		
+		direction = target_dist / target_dist.length()
+		velocity = direction * speed
+		move_and_slide()
 
-	if distance < 0.4:
-		arrive_at_node()
-		return
 
-	var direction = to_target / distance
-	velocity = direction * speed
-	move_and_slide()
-	
-
+@warning_ignore("untyped_declaration")
 func choose_next_node():
 	var best_node: Waypoint = null
 	var best_score := -1.0
-	var options = current_node.connected_nodes
+	var options: Array = current_node.connected_nodes
 	
 	if previous_node != null and previous_node in options and options.size() > 1:
 		if randf_range(0 + forgetfulness, 100) > 90:
@@ -76,7 +95,7 @@ func choose_next_node():
 			Waypoint.NodeType.TRAP_SETTING_SPOT:
 				weight = 0
 
-		var score = randf_range(0.1, 10) * weight
+		var score: float = randf_range(0.1, 10) * weight
 
 		if score > best_score:
 			best_score = score
@@ -85,6 +104,7 @@ func choose_next_node():
 	previous_node = current_node
 	
 	
+@warning_ignore("untyped_declaration")
 func arrive_at_node():
 	previous_node = current_node
 	current_node = target_node
@@ -117,4 +137,6 @@ func arrive_at_node():
 
 
 func _on_ray_cast_3d_start_chase(who: Variant) -> void:
-	pass 
+	if who == "Goon1":
+		in_chase = true
+		
