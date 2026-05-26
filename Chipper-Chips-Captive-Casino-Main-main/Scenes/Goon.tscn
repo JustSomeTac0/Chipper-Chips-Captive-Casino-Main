@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://blofy5qj2g5n7"]
 
-[ext_resource type="Script" uid="uid://bw75qnes0vln8" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Goon1.gd" id="1_ldfjj"]
+[ext_resource type="Script" uid="uid://bylrvv08dulpq" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Goon1.gd" id="1_ldfjj"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
-[ext_resource type="Script" uid="uid://cjgw5s45et2qt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/EnemyRaycast.gd" id="3_i3d0o"]
+[ext_resource type="Script" uid="uid://bnd0xds114lkg" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/EnemyRaycast.gd" id="3_i3d0o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
 radius = 0.3
@@ -40,6 +40,7 @@ frame_progress = 0.29142597
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5224382, 0)
 target_position = Vector3(0, 0, -2)
 script = ExtResource("3_i3d0o")
+enemy = "Goon1"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RayCast3D" unique_id=1760915792]
 transform = Transform3D(3.803609e-08, 0, -0.09999993, 0, 0.09999993, 0, 1.8570263, 0, -8.096427e-09, 0.0010819435, 0, -0.94578546)
