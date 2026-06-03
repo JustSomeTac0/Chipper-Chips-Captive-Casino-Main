@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://desuuhvscgbmw" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages2.png" id="4_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
 [ext_resource type="PackedScene" uid="uid://bve7mkkaqyafk" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn" id="6_hfyj3"]
+[ext_resource type="Texture2D" uid="uid://bxog7wutrwmsa" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Chips Amount.png" id="7_utd5k"]
+[ext_resource type="Script" uid="uid://c7ltp5sdnl53j" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chipScript.gd" id="8_fta1o"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="8_kgy7w"]
+
+[sub_resource type="Theme" id="Theme_utd5k"]
+default_font = ExtResource("8_kgy7w")
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
 
@@ -73,3 +79,26 @@ scale = Vector2(0.176, 1.385)
 texture = ExtResource("3_841ab")
 
 [node name="Effects" parent="." unique_id=1968707285 instance=ExtResource("6_hfyj3")]
+
+[node name="ChipsAmount" type="Sprite2D" parent="." unique_id=902334978]
+texture_filter = 3
+position = Vector2(126, 50)
+texture = ExtResource("7_utd5k")
+script = ExtResource("8_fta1o")
+
+[node name="MyText" type="RichTextLabel" parent="ChipsAmount" unique_id=260968002]
+clip_contents = false
+offset_left = -17.0
+offset_top = -38.0
+offset_right = 108.0
+offset_bottom = 33.0
+size_flags_stretch_ratio = 3.72
+theme = SubResource("Theme_utd5k")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[wave]1000000"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1

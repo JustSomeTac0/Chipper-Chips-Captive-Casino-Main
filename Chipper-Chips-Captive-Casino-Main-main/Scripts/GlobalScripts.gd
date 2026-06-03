@@ -13,7 +13,7 @@ var staff_key: bool = false
 var vip_pass: bool = false
 var screwdriver: bool =  false
 
-var chips: int = 0
+var chips: int = 1100
 
 #what le enemies be doin perchance
 var dice_anger: int = 0

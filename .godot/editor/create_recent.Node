@@ -1,3 +1,4 @@
+RichTextLabel
 MeshInstance2D
 AnimatedSprite2D
 Area2D
@@ -12,4 +13,3 @@ TextureProgressBar
 Timer
 Node2D
 StaticBody3D
-VisibleOnScreenNotifier3D

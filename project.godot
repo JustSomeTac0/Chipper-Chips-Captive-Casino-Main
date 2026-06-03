@@ -18,6 +18,7 @@ config/icon="res://Chipper Chips Captive Casino Main/Sprites/icon.svg"
 [autoload]
 
 Global="*uid://cx8drfmnbeyr7"
+GlobalEffects="*uid://cb3ah3g6b06d6"
 
 [display]
 
