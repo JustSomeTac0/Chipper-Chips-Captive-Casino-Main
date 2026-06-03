@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4yjmyow45w0u" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/gambling_game.gd" id="1_ad8n8"]
 [ext_resource type="Texture2D" uid="uid://25272mq71wbm" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/GamblingGames/SlotMachineSpin.png" id="2_g5jor"]
+[ext_resource type="Texture2D" uid="uid://bhxgc85ai2y0a" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/GamblingGames/otherArmTest.png" id="3_g5jor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ukam"]
 atlas = ExtResource("2_g5jor")
@@ -80,10 +81,54 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jn5e1"]
-size = Vector2(45.47411, 118.965454)
+size = Vector2(53.23275, 167.2413)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2bonl"]
 radius = 18.287128
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5jor"]
+atlas = ExtResource("3_g5jor")
+region = Rect2(238, 0, 119, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iqfu"]
+atlas = ExtResource("3_g5jor")
+region = Rect2(357, 0, 119, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn5e1"]
+atlas = ExtResource("3_g5jor")
+region = Rect2(0, 0, 119, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bonl"]
+atlas = ExtResource("3_g5jor")
+region = Rect2(119, 0, 119, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rb4qq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5jor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iqfu")
+}],
+"loop": true,
+"name": &"grab",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn5e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bonl")
+}],
+"loop": true,
+"name": &"wait",
+"speed": 12.0
+}]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g5jor"]
+size = Vector3(37.135, 39.78, 1)
 
 [node name="SlotMachineGame" type="Node2D" unique_id=2139604207]
 script = ExtResource("1_ad8n8")
@@ -98,7 +143,7 @@ animation = &"pullLever"
 [node name="LeverArea" type="Area2D" parent="SlotMachine" unique_id=376493268]
 
 [node name="WaysDownCollision" type="CollisionShape2D" parent="SlotMachine/LeverArea" unique_id=700394564]
-position = Vector2(127.26294, -41.379272)
+position = Vector2(131.1423, -17.241333)
 scale = Vector2(1.0000004, 1.0000004)
 shape = SubResource("RectangleShape2D_jn5e1")
 
@@ -109,6 +154,21 @@ position = Vector2(131.46564, -76.2931)
 scale = Vector2(1.0000004, 1.0000004)
 shape = SubResource("CircleShape2D_2bonl")
 debug_color = Color(0, 0.65076184, 0.091452695, 0.41960785)
+
+[node name="Arm" type="AnimatedSprite2D" parent="." unique_id=693009447]
+texture_filter = 3
+position = Vector2(1070.3663, 203.57895)
+scale = Vector2(4.494054, 4.7172046)
+sprite_frames = SubResource("SpriteFrames_rb4qq")
+animation = &"grab"
+autoplay = "wait"
+offset = Vector2(-3.3424225, 21.774895)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Arm" unique_id=284655188]
+position = Vector2(104.72363, 140.42662)
+rotation = -0.6370452
+scale = Vector2(1.455, 5.485)
+mesh = SubResource("BoxMesh_g5jor")
 
 [connection signal="mouse_entered" from="SlotMachine/LeverArea" to="." method="_on_lever_area_mouse_entered"]
 [connection signal="mouse_exited" from="SlotMachine/LeverArea" to="." method="_on_lever_area_mouse_exited"]
