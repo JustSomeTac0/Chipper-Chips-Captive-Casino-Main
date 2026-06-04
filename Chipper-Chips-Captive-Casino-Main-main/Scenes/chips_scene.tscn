@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://osdnbkd30sys"]
+
+[ext_resource type="Script" uid="uid://bo7ol2030c6r2" path="res://chips_scene.gd" id="1_m8gvv"]
+[ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/level1Backgorund.png" id="2_j447n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8gvv"]
+size = Vector3(4.541443, 4.386688, 0.8261719)
+
+[node name="ChipsScene" type="Node3D" unique_id=22656573]
+script = ExtResource("1_m8gvv")
+
+[node name="ChipsSprite" type="Sprite3D" parent="." unique_id=1342991739]
+transform = Transform3D(0.23476438, 0, 0, 0, 0.2578255, 0, 0, 0, 1, 0, 0.5093571, 0)
+texture = ExtResource("2_j447n")
+
+[node name="ChipsCollisionArea" type="Area3D" parent="ChipsSprite" unique_id=999542886]
+
+[node name="ChipsCollisionShape" type="CollisionShape3D" parent="ChipsSprite/ChipsCollisionArea" unique_id=1985572299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024566673, 0.20893979, -0.0036544204)
+shape = SubResource("BoxShape3D_m8gvv")
+
+[connection signal="body_entered" from="ChipsSprite/ChipsCollisionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="ChipsSprite/ChipsCollisionArea" to="." method="OnInteractionAreaExited"]

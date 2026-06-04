@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://2868les0v77" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/SlotsImages1.png" id="5_utd5k"]
 [ext_resource type="PackedScene" uid="uid://bve7mkkaqyafk" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn" id="6_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://bxog7wutrwmsa" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Chips Amount.png" id="7_utd5k"]
-[ext_resource type="Script" uid="uid://c7ltp5sdnl53j" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chipScript.gd" id="8_fta1o"]
+[ext_resource type="Script" uid="uid://c7ltp5sdnl53j" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/chipScript.gd" id="8_fta1o"]
 [ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="8_kgy7w"]
 
 [sub_resource type="Theme" id="Theme_utd5k"]
@@ -80,13 +80,13 @@ texture = ExtResource("3_841ab")
 
 [node name="Effects" parent="." unique_id=1968707285 instance=ExtResource("6_hfyj3")]
 
-[node name="ChipsAmount" type="Sprite2D" parent="." unique_id=902334978]
+[node name="ChipsAmountHUD" type="Sprite2D" parent="." unique_id=902334978]
 texture_filter = 3
 position = Vector2(126, 50)
 texture = ExtResource("7_utd5k")
 script = ExtResource("8_fta1o")
 
-[node name="MyText" type="RichTextLabel" parent="ChipsAmount" unique_id=260968002]
+[node name="MyText" type="RichTextLabel" parent="ChipsAmountHUD" unique_id=260968002]
 clip_contents = false
 offset_left = -17.0
 offset_top = -38.0

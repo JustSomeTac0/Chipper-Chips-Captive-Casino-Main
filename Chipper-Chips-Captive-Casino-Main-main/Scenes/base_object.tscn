@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cxrx0t5rr3uq1"]
+
+[ext_resource type="Script" uid="uid://2m1g8klcwh34" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/InteractablesMasterClass.gd" id="1_nts43"]
+[ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/testTile.png" id="2_a66ey"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_83l5b"]
+radius = 1.0220292
+
+[node name="BaseObject" type="Node3D" unique_id=2138505669]
+script = ExtResource("1_nts43")
+
+[node name="ObjectSprite" type="Sprite3D" parent="." unique_id=721922808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5161564, 0)
+billboard = 2
+transparent = false
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_a66ey")
+
+[node name="InteractionArea" type="Area3D" parent="ObjectSprite" unique_id=899455864]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="ObjectSprite/InteractionArea" unique_id=1586954486]
+shape = SubResource("SphereShape3D_83l5b")
+
+[connection signal="body_entered" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaExited"]

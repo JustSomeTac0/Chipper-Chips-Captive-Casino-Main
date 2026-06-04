@@ -21,6 +21,7 @@ var dir = Vector3.ZERO
 var flashlight
 var hitbox #THIS 
 var waitfForTimer = false
+var ChipDisplayHud
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
 var stamina: int = 120 #PULL
@@ -35,6 +36,9 @@ var isRunning = false
 signal staminaChanged #call to update the Stamina bar
 
 
+
+
+
 func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
@@ -42,9 +46,8 @@ func _ready():
 	hitbox = $body
 	StaminaRegenTimer = $StaminaRegenTimer
 	maxStamina = $Hud/CanvasLayer/TextureProgressBar.max_value
-
+	ChipDisplayHud = $Hud/ChipsAmount
 	
-	print(maxStamina)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -181,3 +184,7 @@ func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen T
 			waitfForTimer = false
 			
 			
+
+
+func gotChips(HowMuch, DidGain):
+	ChipDisplayHud.ChangeChipAmount(HowMuch, DidGain)
