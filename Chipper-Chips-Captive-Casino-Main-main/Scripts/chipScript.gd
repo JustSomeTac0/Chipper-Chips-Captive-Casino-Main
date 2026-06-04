@@ -15,25 +15,27 @@ func _ready() -> void:
 	
 	CurrentChipAmount = Global.chips
 	
-	RoundNumber(Global.chips)
-	
+	ChangeChipAmount(0, true)
 
 func WriteToText(NumberToWrite):
 	MyRichText.text = NormalTextEffect + str(NumberToWrite) + TextLetter
 
 func RoundNumber(numberToRound):
-	if numberToRound >= 1000:
-		numberToRound = numberToRound / 1000.0
+	if (Global.chips + numberToRound) >= 1000:
+		numberToRound = (Global.chips + numberToRound) / 1000.0
 		TextLetter = "K"
 	
+	else:
+		TextLetter = ""
+	
+	Global.chips = CurrentChipAmount
 	WriteToText(numberToRound)
 
 func ChangeChipAmount(AmountToBeChanged, Increase):
-	if Increase == false:
+	if Increase == true:
 		CurrentChipAmount += AmountToBeChanged
-	elif Increase == true:
+	elif Increase == false:
 		CurrentChipAmount -= AmountToBeChanged
 	else:
 		CurrentChipAmount = CurrentChipAmount
-	Global.chips = CurrentChipAmount
 	RoundNumber(AmountToBeChanged)

@@ -46,7 +46,7 @@ func _ready():
 	hitbox = $body
 	StaminaRegenTimer = $StaminaRegenTimer
 	maxStamina = $Hud/CanvasLayer/TextureProgressBar.max_value
-	ChipDisplayHud = $Hud/ChipsAmount
+	ChipDisplayHud = $Hud/ChipsAmountHUD
 	
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -187,4 +187,6 @@ func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen T
 
 
 func gotChips(HowMuch, DidGain):
-	ChipDisplayHud.ChangeChipAmount(HowMuch, DidGain)
+	var transfer1 = HowMuch
+	var transfer2 = DidGain
+	ChipDisplayHud.ChangeChipAmount(transfer1, transfer2)

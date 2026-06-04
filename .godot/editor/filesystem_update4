@@ -1,3 +1,7 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/chipScript.gd
 res://chips_scene.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/base_object.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/InteractablesMasterClass.gd

@@ -25,7 +25,6 @@ func OnInteractionAreaEntered(body: Node3D) -> void:
 		PlayerInArea = true
 		set_process_unhandled_input(true)
 		InteractionAvailable.emit()
-		print("working")
 
 
 func OnInteractionAreaExited(body: Node3D) -> void:
@@ -33,4 +32,3 @@ func OnInteractionAreaExited(body: Node3D) -> void:
 		PlayerInArea = false
 		set_process_unhandled_input(false)
 		InteractionUnavailable.emit()
-		print("workingbut not i guess")
