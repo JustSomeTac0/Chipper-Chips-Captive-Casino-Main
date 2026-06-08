@@ -14,8 +14,9 @@ var moveDownAmountPos
 var moveDownAmountBad
 
 func _ready() -> void:
-	player = $"../../.." #play root
+	player = $"../.." #play root
 	player.staminaChanged.connect(update) #connecting
+	self.value = self.max_value
 	currentStamina = self.value
 	PosSlot1 = $PostiveSlot1
 	PosSlot2 = $"PostiveSlot2"

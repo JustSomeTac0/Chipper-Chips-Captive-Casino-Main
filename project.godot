@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Chipper Chips Captive Casino 2026 04 14 09 49 50"
+config/name="Chipper Chips Captive Casino"
+config/description="Gambling"
+config/version="0.1"
 run/main_scene="uid://d13ap5b2koici"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Chipper Chips Captive Casino Main/Sprites/icon.svg"
+config/icon="uid://bn0qjcniwx7dt"
 
 [autoload]
 

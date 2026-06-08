@@ -18,11 +18,6 @@ shaded = true
 texture_filter = 2
 texture = ExtResource("2_a66ey")
 
-[node name="InteractionArea" type="Area3D" parent="ObjectSprite" unique_id=899455864]
-
-[node name="CollisionShape" type="CollisionShape3D" parent="ObjectSprite/InteractionArea" unique_id=1586954486]
-shape = SubResource("SphereShape3D_83l5b")
-
 [node name="TextControl" type="Label3D" parent="." unique_id=1894825849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1838183, 0)
 billboard = 1
@@ -35,5 +30,11 @@ font = ExtResource("3_a66ey")
 font_size = 35
 outline_size = 25
 
-[connection signal="body_entered" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaEntered"]
-[connection signal="body_exited" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaExited"]
+[node name="InteractionArea" type="Area3D" parent="." unique_id=899455864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5161564, 0)
+
+[node name="CollisionShape" type="CollisionShape3D" parent="InteractionArea" unique_id=1586954486]
+shape = SubResource("SphereShape3D_83l5b")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="OnInteractionAreaExited"]

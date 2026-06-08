@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b7r6mva46n0we"]
+
+[ext_resource type="Script" uid="uid://ce6hlaeig0rf7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GamblingMachineObject.gd" id="1_25x2b"]
+[ext_resource type="PackedScene" uid="uid://c8lvuktnxpg6w" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/GamblingGame.tscn" id="2_78p4f"]
+[ext_resource type="Texture2D" uid="uid://tg2kt7g2ijhg" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items and Objects/Machines/SlotMachineObject.png" id="2_xdlyw"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="4_8icjk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fr7wl"]
+size = Vector3(3.3056307, 2.7238393, 2.7090073)
+
+[node name="GamblingMachineObject" type="Node3D" unique_id=673703135]
+script = ExtResource("1_25x2b")
+
+[node name="MachineSprite" type="Sprite3D" parent="." unique_id=490665843]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 1.1888783, 0)
+billboard = 2
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_xdlyw")
+
+[node name="TextControl" type="Label3D" parent="." unique_id=401505935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5284262, 0.005138576)
+billboard = 1
+alpha_scissor_threshold = 0.0
+alpha_hash_scale = 1.17
+texture_filter = 2
+modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
+text = "[E]"
+font = ExtResource("4_8icjk")
+font_size = 35
+outline_size = 10
+
+[node name="MachineCollisionArea" type="Area3D" parent="." unique_id=1414269205]
+transform = Transform3D(0.82000005, 0, 0, 0, 0.82000005, 0, 0, 0, 0.82000005, 0, 0.7475891, 0)
+
+[node name="MachineCollisionShape" type="CollisionShape3D" parent="MachineCollisionArea" unique_id=847265725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025066718, 0.63962346, 0.02298665)
+shape = SubResource("BoxShape3D_fr7wl")
+
+[node name="SlotMachineGame" parent="." unique_id=2139604207 instance=ExtResource("2_78p4f")]
+
+[connection signal="body_entered" from="MachineCollisionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="MachineCollisionArea" to="." method="OnInteractionAreaExited"]

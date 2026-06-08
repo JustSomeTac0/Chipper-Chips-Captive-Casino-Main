@@ -5,12 +5,12 @@ extends CharacterBody3D
 const ACCEL = 10
 const DEACCEL = 30
 
-var SPEED = 8.5
+@export var SPEED = 8.5
 const SPRINT_MULT = 1.9
 const JUMP_VELOCITY = 9
 const MOUSE_SENSITIVITY = 0.5
 var weight = 2
-var regenTime = 0.1 #base Stamina Regen time
+@export var regenTime = 0.1 #base Stamina Regen time
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -22,16 +22,20 @@ var flashlight
 var hitbox #THIS 
 var waitfForTimer = false
 var ChipDisplayHud
+
+
 var hitboxRadius: float = 0.5 #SHIT
 var hitboxHeight: float = 2.0 #BETTER
-var stamina: int = 120 #PULL
-var maxStamina
+var stamina: int = 200 #PULL
+@export var MaxStamina: int = 240
 var sprinting: bool = false
+@export_range(0, 20, 1) var PlayerStartingLuck = 0
+
 var StaminaRegenTimer
 
 var isCrouched = false # Add states for diffrent actions
 var isRunning = false
-
+var ProcessInputs = true
 
 signal staminaChanged #call to update the Stamina bar
 
@@ -40,14 +44,16 @@ signal staminaChanged #call to update the Stamina bar
 
 
 func _ready():
+	stamina = MaxStamina
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
 	hitbox = $body
 	StaminaRegenTimer = $StaminaRegenTimer
-	maxStamina = $Hud/CanvasLayer/TextureProgressBar.max_value
-	ChipDisplayHud = $Hud/ChipsAmountHUD
+	ChipDisplayHud = $Hud/CanvasLayer/ChipsAmountHUD
 	
+	$Hud/TextureProgressBar.max_value = MaxStamina
+	Global.PlayerLuck = PlayerStartingLuck
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -94,91 +100,94 @@ func _physics_process(delta):
 	# Add the gravity. Pulls value from project settings.
 	if not is_on_floor():
 		velocity.y -= gravity * delta * weight
-
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 	
 	
-	
-	
-	
-	
-	##Crouching things I addded
-	if Input.is_action_pressed("crouch"):
-		if isCrouched == false:
-			SPEED = SPEED - 1.5
-			isCrouched = true
-			regenTime = regenTime / 2
-			weight = 4 # fall faster 
-			velocity.y -= 0.4 # ditto
-			hitboxRadius = 0.3
-			hitboxHeight = 1
-			hitbox.shape.radius = float(hitboxRadius)
-			hitbox.shape.height = float(hitboxHeight)
-	else:
-		if isCrouched == true:
-			SPEED = SPEED + 1.5
-			isCrouched = false
-			regenTime = regenTime * 2
-			weight = 2
-			hitboxRadius = 0.5
-			hitboxHeight = 2.0
-			hitbox.shape.radius = float(hitboxRadius)
-			hitbox.shape.height = float(hitboxHeight)
-	
-	
-	
-	
-	
-	
-	# This just controls acceleration. Don't touch it.
-	var accel
-	if dir.dot(velocity) > 0:
-		accel = ACCEL
-		moving = true
-	else:
-		accel = DEACCEL
-		moving = false
-
-
-
-
-
+	if ProcessInputs == true:
+			
+			# Handle Jump.
+			if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+				velocity.y = JUMP_VELOCITY
+			
+			
+			
+			
+			
+			
+			##Crouching things I addded
+			if Input.is_action_pressed("crouch"):
+				if isCrouched == false:
+					SPEED = SPEED / 2
+					isCrouched = true
+					regenTime = regenTime / 3
+					weight = 4 # fall faster 
+					velocity.y -= 0.4 # ditto
+					hitboxRadius = 0.3
+					hitboxHeight = 1
+					hitbox.shape.radius = float(hitboxRadius)
+					hitbox.shape.height = float(hitboxHeight)
+			else:
+				if isCrouched == true:
+					SPEED = SPEED * 2
+					isCrouched = false
+					regenTime = regenTime * 3
+					weight = 2
+					hitboxRadius = 0.5
+					hitboxHeight = 2.0
+					hitbox.shape.radius = float(hitboxRadius)
+					hitbox.shape.height = float(hitboxHeight)
+			
+			
+			
+			
+			
+			
+			# This just controls acceleration. Don't touch it.
+			var accel
+			if dir.dot(velocity) > 0:
+				accel = ACCEL
+				moving = true
+			else:
+				accel = DEACCEL
+				moving = false
 
 
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
-	var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
-	if Input.is_key_pressed(KEY_SHIFT) && stamina > 0 && isCrouched == false:
-		isRunning = true
-		stamina -= 1
-		sprinting = true
-		direction = direction * SPRINT_MULT
-		staminaChanged.emit()
-	else:
-		isRunning = false
-		if waitfForTimer == false:
-			StaminaRegenTimer.start(regenTime)
-			waitfForTimer = true
-		
-	
-	
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-	move_and_slide()
+
+
+
+
+			# Get the input direction and handle the movement/deceleration.
+			# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
+			var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
+			var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
+			if Input.is_key_pressed(KEY_SHIFT) && stamina > 0 && isCrouched == false:
+				isRunning = true
+				stamina -= 0.5
+				sprinting = true
+				direction = direction * SPRINT_MULT
+				staminaChanged.emit()
+			else:
+				isRunning = false
+				if waitfForTimer == false:
+					StaminaRegenTimer.start(regenTime)
+					waitfForTimer = true
+				
+			
+			
+			if direction:
+				velocity.x = direction.x * SPEED
+				velocity.z = direction.z * SPEED
+			else:
+				velocity.x = move_toward(velocity.x, 0, SPEED)
+				velocity.z = move_toward(velocity.z, 0, SPEED)
+	if ProcessInputs == true:
+		move_and_slide()
 
 
 func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen Timer call StaminaRegenTimer.start(regenTime) to start it
 	if not Input.is_key_pressed(KEY_SHIFT):
-		if not self.stamina >= maxStamina:
+		if not self.stamina >= MaxStamina:
 			stamina += 1
 			staminaChanged.emit()
 			waitfForTimer = false
@@ -188,5 +197,5 @@ func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen T
 
 func gotChips(HowMuch, DidGain):
 	var transfer1 = HowMuch
-	var transfer2 = DidGain
+	var transfer2: bool = DidGain
 	ChipDisplayHud.ChangeChipAmount(transfer1, transfer2)

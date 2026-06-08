@@ -1,5 +1,9 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
-res://chips_scene.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chips_scene.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/HUD.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/GamblingGame.tscn
 res://Chipper-Chips-Captive-Casino-Main-main/Scripts/chipScript.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GamblingMachineObject.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/gambling_game.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/gambling_machine_object.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chips_scene.tscn

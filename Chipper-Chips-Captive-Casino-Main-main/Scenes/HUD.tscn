@@ -8,92 +8,88 @@
 [ext_resource type="PackedScene" uid="uid://bve7mkkaqyafk" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn" id="6_hfyj3"]
 [ext_resource type="Texture2D" uid="uid://bxog7wutrwmsa" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Chips Amount.png" id="7_utd5k"]
 [ext_resource type="Script" uid="uid://c7ltp5sdnl53j" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/chipScript.gd" id="8_fta1o"]
-[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="8_kgy7w"]
-
-[sub_resource type="Theme" id="Theme_utd5k"]
-default_font = ExtResource("8_kgy7w")
+[ext_resource type="Theme" uid="uid://2lfebhoyftpa" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/basicTheme.tres" id="9_fta1o"]
 
 [node name="Hud" type="Node2D" unique_id=1366660728]
+z_index = -1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=226205030]
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=345629915]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=345629915]
 texture_filter = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0000038
-offset_top = -164.0
+offset_top = 556.0
 offset_right = 64.20804
-offset_bottom = 187.83203
+offset_bottom = 907.83203
 grow_vertical = 0
 scale = Vector2(3.642843, 0.4617688)
-max_value = 120.0
-value = 120.0
+max_value = 240.0
 nine_patch_stretch = true
 texture_under = ExtResource("2_hfyj3")
 texture_over = ExtResource("2_hfyj3")
 texture_progress = ExtResource("2_hfyj3")
 script = ExtResource("2_73ole")
 
-[node name="NegativeSlot3" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=39320058]
+[node name="NegativeSlot3" type="Sprite2D" parent="TextureProgressBar" unique_id=39320058]
 texture_filter = 1
-position = Vector2(40.048, 134.592)
+position = Vector2(40.048, 132.523)
 scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="NegativeSlot2" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=1799173819]
+[node name="NegativeSlot2" type="Sprite2D" parent="TextureProgressBar" unique_id=1799173819]
 texture_filter = 1
-position = Vector2(27.118, 131.759)
+position = Vector2(27.118, 132.523)
 scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="NegativeSlot1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=869239372]
+[node name="NegativeSlot1" type="Sprite2D" parent="TextureProgressBar" unique_id=869239372]
 texture_filter = 1
-position = Vector2(14.793172, 132.55765)
+position = Vector2(14.793, 132.523)
 scale = Vector2(0.121163666, 1.1164997)
 texture = ExtResource("4_hfyj3")
 
-[node name="PostiveSlot1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=1730559669]
+[node name="PostiveSlot1" type="Sprite2D" parent="TextureProgressBar" unique_id=1730559669]
 texture_filter = 1
 position = Vector2(14.367, 260)
 scale = Vector2(0.13519996, 1.1732553)
 texture = ExtResource("5_utd5k")
 
-[node name="PostiveSlot2" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=753336056]
+[node name="PostiveSlot2" type="Sprite2D" parent="TextureProgressBar" unique_id=753336056]
 texture_filter = 1
 position = Vector2(27.118, 260)
 scale = Vector2(0.135, 1.211)
 texture = ExtResource("5_utd5k")
 
-[node name="PostiveSlot3" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=827748296]
+[node name="PostiveSlot3" type="Sprite2D" parent="TextureProgressBar" unique_id=827748296]
 texture_filter = 1
 position = Vector2(40.048, 260)
 scale = Vector2(0.135, 1.211)
 texture = ExtResource("5_utd5k")
 
-[node name="Staminabar1" type="Sprite2D" parent="CanvasLayer/TextureProgressBar" unique_id=169049449]
+[node name="Staminabar1" type="Sprite2D" parent="TextureProgressBar" unique_id=169049449]
 texture_filter = 3
 position = Vector2(31.068974, 208.26393)
 scale = Vector2(0.176, 1.385)
 texture = ExtResource("3_841ab")
 
-[node name="Effects" parent="." unique_id=1968707285 instance=ExtResource("6_hfyj3")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=226205030]
+layer = 0
 
-[node name="ChipsAmountHUD" type="Sprite2D" parent="." unique_id=902334978]
+[node name="ChipsAmountHUD" type="Sprite2D" parent="CanvasLayer" unique_id=902334978]
 texture_filter = 3
 position = Vector2(126, 50)
 texture = ExtResource("7_utd5k")
 script = ExtResource("8_fta1o")
 
-[node name="MyText" type="RichTextLabel" parent="ChipsAmountHUD" unique_id=260968002]
+[node name="MyText" type="RichTextLabel" parent="CanvasLayer/ChipsAmountHUD" unique_id=260968002]
 clip_contents = false
 offset_left = -17.0
 offset_top = -38.0
 offset_right = 108.0
 offset_bottom = 33.0
 size_flags_stretch_ratio = 3.72
-theme = SubResource("Theme_utd5k")
+theme = ExtResource("9_fta1o")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
@@ -102,3 +98,5 @@ fit_content = true
 autowrap_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Effects" parent="." unique_id=1968707285 instance=ExtResource("6_hfyj3")]

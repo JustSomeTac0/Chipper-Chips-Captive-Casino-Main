@@ -2,7 +2,7 @@ extends Sprite2D
 
 
 var MyRichText
-
+var PostiveAmountOfChips = true
 
 var CurrentChipAmount
 
@@ -21,13 +21,28 @@ func WriteToText(NumberToWrite):
 	MyRichText.text = NormalTextEffect + str(NumberToWrite) + TextLetter
 
 func RoundNumber(numberToRound):
-	if (Global.chips + numberToRound) >= 1000:
-		numberToRound = (Global.chips + numberToRound) / 1000.0
-		TextLetter = "K"
-	else:
-		TextLetter = ""
+	if PostiveAmountOfChips == true:
+		if (Global.chips + numberToRound) >= 1000.00:
+			numberToRound = (Global.chips + numberToRound) / 1000.00
+			TextLetter = "K"
+			numberToRound = snapped(numberToRound, 0.01)
+		else:
+			TextLetter = ""
+			numberToRound = Global.chips + numberToRound
 	
-	numberToRound = snapped(numberToRound, 0.01)
+	
+	elif PostiveAmountOfChips == false:
+		if (Global.chips - numberToRound) >= 1000.00:
+			numberToRound = (Global.chips - numberToRound) / 1000.00
+			TextLetter = "K"
+			numberToRound = snapped(numberToRound, 0.01)
+		else:
+			TextLetter = ""
+			numberToRound = Global.chips - numberToRound
+	
+	
+	
+	
 	Global.chips = CurrentChipAmount
 	WriteToText(numberToRound)
 
@@ -35,7 +50,9 @@ func ChangeChipAmount(AmountToBeChanged, Increase):
 	if Increase == true:
 		CurrentChipAmount += AmountToBeChanged
 	elif Increase == false:
-		CurrentChipAmount -= AmountToBeChanged
+		CurrentChipAmount = CurrentChipAmount - AmountToBeChanged
 	else:
 		CurrentChipAmount = CurrentChipAmount
+		print("error")
+	PostiveAmountOfChips = Increase
 	RoundNumber(AmountToBeChanged)

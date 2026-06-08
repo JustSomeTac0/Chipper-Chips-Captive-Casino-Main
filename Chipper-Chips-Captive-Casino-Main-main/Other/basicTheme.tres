@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://2lfebhoyftpa"]
+
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="1_m8hnr"]
+
+[resource]
+default_font = ExtResource("1_m8hnr")
+default_font_size = 30
+Label/font_sizes/font_size = 16
