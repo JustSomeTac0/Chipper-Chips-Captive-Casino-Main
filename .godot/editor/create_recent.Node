@@ -1,8 +1,10 @@
-CollisionShape3D
+AnimatedSprite3D
 Area3D
+CollisionShape3D
+Label3D
+RichTextLabel
 Sprite3D
 Node
-RichTextLabel
 MeshInstance2D
 AnimatedSprite2D
 Area2D
@@ -11,4 +13,3 @@ NavigationRegion3D
 MeshInstance3D
 RigidBody3D
 RayCast3D
-TextureProgressBar

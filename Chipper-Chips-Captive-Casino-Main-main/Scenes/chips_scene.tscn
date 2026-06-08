@@ -1,23 +1,117 @@
 [gd_scene format=3 uid="uid://osdnbkd30sys"]
 
 [ext_resource type="Script" uid="uid://bo7ol2030c6r2" path="res://chips_scene.gd" id="1_m8gvv"]
-[ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/level1Backgorund.png" id="2_j447n"]
+[ext_resource type="Texture2D" uid="uid://bn6jn3qqh242b" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemDouble1.png" id="2_i7qmk"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="3_j447n"]
+[ext_resource type="Texture2D" uid="uid://dtkqtg67dliyv" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemDouble2.png" id="3_xdc2t"]
+[ext_resource type="Texture2D" uid="uid://btunfcako17nl" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemDouble3.png" id="4_einqk"]
+[ext_resource type="Texture2D" uid="uid://c3ev1pft36yw0" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemDouble4.png" id="5_3e4gm"]
+[ext_resource type="Texture2D" uid="uid://qy7bcpa37nhr" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemDouble5.png" id="6_gekuu"]
+[ext_resource type="Texture2D" uid="uid://dxpdc382t8pdj" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemSingle1.png" id="7_xw1pd"]
+[ext_resource type="Texture2D" uid="uid://sby2xbm7bsep" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemSingle2.png" id="8_y00rh"]
+[ext_resource type="Texture2D" uid="uid://dqc6pqewgy2de" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemSingle3.png" id="9_mavew"]
+[ext_resource type="Texture2D" uid="uid://b7ue7rbdfr2to" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemSingle4.png" id="10_0k4fm"]
+[ext_resource type="Texture2D" uid="uid://cer6p41l2wmv7" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemSingle5.png" id="11_ugvdj"]
+[ext_resource type="Texture2D" uid="uid://c2yf4d514iq7t" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemThriple1.png" id="12_aajwu"]
+[ext_resource type="Texture2D" uid="uid://bn0qjcniwx7dt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemThriple2.png" id="13_i7mdu"]
+[ext_resource type="Texture2D" uid="uid://dqoek6yjhuhcu" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemThriple3.png" id="14_o5wrq"]
+[ext_resource type="Texture2D" uid="uid://bgnvaxbdvtuv7" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemThriple4.png" id="15_k3kbr"]
+[ext_resource type="Texture2D" uid="uid://8fjf8ce71gs" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items/Chips/ChipsItemThriple5.png" id="16_ok7ee"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_m8gvv"]
-size = Vector3(4.541443, 4.386688, 0.8261719)
+[sub_resource type="SpriteFrames" id="SpriteFrames_aj0ho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i7qmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xdc2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_einqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3e4gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gekuu")
+}],
+"loop": false,
+"name": &"Double",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xw1pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y00rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mavew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0k4fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ugvdj")
+}],
+"loop": false,
+"name": &"Single",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_aajwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i7mdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o5wrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_k3kbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ok7ee")
+}],
+"loop": false,
+"name": &"Triple",
+"speed": 0.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j447n"]
+size = Vector3(3.3056307, 1.3184528, 2.7090073)
 
 [node name="ChipsScene" type="Node3D" unique_id=22656573]
 script = ExtResource("1_m8gvv")
 
-[node name="ChipsSprite" type="Sprite3D" parent="." unique_id=1342991739]
-transform = Transform3D(0.23476438, 0, 0, 0, 0.2578255, 0, 0, 0, 1, 0, 0.5093571, 0)
-texture = ExtResource("2_j447n")
+[node name="ChipsSprite" type="AnimatedSprite3D" parent="." unique_id=550541176]
+transform = Transform3D(0.58, 0, 0, 0, 0.58, 0, 0, 0, 0.58, 0, 0.24544972, 0)
+billboard = 1
+texture_filter = 4
+sprite_frames = SubResource("SpriteFrames_aj0ho")
+animation = &"Triple"
 
 [node name="ChipsCollisionArea" type="Area3D" parent="ChipsSprite" unique_id=999542886]
+transform = Transform3D(1.4137932, 0, 0, 0, 1.4137932, 0, 0, 0, 1.4137932, 0, 0.25153875, 0)
 
 [node name="ChipsCollisionShape" type="CollisionShape3D" parent="ChipsSprite/ChipsCollisionArea" unique_id=1985572299]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024566673, 0.20893979, -0.0036544204)
-shape = SubResource("BoxShape3D_m8gvv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025066718, -0.06306979, 0.02298665)
+shape = SubResource("BoxShape3D_j447n")
+
+[node name="TextControl" type="Label3D" parent="." unique_id=1384021956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5692247, 0)
+billboard = 1
+alpha_scissor_threshold = 0.0
+alpha_hash_scale = 1.17
+texture_filter = 2
+modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
+text = "[E]"
+font = ExtResource("3_j447n")
+font_size = 35
+outline_size = 10
 
 [connection signal="body_entered" from="ChipsSprite/ChipsCollisionArea" to="." method="OnInteractionAreaEntered"]
 [connection signal="body_exited" from="ChipsSprite/ChipsCollisionArea" to="." method="OnInteractionAreaExited"]

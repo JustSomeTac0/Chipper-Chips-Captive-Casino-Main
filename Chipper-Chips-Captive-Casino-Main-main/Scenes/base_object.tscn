@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://2m1g8klcwh34" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/InteractablesMasterClass.gd" id="1_nts43"]
 [ext_resource type="Texture2D" uid="uid://dmyaftrs2dtwt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/testTile.png" id="2_a66ey"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="3_a66ey"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_83l5b"]
 radius = 1.0220292
@@ -21,6 +22,18 @@ texture = ExtResource("2_a66ey")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="ObjectSprite/InteractionArea" unique_id=1586954486]
 shape = SubResource("SphereShape3D_83l5b")
+
+[node name="TextControl" type="Label3D" parent="." unique_id=1894825849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1838183, 0)
+billboard = 1
+alpha_scissor_threshold = 0.0
+alpha_hash_scale = 1.17
+texture_filter = 2
+modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
+text = "[E]"
+font = ExtResource("3_a66ey")
+font_size = 35
+outline_size = 25
 
 [connection signal="body_entered" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaEntered"]
 [connection signal="body_exited" from="ObjectSprite/InteractionArea" to="." method="OnInteractionAreaExited"]

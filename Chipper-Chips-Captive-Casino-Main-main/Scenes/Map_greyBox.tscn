@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b1tk6jdsase6q" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Item.tscn" id="6_cosa2"]
 [ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn" id="7_nbklu"]
 [ext_resource type="Script" uid="uid://cx8drfmnbeyr7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd" id="8_uofhw"]
-[ext_resource type="PackedScene" uid="uid://cxrx0t5rr3uq1" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/base_object.tscn" id="9_jyex6"]
 [ext_resource type="PackedScene" uid="uid://osdnbkd30sys" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chips_scene.tscn" id="11_afq3y"]
 [ext_resource type="PackedScene" uid="uid://cf8w7v7mjr30f" path="res://Chipper-Chips-Captive-Casino-Main-main/Models/Other_Stairs.gltf" id="14_jyex6"]
 
@@ -3270,11 +3269,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 
 [node name="Chips" type="Node" parent="Items" unique_id=1096331404]
 
-[node name="ChipsScene" parent="Items/Chips" unique_id=22656573 instance=ExtResource("11_afq3y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.550982, -3.45658, 21.341482)
+[node name="ChipsScene2" parent="Items/Chips" unique_id=22656573 instance=ExtResource("11_afq3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.08548, -3.7096708, 19.697474)
 
-[node name="BaseObject" parent="Items/Chips" unique_id=2138505669 instance=ExtResource("9_jyex6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.407269, -1.85799, 11.445534)
+[node name="ChipsScene" parent="Items/Chips" unique_id=1416210499 instance=ExtResource("11_afq3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.550982, -3.7756917, 22.879532)
+
+[node name="ChipsScene3" parent="Items/Chips" unique_id=983415195 instance=ExtResource("11_afq3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.03955, -3.7756917, 20.932934)
+
+[node name="ChipsScene4" parent="Items/Chips" unique_id=388001509 instance=ExtResource("11_afq3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.150702, -3.7756917, 23.390512)
 
 [node name="TutorialKey" parent="Items" unique_id=1852272048 instance=ExtResource("6_cosa2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.602285, -2.9782147, -19.667933)

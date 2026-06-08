@@ -24,10 +24,10 @@ func RoundNumber(numberToRound):
 	if (Global.chips + numberToRound) >= 1000:
 		numberToRound = (Global.chips + numberToRound) / 1000.0
 		TextLetter = "K"
-	
 	else:
 		TextLetter = ""
 	
+	numberToRound = snapped(numberToRound, 0.01)
 	Global.chips = CurrentChipAmount
 	WriteToText(numberToRound)
 
