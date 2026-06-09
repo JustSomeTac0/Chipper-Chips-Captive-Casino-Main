@@ -1,3 +1,4 @@
+CSGBox3D
 Node
 Label3D
 RichTextLabel
@@ -11,4 +12,3 @@ VisibleOnScreenEnabler3D
 VisibleOnScreenNotifier3D
 AnimatedSprite3D
 Area3D
-CollisionShape3D
