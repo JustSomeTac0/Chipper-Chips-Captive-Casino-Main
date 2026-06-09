@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b1tk6jdsase6q" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Item.tscn" id="6_cosa2"]
 [ext_resource type="PackedScene" uid="uid://blofy5qj2g5n7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn" id="7_nbklu"]
 [ext_resource type="Script" uid="uid://cx8drfmnbeyr7" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd" id="8_uofhw"]
+[ext_resource type="PackedScene" uid="uid://djlxdm2y3tx0n" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/GoalObject.tscn" id="9_ru5xy"]
 [ext_resource type="PackedScene" uid="uid://b7r6mva46n0we" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/gambling_machine_object.tscn" id="10_afq3y"]
 [ext_resource type="PackedScene" uid="uid://osdnbkd30sys" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chips_scene.tscn" id="11_afq3y"]
 [ext_resource type="PackedScene" uid="uid://cf8w7v7mjr30f" path="res://Chipper-Chips-Captive-Casino-Main-main/Models/Other_Stairs.gltf" id="14_jyex6"]
@@ -3267,6 +3268,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eisij")
 [node name="WindowNodes" type="Node" parent="EnemyPathNodes" unique_id=351825789]
 
 [node name="Items" type="Node" parent="." unique_id=1508168014]
+
+[node name="Other" type="Node" parent="Items" unique_id=32066183]
+
+[node name="Node3D" parent="Items/Other" unique_id=2033814544 instance=ExtResource("9_ru5xy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6504159, -0.43763852, -16.301151)
 
 [node name="Chips" type="Node" parent="Items" unique_id=1096331404]
 

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://djlxdm2y3tx0n"]
+
+[ext_resource type="Script" uid="uid://vn8kfwohwoar" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/goal_object.gd" id="1_qqi7b"]
+[ext_resource type="Texture2D" uid="uid://c7g6nxhf1fjae" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Chiper CardboardCutout.png" id="1_su6j2"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="2_qqi7b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pdgrg"]
+radius = 1.8617636
+
+[node name="Node3D" type="Node3D" unique_id=2033814544]
+script = ExtResource("1_qqi7b")
+
+[node name="ObjectSprite" type="Sprite3D" parent="." unique_id=954711682]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 1.1685429, 0)
+shaded = true
+texture_filter = 2
+texture = ExtResource("1_su6j2")
+
+[node name="TextControl" type="Label3D" parent="." unique_id=538678637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1838183, 0.14904702)
+billboard = 1
+alpha_scissor_threshold = 0.0
+alpha_hash_scale = 1.17
+texture_filter = 2
+modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
+text = "[E]"
+font = ExtResource("2_qqi7b")
+font_size = 49
+outline_size = 25
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=1782090366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2001443, 0)
+
+[node name="CollisionShape" type="CollisionShape3D" parent="InteractionArea" unique_id=164502754]
+shape = SubResource("SphereShape3D_pdgrg")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=482799723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.63021433, 1.517362, 0.013795644)
+text = "GIVE ME 
+3000 CHIPS 
+TO WIN"
+font = ExtResource("2_qqi7b")
+font_size = 28
+
+[connection signal="body_entered" from="InteractionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="OnInteractionAreaExited"]

@@ -1,6 +1,7 @@
+Node
+Label3D
 RichTextLabel
 TextureButton
-Node
 Node3D
 Sprite3D
 Polygon2D
@@ -11,4 +12,3 @@ VisibleOnScreenNotifier3D
 AnimatedSprite3D
 Area3D
 CollisionShape3D
-Label3D

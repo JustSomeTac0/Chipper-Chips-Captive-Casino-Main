@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://yms6abvunxmr"]
+
+[ext_resource type="Shader" uid="uid://br8fvnmc76n5r" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader" id="1_gach7"]
+[ext_resource type="Script" uid="uid://b4v803qhhyddw" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/loading_screen.gd" id="1_lmtpv"]
+[ext_resource type="Texture2D" uid="uid://c60corw08kkxm" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Menus/EARLY LOADING SCREEN.png" id="2_lmtpv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_168cr"]
+shader = ExtResource("1_gach7")
+shader_parameter/interval = 0.15
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 5.0
+shader_parameter/seed = 42.0
+
+[node name="Node2D" type="Node2D" unique_id=684290751]
+script = ExtResource("1_lmtpv")
+
+[node name="EarlyLoadingScreen" type="Sprite2D" parent="." unique_id=366129730]
+material = SubResource("ShaderMaterial_168cr")
+position = Vector2(632, 351)
+texture = ExtResource("2_lmtpv")

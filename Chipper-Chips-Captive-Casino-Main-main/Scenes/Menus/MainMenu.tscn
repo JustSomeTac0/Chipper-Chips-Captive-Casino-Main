@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://siyugbkivau0"]
+
+[ext_resource type="Script" uid="uid://kushrvwk6cev" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/main_menu.gd" id="1_x84o7"]
+[ext_resource type="Shader" uid="uid://br8fvnmc76n5r" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader" id="1_xxnfc"]
+[ext_resource type="Texture2D" uid="uid://u47ijteppcqb" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Menus/CHIPERS EARLY MENU.png" id="2_x84o7"]
+[ext_resource type="Texture2D" uid="uid://cabmsy7qs6nbm" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Menus/MENU BUTTON EARLY.png" id="4_3vyno"]
+[ext_resource type="Theme" uid="uid://2lfebhoyftpa" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/basicTheme.tres" id="5_b1awg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cd1p4"]
+shader = ExtResource("1_xxnfc")
+shader_parameter/interval = 0.2
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 7.0
+shader_parameter/seed = 42.0
+
+[sub_resource type="Shader" id="Shader_r16ju"]
+code = "shader_type canvas_item;
+uniform float interval = 0.5; // the displacement will happen every [interval] seconds
+uniform float timeDelay = 0.0; // use it if you don't want all the sprites to move at the same time
+uniform float intensityX = 20.0; // X axis force of movement
+uniform float intensityY = 20.0; // Y axis force of movement
+uniform float seed = 42.0; // seed to randomize movement
+
+void vertex() {
+	float chunk = floor((TIME + timeDelay) / interval);
+	float seedNum = VERTEX.x + VERTEX.y + chunk + seed;
+	float offsetX = sin(seedNum * 12.9898) * 43758.5453;
+	float offsetY = sin(seedNum * 32.9472) * 94726.0482;
+	offsetX = fract(offsetX);
+	offsetX = offsetX * 2.0 - 1.0;
+	offsetY = fract(offsetY);
+	offsetY = offsetY * 2.0 - 1.0;
+	VERTEX += vec2(offsetX * intensityX, offsetY * intensityY);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_68aw5"]
+shader = SubResource("Shader_r16ju")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 5.0
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bdsih"]
+shader = ExtResource("1_xxnfc")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 5.0
+shader_parameter/seed = 30.0
+
+[node name="Node2D" type="Node2D" unique_id=1361713715]
+script = ExtResource("1_x84o7")
+
+[node name="ChipersEarlyMenu" type="Sprite2D" parent="." unique_id=2027231284]
+texture_filter = 1
+material = SubResource("ShaderMaterial_cd1p4")
+position = Vector2(637.49994, 377.99997)
+scale = Vector2(0.59399176, 0.54249287)
+texture = ExtResource("2_x84o7")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=839285826]
+material = SubResource("ShaderMaterial_68aw5")
+offset_left = 69.0
+offset_top = 360.0
+offset_right = 530.0
+offset_bottom = 603.0
+scale = Vector2(0.58400035, 0.344)
+texture_normal = ExtResource("4_3vyno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton" unique_id=2065620267]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.16700001
+anchor_right = 0.078
+anchor_bottom = 0.16700001
+offset_left = 13.699509
+offset_top = -37.674034
+offset_right = 354.84503
+offset_bottom = 139.65164
+scale = Vector2(1.0590645, 1.2431273)
+mouse_filter = 2
+theme = ExtResource("5_b1awg")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+bbcode_enabled = true
+text = "[wave][rainbow]Play Vibeo Gaem"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=101170047]
+material = SubResource("ShaderMaterial_bdsih")
+offset_left = 58.0
+offset_top = 488.0
+offset_right = 519.0
+offset_bottom = 731.0
+scale = Vector2(0.58399975, 0.344)
+texture_normal = ExtResource("4_3vyno")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton2" unique_id=182618977]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.16700001
+anchor_right = 0.078
+anchor_bottom = 0.16700001
+offset_left = 13.699509
+offset_top = -37.674034
+offset_right = 354.84503
+offset_bottom = 139.65164
+scale = Vector2(1.0590645, 1.2431273)
+mouse_filter = 2
+theme = ExtResource("5_b1awg")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 44
+bbcode_enabled = true
+text = "[shake]LEAVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="PlayButtonPressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="NotPlayButtonPressed"]

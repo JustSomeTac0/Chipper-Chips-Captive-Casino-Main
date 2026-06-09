@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dct0essdblu06"]
+
+[ext_resource type="Shader" uid="uid://br8fvnmc76n5r" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader" id="1_iv23n"]
+[ext_resource type="Script" uid="uid://bihuqxo3s7g4j" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/win_screen.gd" id="1_j4wo2"]
+[ext_resource type="Texture2D" uid="uid://oliytgt2c5fe" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Menus/YOU WIN EARLY.png" id="2_j4wo2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l186h"]
+shader = ExtResource("1_iv23n")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 5.0
+shader_parameter/intensityY = 5.0
+shader_parameter/seed = 42.0
+
+[node name="Node2D" type="Node2D" unique_id=866966376]
+script = ExtResource("1_j4wo2")
+
+[node name="YouWinEarly" type="Sprite2D" parent="." unique_id=1072434732]
+texture_filter = 1
+material = SubResource("ShaderMaterial_l186h")
+position = Vector2(628, 352)
+texture = ExtResource("2_j4wo2")
