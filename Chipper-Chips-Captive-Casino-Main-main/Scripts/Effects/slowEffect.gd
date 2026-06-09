@@ -9,12 +9,15 @@ var Slow
 var isSlow = false
 ###
 
+signal RunEffect
+
 func _ready() -> void:
 	player =  $"../../.."
 	effectTimer = $"Effect Timer"
 	effectProgressBar = $EffectProgressBar
 	effectProgressBar.max_value = effectTimer.wait_time
 	effectMaster = $".."
+	self.RunEffect.connect(effectSlowActive)
 	###change this if another effect
 	Slow = self
 	###

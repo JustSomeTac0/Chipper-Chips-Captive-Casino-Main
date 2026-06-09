@@ -13,6 +13,8 @@ var Drunk
 var isDrunk = false
 ###
 
+signal RunEffect
+
 func _ready() -> void:
 	player =  $"../../.."
 	effectTimer = $"Effect Timer"
@@ -20,6 +22,7 @@ func _ready() -> void:
 	effectProgressBar.max_value = effectTimer.wait_time
 	effectMaster = $".."
 	MapMaterial = $"../../../../Map/NavigationRegion3D/Storage".get_material()
+	self.RunEffect.connect(effectDrunkActive)
 
 	###change this if another effect
 	Drunk = self

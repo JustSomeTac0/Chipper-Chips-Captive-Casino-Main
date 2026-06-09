@@ -9,12 +9,15 @@ var Tired
 var isTired = false
 ###
 
+signal RunEffect
+
 func _ready() -> void:
 	player =  $"../../.."
 	effectTimer = $"Effect Timer"
 	effectProgressBar = $EffectProgressBar
 	effectProgressBar.max_value = effectTimer.wait_time
 	effectMaster = $".."
+	self.RunEffect.connect(effectTiredActive)
 	###change this if another effect
 	Tired = self
 	###

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cdbo6tqxhpmue"]
+
+[ext_resource type="Script" uid="uid://bk586bg85equy" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/ticket_machine.gd" id="1_mnfif"]
+[ext_resource type="Texture2D" uid="uid://co6i7d1k3auqe" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items and Objects/Machines/TicketMachineObject1.png" id="2_sjb5c"]
+[ext_resource type="Texture2D" uid="uid://d0d1c5g8peunp" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items and Objects/Machines/TicketMachineObject2.png" id="3_avatd"]
+[ext_resource type="Texture2D" uid="uid://bk6vwnxkyne70" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Items and Objects/Machines/TicketMachineObject3.png" id="4_qqhdy"]
+[ext_resource type="FontFile" uid="uid://du2shk3pqptga" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/Whacky_Joe.ttf" id="5_i5nms"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f8h8u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sjb5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_avatd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qqhdy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_13e2l"]
+radius = 1.0220292
+
+[node name="TicketMachine" type="Node3D" unique_id=107727302]
+script = ExtResource("1_mnfif")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="." unique_id=886390875]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.07975185, 0.89899606, 0)
+billboard = 2
+shaded = true
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_f8h8u")
+
+[node name="TextControl" type="Label3D" parent="." unique_id=1928732106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07318619, 1.6115763, -0.011570215)
+billboard = 1
+no_depth_test = true
+alpha_scissor_threshold = 0.0
+alpha_hash_scale = 1.17
+texture_filter = 2
+modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
+text = "[E]"
+font = ExtResource("5_i5nms")
+font_size = 35
+outline_size = 25
+
+[node name="InteractionArea" type="Area3D" parent="." unique_id=110281931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5161564, 0)
+
+[node name="CollisionShape" type="CollisionShape3D" parent="InteractionArea" unique_id=512658355]
+shape = SubResource("SphereShape3D_13e2l")

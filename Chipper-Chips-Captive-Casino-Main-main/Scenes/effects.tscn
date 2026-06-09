@@ -15,7 +15,6 @@
 [ext_resource type="Script" uid="uid://wkv6cfteev36" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/drunkEffect.gd" id="13_b5hco"]
 [ext_resource type="Texture2D" uid="uid://dqwmtobfw2mvx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectDrunkSym.png" id="14_onvdp"]
 
-
 [node name="Effects" type="Node2D" unique_id=1968707285]
 process_thread_group = 2
 process_thread_group_order = 0

@@ -1,5 +1,6 @@
-CSGBox3D
 Node
+AnimatedSprite3D
+CSGBox3D
 Label3D
 RichTextLabel
 TextureButton
@@ -10,5 +11,4 @@ CanvasModulate
 Button
 VisibleOnScreenEnabler3D
 VisibleOnScreenNotifier3D
-AnimatedSprite3D
 Area3D
