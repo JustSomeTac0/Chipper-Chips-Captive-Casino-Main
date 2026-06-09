@@ -1,0 +1,58 @@
+extends Node2D
+var player 
+var effectTimer
+var effectProgressBar
+var effectMaster
+
+###change this if another effect
+var Lucky
+var isLucky = false
+###
+
+signal RunEffect
+
+func _ready() -> void:
+	player =  $"../../.."
+	effectTimer = $"Effect Timer"
+	effectProgressBar = $EffectProgressBar
+	effectProgressBar.max_value = effectTimer.wait_time
+	effectMaster = $".."
+	self.RunEffect.connect(effectLuckyActive)
+	###change this if another effect
+	Lucky = self
+	self._process(false)
+	###
+
+###change this if another effect
+func effectLuckyActive():
+	self._process(true)
+	isLucky = true
+	Global.PlayerLuck = Global.PlayerLuck + 10
+	effectTimer.start()
+	effectMaster.handleEffects(Lucky)
+###
+
+
+func _on_effect_timer_timeout() -> void:
+	###change this if another effect
+	Global.PlayerLuck = Global.PlayerLuck - 10
+	isLucky = false
+	###
+	
+	
+	effectMaster.effectList.pop_at(effectMaster.effectList.find(self))
+	#cool animation#
+	for i in range(10):
+		self.position.x = self.position.x + 10
+		await get_tree().create_timer(0.01).timeout
+	
+	self._process(false)
+	
+
+
+
+func _process(delta: float) -> void:
+	###change this if another effect
+	if isLucky == true:
+	###
+		effectProgressBar.value = effectTimer.time_left

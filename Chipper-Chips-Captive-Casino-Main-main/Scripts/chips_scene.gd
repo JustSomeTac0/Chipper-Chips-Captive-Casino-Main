@@ -87,14 +87,6 @@ func RandomChipSetup():
 		self.visible = true
 
 
-func OnInteractionAreaEntered(body: Node3D) -> void:
-	if body == Player:
-		textCoolEffect()
-		PlayerInArea = true
-		TextLabel.visible = true
-		set_process_unhandled_input(true)
-		InteractionAvailable.emit()
-
 
 func CollectChips():
 	if Collected == false && PlayerInArea == true:
@@ -103,14 +95,3 @@ func CollectChips():
 			var GainThese = ChipWorth * ChipAmount
 			Player.gotChips(GainThese, true)
 			print("Player got %d" %ChipAmount + " %d" %ChipWorth + "$ Chips")
-
-
-func textCoolEffect():
-	for i in range(2):
-		TextLabel.font_size += 1
-		await get_tree().create_timer(0.04).timeout 
-	for i in range(2):
-		TextLabel.font_size -= 1
-		await get_tree().create_timer(0.07).timeout 
-	if PlayerInArea == true:
-		textCoolEffect()

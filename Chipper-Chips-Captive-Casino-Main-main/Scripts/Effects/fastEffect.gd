@@ -20,10 +20,12 @@ func _ready() -> void:
 	self.RunEffect.connect(effectFastActive)
 	###change this if another effect
 	Fast = self
+	self._process(false)
 	###
 
 ###change this if another effect
 func effectFastActive(): #change this to player speed
+	self._process(true)
 	isFast = true
 	player.SPEED = player.SPEED * 1.2
 	effectTimer.start()
@@ -44,11 +46,8 @@ func _on_effect_timer_timeout() -> void:
 		self.position.x = self.position.x + 10
 		await get_tree().create_timer(0.01).timeout
 	
-
-func _input(event): #testing
-	if Input.is_action_pressed("devButton"):
-		effectFastActive()
-		
+	self._process(false)
+	
 
 
 func _process(delta: float) -> void:

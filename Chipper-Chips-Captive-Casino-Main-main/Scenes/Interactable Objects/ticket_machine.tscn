@@ -24,7 +24,7 @@ animations = [{
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_13e2l"]
-radius = 1.0220292
+radius = 1.2469454
 
 [node name="TicketMachine" type="Node3D" unique_id=107727302]
 script = ExtResource("1_mnfif")
@@ -37,12 +37,14 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_f8h8u")
 
 [node name="TextControl" type="Label3D" parent="." unique_id=1928732106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07318619, 1.6115763, -0.011570215)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07318619, 1.2480254, -0.011570215)
 billboard = 1
 no_depth_test = true
 alpha_scissor_threshold = 0.0
 alpha_hash_scale = 1.17
 texture_filter = 2
+render_priority = 2
+outline_render_priority = 1
 modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
 text = "[E]"
 font = ExtResource("5_i5nms")
@@ -54,3 +56,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5161564, 0)
 
 [node name="CollisionShape" type="CollisionShape3D" parent="InteractionArea" unique_id=512658355]
 shape = SubResource("SphereShape3D_13e2l")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="OnInteractionAreaEntered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="OnInteractionAreaExited"]

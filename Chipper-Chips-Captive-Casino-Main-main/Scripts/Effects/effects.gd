@@ -25,6 +25,8 @@ func _ready() -> void:
 	Fast = $Fast
 	Slow = $Slow
 	Drunk = $Drunk
+	Lucky = $Lucky
+	Unlucky = $Unlucky
 
 
 func handleEffects(effect): #just call the with the name of the effect like handleEffects(Energized)

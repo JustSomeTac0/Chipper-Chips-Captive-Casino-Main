@@ -59,6 +59,9 @@ func _input(event: InputEvent) -> void:
 		var MousesYVaule = get_global_mouse_position().y
 		var MousesXVaule = get_global_mouse_position().x
 		
+		if InLeverArea == false && CanPlayerSpin == true:
+			SlotMachine.frame = 0
+		
 		if PullingDown == true && CanPlayerSpin == true:
 			
 			
@@ -96,9 +99,11 @@ func MachineRunning():
 	if Result >= (46 - Global.PlayerLuck):  #more luck the player has the lower number is needed
 		SlotMachine.play("Win") #WIN
 		GameWon.emit()
+		Global.PlayerLuckDrain()
 	else:
 		SlotMachine.play("Lose") #LOSE
 		GameLost.emit()
+		Global.PittyPlayerLuckIncrease()
 
 
 

@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://lcqqggx42x75" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectTiredSym.png" id="12_hfyo5"]
 [ext_resource type="Script" uid="uid://wkv6cfteev36" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/drunkEffect.gd" id="13_b5hco"]
 [ext_resource type="Texture2D" uid="uid://dqwmtobfw2mvx" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectDrunkSym.png" id="14_onvdp"]
+[ext_resource type="Script" uid="uid://cthcyhrnguhd5" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/lucky.gd" id="15_a8wc7"]
+[ext_resource type="Texture2D" uid="uid://ceoi54tcfqhh7" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/PostiveEffectLuckySym.png" id="16_5umba"]
+[ext_resource type="Script" uid="uid://bgv6pq4srsh6d" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/unlucky.gd" id="17_55uau"]
+[ext_resource type="Texture2D" uid="uid://bhmodf7msc8fv" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/HUD/Effects/NegativeEffectUnlcukySym.png" id="18_vf34l"]
 
 [node name="Effects" type="Node2D" unique_id=1968707285]
 process_thread_group = 2
@@ -128,8 +132,56 @@ texture_over = ExtResource("14_onvdp")
 texture_progress = ExtResource("10_vf34l")
 texture_progress_offset = Vector2(-1.745, 1.33)
 
+[node name="Lucky" type="Node2D" parent="." unique_id=1922692742]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("15_a8wc7")
+
+[node name="Effect Timer" type="Timer" parent="Lucky" unique_id=1652785187]
+wait_time = 45.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Lucky" unique_id=158804652]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("16_5umba")
+texture_progress = ExtResource("5_ck2a1")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
+[node name="Unlucky" type="Node2D" parent="." unique_id=2105754168]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+script = ExtResource("17_55uau")
+
+[node name="Effect Timer" type="Timer" parent="Unlucky" unique_id=196965420]
+wait_time = 45.0
+one_shot = true
+
+[node name="EffectProgressBar" type="TextureProgressBar" parent="Unlucky" unique_id=1979353223]
+texture_filter = 1
+offset_left = 1147.22
+offset_right = 1351.22
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+max_value = 100.42
+nine_patch_stretch = true
+texture_under = ExtResource("3_b5hco")
+texture_over = ExtResource("18_vf34l")
+texture_progress = ExtResource("10_vf34l")
+texture_progress_offset = Vector2(-1.745, 1.33)
+
 [connection signal="timeout" from="Energized/Effect Timer" to="Energized" method="_on_effect_timer_timeout"]
 [connection signal="timeout" from="Fast/Effect Timer" to="Fast" method="_on_effect_timer_timeout"]
 [connection signal="timeout" from="Slow/Effect Timer" to="Slow" method="_on_effect_timer_timeout"]
 [connection signal="timeout" from="Tired/Effect Timer" to="Tired" method="_on_effect_timer_timeout"]
 [connection signal="timeout" from="Drunk/Effect Timer" to="Drunk" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Lucky/Effect Timer" to="Lucky" method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="Unlucky/Effect Timer" to="Unlucky" method="_on_effect_timer_timeout"]

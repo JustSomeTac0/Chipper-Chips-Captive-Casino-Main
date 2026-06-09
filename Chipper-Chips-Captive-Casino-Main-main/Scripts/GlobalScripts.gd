@@ -20,3 +20,22 @@ var chips: int = 550
 
 #what le enemies be doin perchance
 var dice_anger: int = 0
+
+
+
+func PittyPlayerLuckIncrease():
+	if PlayerLuck < 26:
+		PlayerLuck = PlayerLuck + 5
+	elif 26 < PlayerLuck && PlayerLuck > 36:
+		PlayerLuck = PlayerLuck + 3
+	else:
+		PlayerLuck = PlayerLuck + 1
+	print(PlayerLuck)
+
+
+func PlayerLuckDrain():
+	if PlayerLuck < 5:
+		PlayerLuck = PlayerLuck - PlayerLuck
+	else:
+		PlayerLuck = PlayerLuck - 5
+	print(PlayerLuck)

@@ -19,16 +19,19 @@ texture_filter = 2
 texture = ExtResource("2_xdlyw")
 
 [node name="TextControl" type="Label3D" parent="." unique_id=401505935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5284262, 0.005138576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2654161, -0.031008244)
 billboard = 1
+no_depth_test = true
 alpha_scissor_threshold = 0.0
 alpha_hash_scale = 1.17
 texture_filter = 2
+render_priority = 2
+outline_render_priority = 1
 modulate = Color(0.86323947, 0.86323947, 0.86323947, 1)
 text = "[E]"
 font = ExtResource("4_8icjk")
 font_size = 35
-outline_size = 10
+outline_size = 20
 
 [node name="MachineCollisionArea" type="Area3D" parent="." unique_id=1414269205]
 transform = Transform3D(0.82000005, 0, 0, 0, 0.82000005, 0, 0, 0, 0.82000005, 0, 0.7475891, 0)

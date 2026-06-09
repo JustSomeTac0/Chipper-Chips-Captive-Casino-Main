@@ -26,10 +26,12 @@ func _ready() -> void:
 
 	###change this if another effect
 	Drunk = self
+	self._process(false)
 	###
 
 ###change this if another effect
 func effectDrunkActive():
+	self._process(true)
 	isDrunk = true
 	effectTimer.start()
 	effectMaster.handleEffects(Drunk)
@@ -63,11 +65,8 @@ func _on_effect_timer_timeout() -> void:
 		self.position.x = self.position.x + 10
 		await get_tree().create_timer(0.01).timeout
 	
+	self._process(false)
 
-func _input(event): #testing
-	if Input.is_action_pressed("devButton"):
-		effectDrunkActive()
-		
 
 
 func _process(delta: float) -> void:

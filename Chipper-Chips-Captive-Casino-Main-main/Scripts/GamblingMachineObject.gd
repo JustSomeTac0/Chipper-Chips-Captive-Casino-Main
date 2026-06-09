@@ -39,6 +39,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				SlotMachineGame.ResetScene()
 
 
+
 func MachineCostFunc():
 	Player.gotChips(MachineCost, false)
 

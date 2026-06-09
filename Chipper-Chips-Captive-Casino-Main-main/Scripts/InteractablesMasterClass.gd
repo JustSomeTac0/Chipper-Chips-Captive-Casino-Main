@@ -23,9 +23,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		Interacted.emit()
 		get_viewport().set_input_as_handled()
 
+func textCoolEffect():
+	for i in range(2):
+		TextLabel.font_size += 1
+		await get_tree().create_timer(0.04).timeout 
+	for i in range(2):
+		TextLabel.font_size -= 1
+		await get_tree().create_timer(0.07).timeout 
+	if PlayerInArea == true:
+		textCoolEffect()
 
 func OnInteractionAreaEntered(body: Node3D) -> void:
 	if body == Player:
+		textCoolEffect()
 		PlayerInArea = true
 		TextLabel.visible = true
 		set_process_unhandled_input(true)

@@ -20,10 +20,12 @@ func _ready() -> void:
 	self.RunEffect.connect(effectEnergizedActive)
 	###change this if another effect
 	Energized = self
+	self._process(false)
 	###
 
 ###change this if another effect
 func effectEnergizedActive():
+	self._process(true)
 	isEnergized = true
 	player.regenTime = player.regenTime / 4
 	effectTimer.start()
@@ -43,6 +45,8 @@ func _on_effect_timer_timeout() -> void:
 	for i in range(10):
 		self.position.x = self.position.x + 10
 		await get_tree().create_timer(0.01).timeout
+		
+		self._process(false)
 	
 
 

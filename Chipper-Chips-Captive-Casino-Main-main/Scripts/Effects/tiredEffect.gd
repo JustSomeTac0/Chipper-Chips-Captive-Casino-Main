@@ -20,10 +20,12 @@ func _ready() -> void:
 	self.RunEffect.connect(effectTiredActive)
 	###change this if another effect
 	Tired = self
+	self._process(false)
 	###
 
 ###change this if another effect
 func effectTiredActive():
+	self._process(true)
 	isTired = true
 	player.regenTime = player.regenTime * 4
 	effectTimer.start()
@@ -44,11 +46,8 @@ func _on_effect_timer_timeout() -> void:
 		self.position.x = self.position.x + 10
 		await get_tree().create_timer(0.01).timeout
 	
-
-func _input(event): #testing
-	if Input.is_action_pressed("devButton"):
-		effectTiredActive()
-		
+	self._process(false)
+	
 
 
 func _process(delta: float) -> void:

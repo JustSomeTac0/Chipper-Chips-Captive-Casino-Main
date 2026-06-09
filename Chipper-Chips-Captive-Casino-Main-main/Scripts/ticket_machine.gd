@@ -8,6 +8,8 @@ var Fast
 var Slow
 var Tired
 var Drunk
+var Lucky
+var Unlucky
 
 var ChooseGoodEffectList = []
 var ChooseBadEffectList = []
@@ -26,15 +28,16 @@ func _ready() -> void:
 	Slow = %Player/Hud/Effects/Slow
 	Tired = %Player/Hud/Effects/Tired
 	Drunk = %Player/Hud/Effects/Drunk
+	Lucky = %Player/Hud/Effects/Lucky
+	Unlucky = %Player/Hud/Effects/Unlucky
 	
-	ChooseGoodEffectList = [Energized, Fast]
-	ChooseBadEffectList = [Slow, Tired, Drunk]
+	ChooseGoodEffectList = [Energized, Fast, Lucky]
+	ChooseBadEffectList = [Slow, Tired, Drunk, Unlucky]
 	
-	print(EffectsParent)
 	TextLabel.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(InteractInputAction):
+	if event.is_action_pressed(InteractInputAction) && PlayerInArea == true:
 		UseMachine()
 
 
@@ -47,37 +50,22 @@ func UseMachine():
 		randomize()
 		
 		var RandomNumberCool = RNG.randi_range(1, 100)
-		if RandomNumberCool <= 50 + Global.PlayerLuck:
+		var EffectChoosen
+		if RandomNumberCool <= 50 + Global.PlayerLuck: ##good effect
 			await GlobalEffects.SpriteShakeEffect(MySprite, 2)
 			var ListLegnth = ChooseGoodEffectList.size()
 			var AnotherRandomNumber = RNG.randi_range(0, ListLegnth - 1)
-			var EffectChoosen = ChooseGoodEffectList[AnotherRandomNumber]
-			EffectChoosen.RunEffect.emit()
+			EffectChoosen = ChooseGoodEffectList[AnotherRandomNumber]
 			MySprite.frame = 1
-		else:
+			Global.PlayerLuckDrain()
+		else: #bad effect
 			await GlobalEffects.SpriteShakeEffect(MySprite, 2)
 			var ListLegnth = ChooseBadEffectList.size()
 			var AnotherRandomNumber = RNG.randi_range(0, ListLegnth - 1)
-			var EffectChoosen = ChooseBadEffectList[AnotherRandomNumber]
-			EffectChoosen.RunEffect.emit()
+			EffectChoosen = ChooseBadEffectList[AnotherRandomNumber]
 			MySprite.frame = 2
+			Global.PittyPlayerLuckIncrease()
 		
 		await get_tree().create_timer(0.9).timeout
 		MySprite.frame = 0
-
-
-
-func OnInteractionAreaEntered(body: Node3D) -> void:
-	if body == Player:
-		PlayerInArea = true
-		TextLabel.visible = true
-		set_process_unhandled_input(true)
-		InteractionAvailable.emit()
-
-
-func OnInteractionAreaExited(body: Node3D) -> void:
-	if body == Player:
-		PlayerInArea = false
-		TextLabel.visible = false
-		set_process_unhandled_input(false)
-		InteractionUnavailable.emit()
+		EffectChoosen.RunEffect.emit()
