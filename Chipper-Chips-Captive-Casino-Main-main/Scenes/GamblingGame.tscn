@@ -423,6 +423,7 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 
+[connection signal="animation_finished" from="SlotMachine" to="." method="_on_slot_machine_animation_finished"]
 [connection signal="mouse_entered" from="SlotMachine/LeverArea" to="." method="_on_lever_area_mouse_entered"]
 [connection signal="mouse_exited" from="SlotMachine/LeverArea" to="." method="_on_lever_area_mouse_exited"]
 [connection signal="mouse_entered" from="SlotMachine/StartArea" to="." method="_on_start_area_mouse_entered"]

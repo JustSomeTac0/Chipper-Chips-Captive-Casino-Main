@@ -1,3 +1,6 @@
+CSGMesh3D
+AudioStreamPlayer3D
+VisibleOnScreenEnabler3D
 Node
 AnimatedSprite3D
 CSGBox3D
@@ -9,6 +12,4 @@ Sprite3D
 Polygon2D
 CanvasModulate
 Button
-VisibleOnScreenEnabler3D
 VisibleOnScreenNotifier3D
-Area3D

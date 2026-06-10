@@ -15,6 +15,7 @@ var PullingDown = false
 var InStartArea = false
 var InLeverArea = false
 var CanPlayerSpin = true
+var GameHasBeenWon = false
 
 var RNG = RandomNumberGenerator.new()
 
@@ -98,12 +99,12 @@ func MachineRunning():
 	
 	if Result >= (46 - Global.PlayerLuck):  #more luck the player has the lower number is needed
 		SlotMachine.play("Win") #WIN
-		GameWon.emit()
-		Global.PlayerLuckDrain()
+		GameHasBeenWon = true
+		#CONTIUNE AT WHEN THE ANIAMTION FINISHED SECCTION
 	else:
 		SlotMachine.play("Lose") #LOSE
-		GameLost.emit()
-		Global.PittyPlayerLuckIncrease()
+		GameHasBeenWon = false
+		#CONTIUNE AT WHEN THE ANIAMTION FINISHED SECCTION
 
 
 
@@ -127,3 +128,12 @@ func ResetScene():
 	WhatToDoText.visible = true
 	CanPlayerSpin = true
 	SlotMachine.play("PullLever")
+
+
+func _on_slot_machine_animation_finished() -> void:
+	if GameHasBeenWon == true:
+		GameWon.emit()
+		Global.PlayerLuckDrain()
+	elif GameHasBeenWon == false:
+		GameLost.emit()
+		Global.PittyPlayerLuckIncrease()

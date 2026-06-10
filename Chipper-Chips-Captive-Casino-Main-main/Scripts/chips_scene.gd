@@ -90,6 +90,9 @@ func RandomChipSetup():
 
 func CollectChips():
 	if Collected == false && PlayerInArea == true:
+			var RandomPitch = RNG.randf_range(0.9,1.1)
+			$AudioStreamPlayer3D.pitch_scale = RandomPitch
+			$AudioStreamPlayer3D.play()
 			Collected = true
 			self.visible = false
 			var GainThese = ChipWorth * ChipAmount

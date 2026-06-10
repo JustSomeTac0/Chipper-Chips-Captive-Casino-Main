@@ -49,6 +49,8 @@ func UseMachine():
 		
 		randomize()
 		
+		$AudioStreamPlayer3D.stream = load("res://Chipper-Chips-Captive-Casino-Main-main/Sounds/gmod Ragdoll.wav")
+		$AudioStreamPlayer3D.play()
 		var RandomNumberCool = RNG.randi_range(1, 100)
 		var EffectChoosen
 		if RandomNumberCool <= 50 + Global.PlayerLuck: ##good effect
@@ -66,6 +68,10 @@ func UseMachine():
 			MySprite.frame = 2
 			Global.PittyPlayerLuckIncrease()
 		
+		$AudioStreamPlayer3D.stream = load("res://Chipper-Chips-Captive-Casino-Main-main/Sounds/Microwave DIng.wav")
+		$AudioStreamPlayer3D.play()
 		await get_tree().create_timer(0.9).timeout
 		MySprite.frame = 0
 		EffectChoosen.RunEffect.emit()
+		$AudioStreamPlayer3D.stream = load("res://Chipper-Chips-Captive-Casino-Main-main/Sounds/killpop.wav")
+		$AudioStreamPlayer3D.play()

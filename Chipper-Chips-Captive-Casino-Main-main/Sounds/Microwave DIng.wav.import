@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://x2kx8woelfs1"
+path="res://.godot/imported/Microwave DIng.wav-eea62baaf01efa616f9b0db8261b408f.sample"
+
+[deps]
+
+source_file="res://Chipper-Chips-Captive-Casino-Main-main/Sounds/Microwave DIng.wav"
+dest_files=["res://.godot/imported/Microwave DIng.wav-eea62baaf01efa616f9b0db8261b408f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cimktaxkhkqb5"
+path="res://.godot/imported/Plok! SNES Music - Beach.mp3-39dff991c248cb0a9393579756e35fe7.mp3str"
+
+[deps]
+
+source_file="res://Chipper-Chips-Captive-Casino-Main-main/Sounds/Plok! SNES Music - Beach.mp3"
+dest_files=["res://.godot/imported/Plok! SNES Music - Beach.mp3-39dff991c248cb0a9393579756e35fe7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
