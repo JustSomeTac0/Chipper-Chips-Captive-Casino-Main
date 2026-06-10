@@ -1,27 +1,2 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/effects.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/effects.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/lucky.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/ticket_machine.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/unlucky.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/drunkEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/energizedEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/fastEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/slowEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Effects/tiredEffect.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/ticket_machine.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/GamblingGame.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/gambling_game.gd
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/GoalObject.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/gambling_machine_object.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/chips_scene.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/GoalObject.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/ticket_machine.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/base_object.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/chips_scene.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GamblingMachineObject.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/goal_object.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scripts/InteractablesMasterClass.gd
-res://default_bus_layout.tres
+res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader
