@@ -43,7 +43,8 @@ func physics_update():
 
 	var target_dist = enemy.player.global_position - enemy.global_position
 	target_dist.y = 0
-	if target_dist.length() < 0.75:
+	
+	if abs(target_dist.length()) < 1:
 		get_tree().quit()
 		
 	enemy.move_and_slide()
