@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b0c57jlh667pt" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/LockerScript.gd" id="1_b2fk1"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_f04hd"]
+size = Vector3(1, 1.75, 0.75)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_75ng1"]
-size = Vector3(1, 1.5860596, 0.8800049)
+size = Vector3(1, 1.75, 0.75)
 
 [sub_resource type="SphereMesh" id="SphereMesh_b2fk1"]
 
@@ -18,6 +21,9 @@ size = Vector3(2.8513184, 1.6271973, 1.9365234)
 script = ExtResource("1_b2fk1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1558993142]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1045367315]
+mesh = SubResource("BoxMesh_f04hd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1987003131]
 shape = SubResource("BoxShape3D_75ng1")

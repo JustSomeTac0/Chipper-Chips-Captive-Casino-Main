@@ -46,5 +46,5 @@ TO WIN"
 font = ExtResource("2_qqi7b")
 font_size = 28
 
-[connection signal="body_entered" from="InteractionArea" to="." method="OnInteractionAreaEntered"]
-[connection signal="body_exited" from="InteractionArea" to="." method="OnInteractionAreaExited"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

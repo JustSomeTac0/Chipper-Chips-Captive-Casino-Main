@@ -34,7 +34,7 @@ func _ready():
 	stateMachine.enter_state($StateMachine/Wander)
 	global_transform.origin = current_node.global_transform.origin
 	choose_next_node()
-	
+
 
 
 
@@ -111,6 +111,7 @@ func arrive_at_node():
 
 
 func _on_ray_cast_3d_start_chase(who: Variant) -> void:
-	if who == "Goon1":
-		stateMachine.enter_state($StateMachine/Chase)
+	if Global.hiding == false:
+		if who == "Goon1":
+			stateMachine.enter_state($StateMachine/Chase)
 		

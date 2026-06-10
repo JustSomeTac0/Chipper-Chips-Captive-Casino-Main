@@ -90,99 +90,99 @@ func _input(event):
 			if flashlight.is_visible_in_tree() and not event.echo:
 				flashlight.hide()
 			elif not event.echo:
-				flashlight.show()
+					flashlight.show()
 
 
 
 
 func _physics_process(delta):
-	var moving = false
-	# Add the gravity. Pulls value from project settings.
-	if not is_on_floor():
-		velocity.y -= gravity * delta * weight
-	
-	
-	if ProcessInputs == true:
-			
-			# Handle Jump.
-			if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-				velocity.y = JUMP_VELOCITY
-			
-			
-			
-			
-			
-			
-			##Crouching things I addded
-			if Input.is_action_pressed("crouch"):
-				if isCrouched == false:
-					SPEED = SPEED / 2
-					isCrouched = true
-					regenTime = regenTime / 3
-					weight = 4 # fall faster 
-					velocity.y -= 0.4 # ditto
-					hitboxRadius = 0.3
-					hitboxHeight = 1
-					hitbox.shape.radius = float(hitboxRadius)
-					hitbox.shape.height = float(hitboxHeight)
-			else:
-				if isCrouched == true:
-					SPEED = SPEED * 2
-					isCrouched = false
-					regenTime = regenTime * 3
-					weight = 2
-					hitboxRadius = 0.5
-					hitboxHeight = 2.0
-					hitbox.shape.radius = float(hitboxRadius)
-					hitbox.shape.height = float(hitboxHeight)
-			
-			
-			
-			
-			
-			
-			# This just controls acceleration. Don't touch it.
-			var accel
-			if dir.dot(velocity) > 0:
-				accel = ACCEL
-				moving = true
-			else:
-				accel = DEACCEL
-				moving = false
-
-
-
-
-
-
-
-
-			# Get the input direction and handle the movement/deceleration.
-			# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
-			var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
-			var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
-			if Input.is_key_pressed(KEY_SHIFT) && stamina > 0 && isCrouched == false:
-				isRunning = true
-				stamina -= 0.5
-				sprinting = true
-				direction = direction * SPRINT_MULT
-				staminaChanged.emit()
-			else:
-				isRunning = false
-				if waitfForTimer == false:
-					StaminaRegenTimer.start(regenTime)
-					waitfForTimer = true
+	if Global.hiding == false:
+		var moving = false
+		# Add the gravity. Pulls value from project settings.
+		if not is_on_floor():
+			velocity.y -= gravity * delta * weight
+		
+		
+		if ProcessInputs == true:
 				
-			
-			
-			if direction:
-				velocity.x = direction.x * SPEED
-				velocity.z = direction.z * SPEED
-			else:
-				velocity.x = move_toward(velocity.x, 0, SPEED)
-				velocity.z = move_toward(velocity.z, 0, SPEED)
-	if ProcessInputs == true:
-		move_and_slide()
+				# Handle Jump.
+				if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+					velocity.y = JUMP_VELOCITY
+				
+				
+				
+				
+				
+				
+				##Crouching things I addded
+				if Input.is_action_pressed("crouch"):
+					if isCrouched == false:
+						SPEED = SPEED / 2
+						isCrouched = true
+						regenTime = regenTime / 3
+						weight = 4 # fall faster 
+						velocity.y -= 0.4 # ditto
+						hitboxRadius = 0.3
+						hitboxHeight = 1
+						hitbox.shape.radius = float(hitboxRadius)
+						hitbox.shape.height = float(hitboxHeight)
+				else:
+					if isCrouched == true:
+						SPEED = SPEED * 2
+						isCrouched = false
+						regenTime = regenTime * 3
+						weight = 2
+						hitboxRadius = 0.5
+						hitboxHeight = 2.0
+						hitbox.shape.radius = float(hitboxRadius)
+						hitbox.shape.height = float(hitboxHeight)
+				
+				
+				
+				
+				
+				
+				# This just controls acceleration. Don't touch it.
+				var accel
+				if dir.dot(velocity) > 0:
+					accel = ACCEL
+					moving = true
+				else:
+					accel = DEACCEL
+					moving = false
+
+
+
+				# Get the input direction and handle the movement/deceleration.
+				# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
+				var input_dir = Input.get_vector("moveSidewaysLeft", "moveSidewaysRight", "moveForward", "moveBackwards")
+				var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
+				if Input.is_key_pressed(KEY_SHIFT) && stamina > 0 && isCrouched == false:
+					isRunning = true
+					stamina -= 0.5
+					sprinting = true
+					direction = direction * SPRINT_MULT
+					staminaChanged.emit()
+				else:
+					isRunning = false
+					if waitfForTimer == false:
+						StaminaRegenTimer.start(regenTime)
+						waitfForTimer = true
+					
+				
+				
+				if direction:
+					velocity.x = direction.x * SPEED
+					velocity.z = direction.z * SPEED
+				else:
+					velocity.x = move_toward(velocity.x, 0, SPEED)
+					velocity.z = move_toward(velocity.z, 0, SPEED)
+		if ProcessInputs == true:
+			move_and_slide()
+	else:
+		if Input.is_action_just_pressed("moveForward"):
+			Global.hiding = false
+		
 
 
 func _on_stamina_regen_timer_timeout() -> void: #Connect for the Stamina Regen Timer call StaminaRegenTimer.start(regenTime) to start it

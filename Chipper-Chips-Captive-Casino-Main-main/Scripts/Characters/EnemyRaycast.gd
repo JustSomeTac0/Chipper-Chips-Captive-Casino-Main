@@ -19,4 +19,9 @@ func _physics_process(delta):
 		var hit = get_collider()
 
 		if hit and hit.name == "Player":
+			$"../StateMachine/Chase".lineOfSight = true
 			start_chase.emit(enemy)
+		else :
+			$"../StateMachine/Chase".lineOfSight = false
+	else:
+		$"../StateMachine/Chase".lineOfSight = false

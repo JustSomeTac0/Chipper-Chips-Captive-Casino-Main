@@ -16,14 +16,14 @@ var staff_key: bool = false
 var vip_pass: bool = false
 var screwdriver: bool =  false
 
-var chips: int = 550
+var chips: int = 10000
 
 #what le enemies be doin perchance
 var dice_anger: int = 0
 
 
 
-func PittyPlayerLuckIncrease():
+func PityPlayerLuckIncrease():
 	if PlayerLuck < 26:
 		PlayerLuck = PlayerLuck + 5
 	elif 26 < PlayerLuck && PlayerLuck > 36:

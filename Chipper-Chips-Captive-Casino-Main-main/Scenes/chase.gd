@@ -4,24 +4,16 @@ class_name goonChase
 @onready var enemy = $"../.."
 
 var lineOfSight: bool = false
-var knowsPlayerPos: bool = false
-var isAttentionTiming: bool = false
-var timerrefreshed: bool = false
+var trackTime: int = 0
 
 var delta: float
 
 
 func enter():
-	if lineOfSight == true:
-		knowsPlayerPos = true
-		timerrefreshed = true
-	elif lineOfSight == false and isAttentionTiming == false:
-		isAttentionTiming = true
-		timerrefreshed = false
-		#timer thing i forget how
-		if timerrefreshed == false:
-			pass #exit chase
-	
+	pass
+
+
+
 func exit():
 	pass
 
@@ -42,4 +34,16 @@ func physics_update():
 
 	enemy.rotation.x = 0
 	enemy.rotation.z = 0
+	if lineOfSight == false and Global.hiding == false:
+		trackTime += 1
+	else:
+		trackTime = 0
+	if trackTime > 400:
+		$"..".set_state($"../Wander")
+
+	var target_dist = enemy.player.global_position - enemy.global_position
+	target_dist.y = 0
+	if target_dist.length() < 0.75:
+		get_tree().quit()
+		
 	enemy.move_and_slide()

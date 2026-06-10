@@ -66,7 +66,7 @@ func UseMachine():
 			var AnotherRandomNumber = RNG.randi_range(0, ListLegnth - 1)
 			EffectChoosen = ChooseBadEffectList[AnotherRandomNumber]
 			MySprite.frame = 2
-			Global.PittyPlayerLuckIncrease()
+			Global.PityPlayerLuckIncrease()
 		
 		$AudioStreamPlayer3D.stream = load("res://Chipper-Chips-Captive-Casino-Main-main/Sounds/Microwave DIng.wav")
 		$AudioStreamPlayer3D.play()

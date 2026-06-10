@@ -136,4 +136,4 @@ func _on_slot_machine_animation_finished() -> void:
 		Global.PlayerLuckDrain()
 	elif GameHasBeenWon == false:
 		GameLost.emit()
-		Global.PittyPlayerLuckIncrease()
+		Global.PityPlayerLuckIncrease()
