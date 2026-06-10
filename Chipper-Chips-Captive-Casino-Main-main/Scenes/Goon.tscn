@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bylrvv08dulpq" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Goon1.gd" id="1_ldfjj"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
 [ext_resource type="Script" uid="uid://bnd0xds114lkg" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/EnemyRaycast.gd" id="3_i3d0o"]
+[ext_resource type="Script" uid="uid://b5cwljbkb3bkv" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/state_machine.gd" id="4_wus3n"]
+[ext_resource type="Script" uid="uid://djuae8psc0dlx" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Wander.gd" id="5_4opar"]
+[ext_resource type="Script" uid="uid://cthxri6jh7kep" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chase.gd" id="6_4opar"]
+[ext_resource type="Script" uid="uid://bda8bk1lnoec3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/permanent_idle.gd" id="7_fywfc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
 radius = 0.3
@@ -47,5 +51,17 @@ transform = Transform3D(3.803609e-08, 0, -0.09999993, 0, 0.09999993, 0, 1.857026
 mesh = SubResource("BoxMesh_i3d0o")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2038698927]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1335715771]
+script = ExtResource("4_wus3n")
+
+[node name="Wander" type="Node" parent="StateMachine" unique_id=977164392]
+script = ExtResource("5_4opar")
+
+[node name="Chase" type="Node" parent="StateMachine" unique_id=1790425025]
+script = ExtResource("6_4opar")
+
+[node name="PermanentIdle" type="Node" parent="StateMachine" unique_id=116000963]
+script = ExtResource("7_fywfc")
 
 [connection signal="start_chase" from="RayCast3D" to="." method="_on_ray_cast_3d_start_chase"]

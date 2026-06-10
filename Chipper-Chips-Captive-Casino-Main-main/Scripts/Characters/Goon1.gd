@@ -12,8 +12,10 @@ var laziness: float = randf_range(0.8, 1.2) #Amount of pausinng and length of pa
 var attention_span: float = randf_range(0.8, 1.2) #How long they stay in chase
 var side_room_weight: float = thoroughness #side_room_weight is used so I can force them out of side rooms so they dont wander in circles forever 
 
-@onready var	player: CharacterBody3D = get_tree().get_first_node_in_group("player")
+@onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 @onready var Nav_agent: NavigationAgent3D = $NavigationAgent3D
+
+@onready var stateMachine = $StateMachine
 
 var direction: Vector3
 var target_dist: Vector3
@@ -29,40 +31,11 @@ var in_chase: bool = false
 
 @warning_ignore("untyped_declaration")
 func _ready():
+	stateMachine.enter_state($StateMachine/Wander)
 	global_transform.origin = current_node.global_transform.origin
 	choose_next_node()
 	
 
-@warning_ignore("untyped_declaration", "unused_parameter")
-func _physics_process(delta: float) -> void:
-	if in_chase == false:
-		if waiting or target_node == null:
-			velocity = Vector3.ZERO
-			move_and_slide()
-			return
-
-		target_dist = target_node.global_position - global_position
-		target_dist.y = 0
-
-		if target_dist.length() < 0.4:
-			arrive_at_node()
-			return
-
-		direction = target_dist / target_dist.length()
-		velocity = direction * speed
-		move_and_slide()
-	if in_chase:
-		Nav_agent.set_target_position(player.global_position)
-		direction =  Nav_agent.get_next_path_position()
-		target_dist = target_node.global_position - global_position
-		target_dist.y = 0
-
-		if target_dist.length() < 0.4:
-			pass
-		
-		direction = target_dist / target_dist.length()
-		velocity = direction * speed
-		move_and_slide()
 
 
 @warning_ignore("untyped_declaration")
@@ -106,6 +79,7 @@ func choose_next_node():
 	
 @warning_ignore("untyped_declaration")
 func arrive_at_node():
+	print("boop")
 	previous_node = current_node
 	current_node = target_node
 
@@ -138,5 +112,5 @@ func arrive_at_node():
 
 func _on_ray_cast_3d_start_chase(who: Variant) -> void:
 	if who == "Goon1":
-		in_chase = true
+		stateMachine.enter_state($StateMachine/Chase)
 		

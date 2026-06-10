@@ -1,2 +1,10 @@
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn
 res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chase.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Goon1.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Wander.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Doors.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/door.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/EnemyRaycast.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/permanent_idle.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
