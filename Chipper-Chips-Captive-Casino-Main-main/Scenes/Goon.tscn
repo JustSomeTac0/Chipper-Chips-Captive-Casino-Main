@@ -1,25 +1,158 @@
 [gd_scene format=3 uid="uid://blofy5qj2g5n7"]
 
 [ext_resource type="Script" uid="uid://bylrvv08dulpq" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Goon1.gd" id="1_ldfjj"]
+[ext_resource type="Texture2D" uid="uid://by0xie5newkoh" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/Enemies/Placeholder/CoolEnemyPlaceholderCART-OL.png" id="2_7p3pi"]
 [ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
 [ext_resource type="Script" uid="uid://bnd0xds114lkg" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/EnemyRaycast.gd" id="3_i3d0o"]
-[ext_resource type="Script" uid="uid://b5cwljbkb3bkv" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/state_machine.gd" id="4_wus3n"]
-[ext_resource type="Script" uid="uid://djuae8psc0dlx" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Wander.gd" id="5_4opar"]
-[ext_resource type="Script" uid="uid://cthxri6jh7kep" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chase.gd" id="6_4opar"]
-[ext_resource type="Script" uid="uid://bda8bk1lnoec3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/permanent_idle.gd" id="7_fywfc"]
+[ext_resource type="Script" uid="uid://b5cwljbkb3bkv" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/state_machine.gd" id="4_fywfc"]
+[ext_resource type="Script" uid="uid://djuae8psc0dlx" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Wander.gd" id="5_4opar"]
+[ext_resource type="Script" uid="uid://cthxri6jh7kep" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/chase.gd" id="6_4opar"]
+[ext_resource type="Script" uid="uid://bda8bk1lnoec3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/permanent_idle.gd" id="7_fywfc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
 radius = 0.3
 height = 1.5
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ytmk"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(344, 0, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op5fu"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(344, 240, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj64j"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(344, 480, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb1kx"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(344, 720, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt8m5"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(0, 0, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glwnc"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(0, 240, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tvid"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(0, 480, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8utj"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(0, 720, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pec0v"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(172, 0, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wop1c"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(172, 240, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcjv6"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(172, 480, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74pxx"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(172, 720, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3gdt"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(516, 0, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wh1k"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(516, 240, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bffki"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(516, 480, 172, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgo8d"]
+atlas = ExtResource("2_7p3pi")
+region = Rect2(516, 720, 172, 240)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_5f8en"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ytmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op5fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj64j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb1kx")
+}],
+"loop": true,
+"name": &"WalkBack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt8m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glwnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tvid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8utj")
+}],
+"loop": true,
+"name": &"WalkForward",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pec0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wop1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcjv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74pxx")
+}],
+"loop": true,
+"name": &"WalkSide",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3gdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wh1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bffki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgo8d")
+}],
+"loop": true,
+"name": &"WalkSide2",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_fgknb")
 }],
 "loop": true,
-"name": &"default",
+"name": &"placeholder",
 "speed": 5.0
 }]
 
@@ -31,23 +164,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.085243285, 0)
 shape = SubResource("CapsuleShape3D_tj8fv")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=980361729]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 1, -0.026188016, 0.15587687, 0.07592714)
-billboard = 2
+transform = Transform3D(-0.79999995, 0, -8.742277e-08, 0, 0.79999995, 0, 6.9938224e-08, 0, -1, -0.026188016, 0.082303405, 0.07592714)
 shaded = true
+double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5f8en")
-frame_progress = 0.29142597
+animation = &"WalkForward"
+autoplay = "WalkForward"
+frame_progress = 0.6532762
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="." unique_id=1261876840]
+transform = Transform3D(0.79999995, 0, 1.7484555e-07, 0, 0.79999995, 0, -1.3987645e-07, 0, 1, -0.026188016, 0.082303405, 0.07592714)
+shaded = true
+double_sided = false
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_5f8en")
+animation = &"WalkBack"
+autoplay = "WalkBack"
+frame_progress = 0.45136076
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=2079142789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5224382, 0)
 target_position = Vector3(0, 0, -8)
+debug_shape_thickness = 5
 script = ExtResource("3_i3d0o")
 enemy = "Goon1"
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2038698927]
 
 [node name="StateMachine" type="Node" parent="." unique_id=1335715771]
-script = ExtResource("4_wus3n")
+script = ExtResource("4_fywfc")
 
 [node name="Wander" type="Node" parent="StateMachine" unique_id=977164392]
 script = ExtResource("5_4opar")

@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://blofy5qj2g5n7"]
+
+[ext_resource type="Script" uid="uid://bylrvv08dulpq" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Goon1.gd" id="1_ldfjj"]
+[ext_resource type="Texture2D" uid="uid://5s1q8wvituvn" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/iLoveTestingCutout.png" id="2_fgknb"]
+[ext_resource type="Script" uid="uid://bnd0xds114lkg" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/EnemyRaycast.gd" id="3_i3d0o"]
+[ext_resource type="Script" uid="uid://djuae8psc0dlx" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/Wander.gd" id="5_4opar"]
+[ext_resource type="Script" uid="uid://cthxri6jh7kep" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/chase.gd" id="6_4opar"]
+[ext_resource type="Script" uid="uid://bda8bk1lnoec3" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Characters/permanent_idle.gd" id="7_fywfc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tj8fv"]
+radius = 0.3
+height = 1.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5f8en"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fgknb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_4opar"]
+script/source = "extends Node
+class_name State
+
+@export var initial_state: State
+
+var current_state: State
+var states: Dictionary = {}
+
+signal transitioned
+
+
+func enter():
+	pass
+
+
+func exit():
+	pass
+
+
+func physics_update():
+	pass
+
+
+func transition_state(state: State, newState: State):
+	if state != current_state:
+		return
+	if !newState:
+		return
+	if current_state:
+		current_state.exit()
+		newState.enter()
+		current_state = newState
+
+
+func set_state(newState: State):
+	if newState != current_state:
+		current_state = newState
+
+
+func enter_state(newState: State):
+	if newState != current_state:
+		newState.enter()
+		current_state = newState
+
+
+
+func _ready() -> void:
+	for child in get_children():
+		if child is State:
+			states[child.name.to_lower()] = child
+			child.transitioned.connect(transition_state)
+	if initial_state:
+		initial_state.enter()
+		current_state = initial_state
+
+
+
+func _physics_process(float):
+	if current_state:
+		current_state.physics_update()
+"
+
+[node name="Goon1" type="CharacterBody3D" unique_id=1257103791]
+script = ExtResource("1_ldfjj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732039325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.085243285, 0)
+shape = SubResource("CapsuleShape3D_tj8fv")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=980361729]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 1, -0.026188016, 0.15587687, 0.07592714)
+billboard = 2
+shaded = true
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_5f8en")
+frame_progress = 0.29142597
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2079142789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5224382, 0)
+target_position = Vector3(0, 0, -8)
+script = ExtResource("3_i3d0o")
+enemy = "Goon1"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2038698927]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1335715771]
+script = SubResource("GDScript_4opar")
+
+[node name="Wander" type="Node" parent="StateMachine" unique_id=977164392]
+script = ExtResource("5_4opar")
+
+[node name="Chase" type="Node" parent="StateMachine" unique_id=1790425025]
+script = ExtResource("6_4opar")
+
+[node name="PermanentIdle" type="Node" parent="StateMachine" unique_id=116000963]
+script = ExtResource("7_fywfc")
+
+[connection signal="start_chase" from="RayCast3D" to="." method="_on_ray_cast_3d_start_chase"]

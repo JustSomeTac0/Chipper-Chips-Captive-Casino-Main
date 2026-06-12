@@ -36,6 +36,7 @@ var StaminaRegenTimer
 var isCrouched = false # Add states for diffrent actions
 var isRunning = false
 var ProcessInputs = true
+var CanCrouch = true
 
 signal staminaChanged #call to update the Stamina bar
 
@@ -127,13 +128,13 @@ func _physics_process(delta):
 						hitbox.shape.radius = float(hitboxRadius)
 						hitbox.shape.height = float(hitboxHeight)
 				else:
-					if isCrouched == true:
+					if isCrouched == true && CanCrouch == true:
 						SPEED = SPEED * 2
 						isCrouched = false
 						regenTime = regenTime * 3
 						weight = 2
 						hitboxRadius = 0.5
-						hitboxHeight = 2.0
+						hitboxHeight = 2
 						hitbox.shape.radius = float(hitboxRadius)
 						hitbox.shape.height = float(hitboxHeight)
 				
@@ -199,3 +200,14 @@ func gotChips(HowMuch, DidGain):
 	var transfer1 = HowMuch
 	var transfer2: bool = DidGain
 	ChipDisplayHud.ChangeChipAmount(transfer1, transfer2)
+
+func CollistionUncrochArea(body: Node3D) -> void:
+	if body is CSGBox3D or body is CSGMesh3D:
+		CanCrouch = false
+		print("SOmething")
+
+
+func NoCollistionUncrochArea(body: Node3D) -> void:
+	if body is CSGBox3D or body is CSGMesh3D:
+		CanCrouch = true
+		print("Not Something")

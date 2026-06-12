@@ -6,9 +6,11 @@
 [ext_resource type="Script" uid="uid://yguvjfk2srxr" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 [ext_resource type="Texture2D" uid="uid://dmo07y4qr38ah" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/OtherFlash.png" id="3_n2yuy"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6c0e1"]
+size = Vector3(0.48443604, 0.83340454, 0.5133362)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
 radius = 0.3
-height = 1.5
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n2yuy"]
 animations = [{
@@ -33,11 +35,19 @@ wait_time = 0.1
 
 [node name="Hud" parent="." unique_id=1366660728 instance=ExtResource("2_7xlnr")]
 
+[node name="CanUncrochArea" type="Area3D" parent="." unique_id=1479746131]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanUncrochArea" unique_id=12358801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012347162, 1.0459481, -0.0021457672)
+shape = SubResource("BoxShape3D_6c0e1")
+debug_color = Color(0.72303855, 0.24647272, 1, 0.41960785)
+
 [node name="body" type="CollisionShape3D" parent="." unique_id=1314790822 groups=["player_body"]]
 shape = SubResource("CapsuleShape3D_euj4i")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=713447757]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 1, 0.19601357, 0.15587687, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 1, 0.024780095, 0.15587687, 0)
+visible = false
 billboard = 2
 shaded = true
 texture_filter = 0
@@ -79,3 +89,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5727258, 0)
 
 [connection signal="timeout" from="StaminaRegenTimer" to="." method="_on_stamina_regen_timer_timeout"]
+[connection signal="body_entered" from="CanUncrochArea" to="." method="CollistionUncrochArea"]
+[connection signal="body_exited" from="CanUncrochArea" to="." method="NoCollistionUncrochArea"]

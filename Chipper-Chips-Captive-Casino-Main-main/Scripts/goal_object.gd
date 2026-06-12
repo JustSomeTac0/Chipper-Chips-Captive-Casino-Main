@@ -4,7 +4,8 @@ var in_range: bool = false
 
 func _ready() -> void:
 	TextLabel = $TextControl
-	Player = get_tree().get_first_node_in_group("player")
+	Player = %Player
+	print(Player)
 	TextLabel.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -22,8 +23,10 @@ func WinGame():
 func _on_interaction_area_body_exited(body: Node3D) -> void:
 	if body == Player:
 		in_range = false
+		TextLabel.visible = false
 
 
 func _on_interaction_area_body_entered(body: Node3D) -> void:
 	if body == Player:
-		in_range = false
+		in_range = true
+		TextLabel.visible = true

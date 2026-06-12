@@ -14,7 +14,7 @@ signal InteractionUnavailable
 func _ready() -> void:
 	set_process_unhandled_input(false)
 	TextLabel = $TextControl
-	Player = get_tree().get_first_node_in_group("player")
+	Player = %Player
 	
 	TextLabel.visible = false
 

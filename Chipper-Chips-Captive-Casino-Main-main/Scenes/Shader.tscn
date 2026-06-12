@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cf46k78c875ma"]
+
+[ext_resource type="Shader" uid="uid://c40e2uw1vbqeu" path="res://Chipper-Chips-Captive-Casino-Main-main/Shaders/PixelateShader.gdshader" id="1_c5kgn"]
+[ext_resource type="PackedScene" uid="uid://d13ap5b2koici" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn" id="2_tt3uq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt3uq"]
+shader = ExtResource("1_c5kgn")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 16
+shader_parameter/dither_size = 1
+
+[node name="Node3D" type="Node3D" unique_id=426662453]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=531275763]
+material = SubResource("ShaderMaterial_tt3uq")
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=672958958]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Map" parent="SubViewportContainer/SubViewport" unique_id=841301764 instance=ExtResource("2_tt3uq")]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqrds33ohf0se" path="res://Chipper-Chips-Captive-Casino-Main-main/Scripts/Item.gd" id="1_4lfgn"]
 
+
 [sub_resource type="SphereMesh" id="SphereMesh_cosa2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1igmn"]

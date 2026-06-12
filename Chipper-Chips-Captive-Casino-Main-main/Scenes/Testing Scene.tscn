@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qh2ad3val6fo"]
 
 [ext_resource type="Texture2D" uid="uid://dlmgawbb67ctt" path="res://Chipper-Chips-Captive-Casino-Main-main/Sprites/level1Backgorund.png" id="1_c6x0b"]
-[ext_resource type="PackedScene" uid="uid://sk7hwovy0cd2" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Doors.tscn" id="2_eaykp"]
+[ext_resource type="PackedScene" uid="uid://sk7hwovy0cd2" path="res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Interactable Objects/Doors.tscn" id="2_eaykp"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.tscn" id="2_ebker"]
 
 

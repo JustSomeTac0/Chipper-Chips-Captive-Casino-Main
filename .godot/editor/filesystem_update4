@@ -1,5 +1,9 @@
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/goal_object.gd
 res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Map_greyBox.tscn
 res://Chipper-Chips-Captive-Casino-Main-main/Shaders/DisplacementShader.gdshader
 res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.gd
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Goon.tscn
-res://Chipper-Chips-Captive-Casino-Main-main/Scenes/chase.gd
+res://Chipper-Chips-Captive-Casino-Main-main/Other/simple_fpsplayer/Player.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Scripts/GlobalScripts.gd
+res://PS1 Shader.gdshader
+res://Chipper-Chips-Captive-Casino-Main-main/Scenes/Shader.tscn
+res://Chipper-Chips-Captive-Casino-Main-main/Shaders/PixelateShader.gdshader

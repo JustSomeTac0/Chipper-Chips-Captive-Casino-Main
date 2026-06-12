@@ -35,11 +35,18 @@ func physics_update():
 	enemy.rotation.x = 0
 	enemy.rotation.z = 0
 	if lineOfSight == false and Global.hiding == false:
-		trackTime += 1
+		trackTime += 2
+		print(trackTime)
+	elif Global.hiding == true:
+		trackTime += 10
+		print(trackTime)
 	else:
-		trackTime = 0
+		if trackTime > 50:
+			trackTime -= 1
+			print(trackTime)
 	if trackTime > 400:
 		$"..".set_state($"../Wander")
+		trackTime = 0
 
 	var target_dist = enemy.player.global_position - enemy.global_position
 	target_dist.y = 0
